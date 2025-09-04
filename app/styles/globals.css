@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-dark: #07080a;
+  --text: #ffffff;
+  --accent: #ff3b3b;
+}
+
+html, body, #__next { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.main-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  position: relative;
+  z-index: 1;
+}
+
+// ensure canvas behind content
+#magnetic-canvas { position: fixed; inset: 0; z-index: 0; }
+
+a { color: inherit; }
