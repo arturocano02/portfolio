@@ -1,93 +1,143 @@
 import React from 'react';
+import Button from '../components/Button';
+import Badge from '../components/Badge';
+import FeatureCard from '../components/FeatureCard';
+import CaseStudyCard from '../components/CaseStudyCard';
+import ScrollIndicator from '../components/ScrollIndicator';
 
-export default function HomePage(){
+export default function HomePage() {
   return (
-    <section className="p-6" aria-label="Home content">
-      <header className="mb-6">
-        <h1 className="text-4xl font-extrabold tracking-tight">designing and implementing AI products</h1>
-        <p className="text-lg mt-2">a London based 23 year old</p>
-        <div className="mt-4 flex gap-4">
-          <a href="/contact" className="bg-transparent border border-white text-white px-4 py-2 rounded">Work with me</a>
-          <a href="/cv" className="bg-white text-[#07080a] px-4 py-2 rounded">CV</a>
+    <>
+      {/* Hero Section - Full viewport height */}
+      <section className="section-full" id="hero">
+        <div className="glass hero">
+          <h1 className="text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+            designing and implementing AI products
+          </h1>
+          <p className="text-xl mb-8">a London based 23 year old</p>
+          <div className="flex gap-4">
+            <Button href="/contact" variant="primary">Work with me</Button>
+            <Button href="/cv" variant="outline">CV</Button>
+          </div>
         </div>
-      </header>
-      <section aria-label="Partners" className="mb-8">
-        <h2 className="text-2xl font-semibold">Who I have worked with</h2>
-        <div className="flex flex-wrap items-center mt-4">
-          {['Else','Amazon','Norton','Imperial Enterprise Lab','Placeholder 1','Placeholder 2'].map((name, idx)=> (
-            <div key={idx} className="mr-4 mb-3 inline-flex items-center justify-center h-10 w-28 bg-gray-800 rounded">{name}</div>
-          ))}
-        </div>
+        <ScrollIndicator targetId="partners" />
       </section>
 
-      <section aria-label="Features" className="mb-8">
-        <div className="grid md:grid-cols-3 gap-6">
-          <article>
-            <div className="text-sm uppercase tracking-wide text-gray-400">make AI feel magical</div>
-            <h3 className="text-xl font-semibold mt-1">Norton Genie scam detection</h3>
-            <p className="mt-2">I led interaction and UI for Norton Genie’s scam-detection experience. I designed the signature orb assistant and the results banner so the product feels smart, magical and trustworthy.</p>
-            <div className="mt-2 text-sm text-gray-300"> 
-              <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded mr-2">1 million plus users</span>
-              <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded mr-2">Award</span>
-              <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">Creativity</span>
-            </div>
-            <a href="/norton" className="mt-3 inline-block text-red-400 hover:underline">View Case Study →</a>
-          </article>
-
-          <article>
-            <div className="text-sm uppercase tracking-wide text-gray-400">automate the boring tasks</div>
-            <h3 className="text-xl font-semibold mt-1">Amazon internal AI tools</h3>
-            <p className="mt-2">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual work, saving time and increasing team efficiency.</p>
-            <a href="/amazon" className="mt-3 inline-block text-red-400 hover:underline">View Case Study →</a>
-          </article>
-
-          <article>
-            <div className="text-sm uppercase tracking-wide text-gray-400">ship and test in the real world</div>
-            <h3 className="text-xl font-semibold mt-1">Trippl safer shared travel</h3>
-            <p className="mt-2">I co-founded Trippl, a platform that matches people travelling the same way so they can share rides more safely and affordably. We ran real pilots and iterated in public.</p>
-            <div className="mt-2 text-sm text-gray-300"> 
-              <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded mr-2">6 pilots</span>
-              <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded mr-2">4 partnerships</span>
-              <span className="inline-block bg-red-600 text-white text-xs px-2 py-1 rounded">500 beta users</span>
-            </div>
-            <a href="/trippl" className="mt-3 inline-block text-red-400 hover:underline">View Case Study →</a>
-          </article>
+      {/* Partners Strip - Compact section */}
+      <section className="section-compact" id="partners">
+        <div className="glass">
+          <h2 className="text-2xl font-semibold mb-8">Who I have worked with</h2>
+          <div className="partners-strip">
+            {['Else', 'Amazon', 'Norton', 'Imperial Enterprise Lab', 'Placeholder 1', 'Placeholder 2'].map((name, idx) => (
+              <div key={idx} className="partner-logo glass flex items-center justify-center h-16 px-6">
+                {name}
+              </div>
+            ))}
+          </div>
         </div>
+        <ScrollIndicator targetId="norton-feature" />
       </section>
 
-      <section aria-label="CaseCards" className="grid md:grid-cols-3 gap-6 mb-8">
-        <article className="p-4 border rounded bg-[#111]">
-          <h4 className="font-semibold">Good Engine</h4>
-          <div className="text-sm text-gray-400">AI-powered T and Cs</div>
-          <p className="mt-2">Terms and conditions are long and hard to parse, so most people only read a small part.</p>
-          <p className="mt-2"><strong>Insight:</strong> Readers look for the few lines that matter to them.</p>
-          <p className="mt-2"><strong>Solution:</strong> A generative tool that highlights the key commitments and surfaces the most important points instantly.</p>
-        </article>
-        <article className="p-4 border rounded bg-[#111]">
-          <h4 className="font-semibold">EasyJet</h4>
-          <div className="text-sm text-gray-400">Finding new airline value</div>
-          <p className="mt-2">Airlines have fixed seats and variable demand, so unused opportunities are easy to miss.</p>
-          <p className="mt-2"><strong>Insight:</strong> AI can locate undervalued capacity and moments to improve margin.</p>
-          <p className="mt-2"><strong>Solution:</strong> An AI-supported concept that simplifies choices for travellers while improving profitability.</p>
-        </article>
-        <article className="p-4 border rounded bg-[#111]">
-          <h4 className="font-semibold">Base360.AI</h4>
-          <div className="text-sm text-gray-400">Clear terms, less friction</div>
-          <p className="mt-2">Rental operations teams struggled with dense policy text.</p>
-          <p className="mt-2"><strong>Insight:</strong> Fast comprehension improves decisions.</p>
-          <p className="mt-2"><strong>Solution:</strong> An AI-powered summary and highlight layer for critical clauses.</p>
-        </article>
+      {/* Feature Blocks - One per viewport */}
+      <section className="section-full" id="norton-feature">
+        <div className="glass-card">
+          <div className="text-sm uppercase tracking-wide text-gray-400 mb-3">make AI feel magical</div>
+          <h2 className="text-3xl font-semibold mb-4">Norton Genie scam detection</h2>
+          <p className="text-lg mb-6">I led interaction and UI for Norton Genie's scam-detection experience. I designed the signature orb assistant and the results banner so the product feels smart, magical and trustworthy.</p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            <Badge text="1 million plus users" />
+            <Badge text="Award" />
+            <Badge text="Creativity" />
+          </div>
+          <Button href="/norton" variant="outline" className="text-accent hover:text-white">
+            View Case Study →
+          </Button>
+        </div>
+        <ScrollIndicator targetId="amazon-feature" />
       </section>
 
-      <footer aria-label="Footer" className="pt-6 border-t border-gray-800 mt-6">
-        <h2 className="text-2xl font-semibold mb-2">Let’s work together</h2>
-        <p className="mb-2">Email and social icons</p>
-        <p><a href="mailto:you@example.com" className="underline text-red-400">you@example.com</a></p>
-        <div className="flex space-x-4 mt-2">
-          <span className="w-6 h-6 bg-gray-700 rounded-full" aria-label="LinkedIn" />
-          <span className="w-6 h-6 bg-gray-700 rounded-full" aria-label="Instagram" />
+      <section className="section-full" id="amazon-feature">
+        <div className="glass-card">
+          <div className="text-sm uppercase tracking-wide text-gray-400 mb-3">automate the boring tasks</div>
+          <h2 className="text-3xl font-semibold mb-4">Amazon internal AI tools</h2>
+          <p className="text-lg mb-6">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual work, saving time and increasing team efficiency.</p>
+          <Button href="/amazon" variant="outline" className="text-accent hover:text-white">
+            View Case Study →
+          </Button>
         </div>
-      </footer>
-    </section>
+        <ScrollIndicator targetId="trippl-feature" />
+      </section>
+
+      <section className="section-full" id="trippl-feature">
+        <div className="glass-card">
+          <div className="text-sm uppercase tracking-wide text-gray-400 mb-3">ship and test in the real world</div>
+          <h2 className="text-3xl font-semibold mb-4">Trippl safer shared travel</h2>
+          <p className="text-lg mb-6">I co-founded Trippl, a platform that matches people travelling the same way so they can share rides more safely and affordably. We ran real pilots and iterated in public.</p>
+          <div className="flex flex-wrap gap-2 mb-6">
+            <Badge text="6 pilots" />
+            <Badge text="4 partnerships" />
+            <Badge text="500 beta users" />
+          </div>
+          <Button href="/trippl" variant="outline" className="text-accent hover:text-white">
+            View Case Study →
+          </Button>
+        </div>
+        <ScrollIndicator targetId="case-studies" />
+      </section>
+
+      {/* Case Study Cards - Full section */}
+      <section className="section-full" id="case-studies">
+        <h2 className="text-3xl font-semibold mb-8 text-center">More Projects</h2>
+        <div className="feature-grid">
+          <CaseStudyCard
+            title="Good Engine"
+            subtitle="AI-powered T and Cs"
+            problem="Terms and conditions are long and hard to parse, so most people only read a small part."
+            insight="Readers look for the few lines that matter to them."
+            solution="A generative tool that highlights the key commitments and surfaces the most important points instantly."
+          />
+
+          <CaseStudyCard
+            title="EasyJet"
+            subtitle="Finding new airline value"
+            problem="Airlines have fixed seats and variable demand, so unused opportunities are easy to miss."
+            insight="AI can locate undervalued capacity and moments to improve margin."
+            solution="An AI-supported concept that simplifies choices for travellers while improving profitability."
+          />
+
+          <CaseStudyCard
+            title="Base360.AI"
+            subtitle="Clear terms, less friction"
+            problem="Rental operations teams struggled with dense policy text."
+            insight="Fast comprehension improves decisions."
+            solution="An AI-powered summary and highlight layer for critical clauses."
+          />
+        </div>
+        <ScrollIndicator targetId="contact" />
+      </section>
+
+      {/* Footer - Full section */}
+      <section className="section-full" id="contact">
+        <div className="glass">
+          <h2 className="text-3xl font-semibold mb-6">Let's work together</h2>
+          <p className="text-xl mb-8">I'm available for new opportunities and collaborations.</p>
+          <p className="mb-6">
+            <a href="mailto:you@example.com" className="text-accent hover:underline text-lg">
+              you@example.com
+            </a>
+          </p>
+          <div className="flex space-x-6">
+            <a href="#" className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors" aria-label="LinkedIn">
+              <span className="sr-only">LinkedIn</span>
+              <div className="w-6 h-6 bg-gray-600 rounded-sm"></div>
+            </a>
+            <a href="#" className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center hover:bg-gray-700 transition-colors" aria-label="Instagram">
+              <span className="sr-only">Instagram</span>
+              <div className="w-6 h-6 bg-gray-600 rounded"></div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </>
   );
 }

@@ -27,24 +27,38 @@ export default function MagneticGridBackground({
       canvas.height = h * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       dims.current = { width: w, height: h, dpr };
-      // create grid centered with given spacing
+      // Build grid (two interleaved lattices for higher density)
       const cols = Math.floor(w / spacing) + 1;
       const rows = Math.floor(h / spacing) + 1;
-      const grid = [];
       const xOffset = (w - (cols - 1) * spacing) / 2;
       const yOffset = (h - (rows - 1) * spacing) / 2;
+      const baseGrid = [];
       for (let r = 0; r < rows; r++) {
         for (let c = 0; c < cols; c++) {
-          grid.push({ x: c * spacing + xOffset, y: r * spacing + yOffset });
+          baseGrid.push({ x: c * spacing + xOffset, y: r * spacing + yOffset });
         }
       }
-      gridRef.current = grid;
-      // center mouse target
+      const extraX = xOffset + spacing / 2;
+      const extraY = yOffset + spacing / 2;
+      const extraGrid = [];
+      // Include only if within bounds
+      for (let r = 0; r < rows; r++) {
+        for (let c = 0; c < cols; c++) {
+          const x2 = c * spacing + extraX;
+          const y2 = r * spacing + extraY;
+          if (x2 <= w && y2 <= h) extraGrid.push({ x: x2, y: y2 });
+        }
+      }
+      gridRef.current = baseGrid.concat(extraGrid);
+      // center mouse at first render
       mouseCurrent.current.x = w / 2;
       mouseCurrent.current.y = h / 2;
       // clear background
       ctx.fillStyle = bg;
       ctx.fillRect(0, 0, w, h);
+      // set initial mouse target to center for instant centering
+      mouseTarget.current.x = w / 2;
+      mouseTarget.current.y = h / 2;
     };
 
     const onMove = (e) => {
@@ -65,14 +79,18 @@ export default function MagneticGridBackground({
     const loop = () => {
       const w = dims.current.width;
       const h = dims.current.height;
+
       // clear and fill background
       ctx.fillStyle = bg;
       ctx.fillRect(0, 0, w, h);
 
-      // interpolate mouse toward target
+      // interpolate mouse toward target with a faster bias for responsiveness
       if (mouseTarget.current.inside) {
-        mouseCurrent.current.x += (mouseTarget.current.x - mouseCurrent.current.x) * 0.15;
-        mouseCurrent.current.y += (mouseTarget.current.y - mouseCurrent.current.y) * 0.15;
+        // faster response when the mouse is moving
+        const dx = mouseTarget.current.x - mouseCurrent.current.x;
+        const dy = mouseTarget.current.y - mouseCurrent.current.y;
+        mouseCurrent.current.x += dx * 0.22;
+        mouseCurrent.current.y += dy * 0.22;
       } else {
         mouseCurrent.current.x += (w / 2 - mouseCurrent.current.x) * 0.15;
         mouseCurrent.current.y += (h / 2 - mouseCurrent.current.y) * 0.15;
@@ -82,8 +100,6 @@ export default function MagneticGridBackground({
       const my = mouseCurrent.current.y;
 
       const grid = gridRef.current;
-      ctx.lineWidth = 1;
-      ctx.strokeStyle = color;
       for (let i = 0; i < grid.length; i++) {
         const d = grid[i];
         const dx = mx - d.x;
@@ -98,11 +114,18 @@ export default function MagneticGridBackground({
         const uy = dist > 0 ? dy / dist : 0;
         const ex = d.x + ux * L;
         const ey = d.y + uy * L;
+        // gradient fade from dot toward end
+        ctx.lineWidth = 1;
+        const grad = ctx.createLinearGradient(d.x, d.y, ex, ey);
+        grad.addColorStop(0, color);
+        grad.addColorStop(1, 'rgba(255,59,59,0)');
+        ctx.strokeStyle = grad;
         ctx.beginPath();
         ctx.moveTo(d.x, d.y);
         ctx.lineTo(ex, ey);
         ctx.stroke();
-        // dot on top
+
+        // draw dot on top
         ctx.fillStyle = color;
         ctx.beginPath();
         ctx.arc(d.x, d.y, dotRadius, 0, Math.PI * 2);

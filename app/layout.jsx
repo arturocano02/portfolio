@@ -1,35 +1,40 @@
 import React from 'react';
 import './globals.css';
 import MagneticGridBackground from '../components/MagneticGridBackground';
+import Header from '../components/Header';
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head />
-      <body className="text-white min-h-screen relative overflow-x-hidden">
+      <head>
+        <title>Arturo Cano | Portfolio</title>
+        <meta name="description" content="Arturo Cano - Designing and implementing AI products" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            document.addEventListener('DOMContentLoaded', () => {
+              const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                  if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                  }
+                });
+              }, { threshold: 0.1 });
+              
+              document.querySelectorAll('.fade-in').forEach(el => {
+                observer.observe(el);
+              });
+            });
+          `
+        }} />
+      </head>
+      <body>
         <MagneticGridBackground />
         <Header />
-        <main className="min-h-screen relative z-10">
-          <div className="main-container">
-            {children}
-          </div>
+        <main className="min-h-screen pt-20">
+          {children}
         </main>
       </body>
     </html>
-  );
-}
-
-function Header(){
-  return (
-    <header className="w-full fixed top-0 left-0 z-50 bg-transparent py-4 px-6">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <a href="/" className="text-2xl font-bold text-white no-underline">Arturo Cano</a>
-        <nav className="flex items-center space-x-6">
-          <a href="/" className="text-white hover:underline">Projects</a>
-          <a href="/cv" className="text-white hover:underline">CV</a>
-          <button className="bg-red-600 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded">Contact</button>
-        </nav>
-      </div>
-    </header>
   );
 }
