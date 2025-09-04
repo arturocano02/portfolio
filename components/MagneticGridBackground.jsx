@@ -5,7 +5,7 @@ export default function MagneticGridBackground({
   spacing = 48,
   dotRadius = 1.6,
   lineMax = 22,
-  influence = 260,
+  influence = 200, // Reduced influence radius for more concentrated effect
   color = '#ff3b3b',
   bg = '#07080a'
 }){
@@ -89,8 +89,8 @@ export default function MagneticGridBackground({
         // faster response when the mouse is moving
         const dx = mouseTarget.current.x - mouseCurrent.current.x;
         const dy = mouseTarget.current.y - mouseCurrent.current.y;
-        mouseCurrent.current.x += dx * 0.22;
-        mouseCurrent.current.y += dy * 0.22;
+        mouseCurrent.current.x += dx * 0.35; // Increased from 0.22 for more responsiveness
+        mouseCurrent.current.y += dy * 0.35; // Increased from 0.22 for more responsiveness
       } else {
         mouseCurrent.current.x += (w / 2 - mouseCurrent.current.x) * 0.15;
         mouseCurrent.current.y += (h / 2 - mouseCurrent.current.y) * 0.15;
@@ -107,8 +107,10 @@ export default function MagneticGridBackground({
         const dist = Math.hypot(dx, dy);
         let L = 0;
         if (dist > 0) {
+          // Use a stronger falloff to make closer dots move more dramatically
           const t = Math.max(0, 1 - dist / influence);
-          L = lineMax * Math.pow(t, 1.5);
+          // Use a higher power (2.5 instead of 1.5) for sharper falloff
+          L = lineMax * Math.pow(t, 2.5);
         }
         const ux = dist > 0 ? dx / dist : 0;
         const uy = dist > 0 ? dy / dist : 0;
