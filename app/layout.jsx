@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/globals.css';
+import './globals.css';
 import MagneticGridBackground from '../components/MagneticGridBackground';
 
 export default function RootLayout({ children }) {
