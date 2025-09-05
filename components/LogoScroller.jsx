@@ -57,20 +57,20 @@ export default function LogoScroller({ logos = [], speed = 1 }) {
           {logos.map((logo, index) => (
             <div 
               key={index} 
-              className="logo-item flex-shrink-0 mx-8 flex items-center justify-center"
+              className="logo-item flex-shrink-0 mx-16 flex items-center justify-center"
             >
               {logo.image ? (
-                <div className="relative h-16 w-auto flex items-center">
+                <div className="relative h-20 w-auto flex items-center">
                   <Image 
                     src={logo.image} 
                     alt={logo.name} 
-                    width={logo.width || 150}
-                    height={logo.height || 60}
+                    width={logo.width || 180}
+                    height={logo.height || 80}
                     className="object-contain"
                   />
                 </div>
               ) : (
-                <div className="partner-logo glass flex items-center justify-center h-16 px-6">
+                <div className="partner-logo glass flex items-center justify-center h-20 px-8">
                   {logo.name}
                 </div>
               )}

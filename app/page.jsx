@@ -28,9 +28,11 @@ export default function HomePage() {
 
       {/* Partners Strip */}
       <section className="py-10">
-        <div className="max-w-4xl mx-auto px-4">
-          <p className="text-sm text-gray-400 mb-4">Who I have worked with</p>
-          <LogoScroller logos={partnerLogos} speed={0.5} />
+        <div className="w-full px-4">
+          <p className="text-sm text-gray-400 mb-4 max-w-4xl mx-auto">Who I have worked with</p>
+          <div className="w-full overflow-hidden">
+            <LogoScroller logos={partnerLogos} speed={0.3} />
+          </div>
         </div>
       </section>
 
