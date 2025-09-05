@@ -1,5 +1,3 @@
 {
-  "/trippl/page": "app/trippl/page.js",
-  "/page": "app/page.js",
-  "/norton/page": "app/norton/page.js"
+  "/trippl/page": "app/trippl/page.js"
 }

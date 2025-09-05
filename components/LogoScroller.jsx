@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
-export default function LogoScroller({ logos = [], speed = 1 }) {
+export default function LogoScroller({ logos = [], speed = 0.5 }) {
   const scrollerRef = useRef(null);
   const innerRef = useRef(null);
 
@@ -47,7 +47,7 @@ export default function LogoScroller({ logos = [], speed = 1 }) {
   }, [speed]);
 
   return (
-    <div className="logo-scroller-container overflow-hidden w-full">
+    <div className="logo-scroller-container overflow-hidden w-full py-4">
       <div 
         ref={scrollerRef}
         className="logo-scroller flex whitespace-nowrap"
@@ -57,20 +57,20 @@ export default function LogoScroller({ logos = [], speed = 1 }) {
           {logos.map((logo, index) => (
             <div 
               key={index} 
-              className="logo-item flex-shrink-0 mx-16 flex items-center justify-center"
+              className="logo-item flex-shrink-0 mx-24 flex items-center justify-center"
             >
               {logo.image ? (
-                <div className="relative h-20 w-auto flex items-center">
+                <div className="relative h-24 w-auto flex items-center">
                   <Image 
                     src={logo.image} 
                     alt={logo.name} 
-                    width={logo.width || 180}
-                    height={logo.height || 80}
+                    width={logo.width || 200}
+                    height={logo.height || 100}
                     className="object-contain"
                   />
                 </div>
               ) : (
-                <div className="partner-logo glass flex items-center justify-center h-20 px-8">
+                <div className="partner-logo glass flex items-center justify-center h-24 px-10">
                   {logo.name}
                 </div>
               )}
