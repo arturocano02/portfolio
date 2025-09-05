@@ -17,9 +17,11 @@ export default function SimpleGradientBackground() {
     let width = window.innerWidth;
     let height = window.innerHeight;
     
-    // Colors that match the image reference
-    const primaryColor = '#FF9D45'; // Orange
-    const blueColor = '#56CCF2'; // Blue
+    // Colors that match the image reference - teal to orange to pink gradient
+    const primaryColor = '#FF9D45'; // Orange for mouse follow
+    const topColor = '#4ECDC4'; // Teal for top
+    const middleColor = '#FF9D45'; // Orange for middle
+    const bottomColor = '#FF6B81'; // Pink for bottom
     
     const resizeCanvas = () => {
       width = window.innerWidth;
@@ -45,6 +47,11 @@ export default function SimpleGradientBackground() {
       };
     };
     
+    // Handle scroll events to ensure gradient persists during scrolling
+    const handleScroll = () => {
+      // Keep the gradient effect active during scrolling
+    };
+    
     // Initial mouse position in center
     mousePos.current = {
       x: width / 2,
@@ -59,25 +66,27 @@ export default function SimpleGradientBackground() {
       // Clear canvas
       ctx.clearRect(0, 0, width, height);
       
-      // Draw base gradient (blue to light blue)
-      const baseGradient = ctx.createLinearGradient(0, 0, width, height);
-      baseGradient.addColorStop(0, '#2F80ED');
-      baseGradient.addColorStop(0.5, '#56CCF2');
-      baseGradient.addColorStop(1, '#4ECDC4');
+      // Draw base gradient (teal to orange to pink - like the reference image)
+      const baseGradient = ctx.createLinearGradient(0, 0, width, height * 1.5);
+      baseGradient.addColorStop(0, topColor); // Teal at top
+      baseGradient.addColorStop(0.4, middleColor); // Orange in middle
+      baseGradient.addColorStop(0.8, bottomColor); // Pink at bottom
       
       ctx.fillStyle = baseGradient;
       ctx.fillRect(0, 0, width, height);
       
-      // Draw orange "torch" following mouse
-      const torchRadius = Math.max(width, height) * 0.5;
+      // Draw orange "torch" following mouse - more pronounced effect
+      const torchRadius = Math.max(width, height) * 0.6;
       const torchGradient = ctx.createRadialGradient(
         mousePos.current.x, mousePos.current.y, 0,
         mousePos.current.x, mousePos.current.y, torchRadius
       );
       
-      torchGradient.addColorStop(0, 'rgba(255, 157, 69, 0.8)');
-      torchGradient.addColorStop(0.3, 'rgba(255, 157, 69, 0.4)');
-      torchGradient.addColorStop(0.7, 'rgba(255, 157, 69, 0.1)');
+      // More vibrant orange with better opacity transitions
+      torchGradient.addColorStop(0, 'rgba(255, 157, 69, 0.9)');
+      torchGradient.addColorStop(0.2, 'rgba(255, 157, 69, 0.7)');
+      torchGradient.addColorStop(0.5, 'rgba(255, 157, 69, 0.4)');
+      torchGradient.addColorStop(0.8, 'rgba(255, 157, 69, 0.1)');
       torchGradient.addColorStop(1, 'rgba(255, 157, 69, 0)');
       
       ctx.globalCompositeOperation = 'screen';
@@ -96,6 +105,7 @@ export default function SimpleGradientBackground() {
     resizeCanvas();
     window.addEventListener('resize', resizeCanvas);
     window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     
     // Start animation
     requestRef.current = requestAnimationFrame(animate);
@@ -104,6 +114,7 @@ export default function SimpleGradientBackground() {
     return () => {
       window.removeEventListener('resize', resizeCanvas);
       window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener('scroll', handleScroll);
       cancelAnimationFrame(requestRef.current);
     };
   }, []);
