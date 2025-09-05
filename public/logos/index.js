@@ -1,45 +1,51 @@
-// Logo configuration for the LogoScroller component
 export const partnerLogos = [
   {
-    name: "Imperial College",
-    image: "/logos/imperial-college.png",
-    width: 200,
-    height: 80
-  },
-  {
     name: "Norton",
-    image: "/logos/norton.png",
-    width: 180,
-    height: 60
-  },
-  {
-    name: "Else",
-    image: "/logos/else.png",
-    width: 100,
-    height: 100
-  },
-  {
-    name: "Imperial Enterprise Lab",
-    image: "/logos/imperial-enterprise-lab.png",
-    width: 200,
-    height: 80
+    // Replace with actual image path once available
+    // image: "/logos/norton.png",
+    // width: 180,
+    // height: 60
   },
   {
     name: "Amazon",
-    image: "/logos/amazon.png",
-    width: 180,
-    height: 60
+    // Replace with actual image path once available
+    // image: "/logos/amazon.png",
+    // width: 180,
+    // height: 60
   },
   {
-    name: "The Scotch",
-    image: "/logos/scotch.png",
-    width: 100,
-    height: 100
+    name: "Trippl",
+    // Replace with actual image path once available
+    // image: "/logos/trippl.png",
+    // width: 180,
+    // height: 60
   },
   {
-    name: "Imperial",
-    image: "/logos/imperial.png",
-    width: 200,
-    height: 60
+    name: "EasyJet",
+    // Replace with actual image path once available
+    // image: "/logos/easyjet.png",
+    // width: 180,
+    // height: 60
+  },
+  {
+    name: "Good Engine",
+    // Replace with actual image path once available
+    // image: "/logos/good-engine.png",
+    // width: 180,
+    // height: 60
+  },
+  {
+    name: "Base360.AI",
+    // Replace with actual image path once available
+    // image: "/logos/base360.png",
+    // width: 180,
+    // height: 60
+  },
+  {
+    name: "Beautiful AI",
+    // Replace with actual image path once available
+    // image: "/logos/beautiful-ai.png",
+    // width: 180,
+    // height: 60
   }
 ];

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from '../../components/Button';
 import Badge from '../../components/Badge';
 

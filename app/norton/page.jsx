@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from '../../components/Button';
 import Badge from '../../components/Badge';
 
@@ -8,24 +9,34 @@ export default function NortonCaseStudy() {
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
+          <p className="text-sm uppercase tracking-wider text-gray-400 mb-2">ARTURO CANO</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-yellow-400">"make my product feel</span><br/>
             <span className="text-yellow-400">smart and magical"</span>
           </h1>
-          <p className="text-xl mb-8">what I did for <span className="font-semibold">Genie</span></p>
+          <p className="text-xl mb-12">what I did for <span className="font-semibold">Genie</span></p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-black bg-opacity-20 p-6 rounded-lg border border-gray-700">
               <h3 className="text-sm font-semibold mb-2">Research & Strategy</h3>
               <p className="text-sm text-gray-300">Studied how AI-led intelligence can augment human decision-making in scam detection.</p>
+              <div className="mt-4">
+                <a href="#" className="text-xs text-yellow-400 hover:underline">Discover →</a>
+              </div>
             </div>
             <div className="bg-black bg-opacity-20 p-6 rounded-lg border border-gray-700">
               <h3 className="text-sm font-semibold mb-2">Design the orb</h3>
               <p className="text-sm text-gray-300">Made Genie's UI dynamic with fine orb animation that responds with intelligence.</p>
+              <div className="mt-4">
+                <a href="#" className="text-xs text-yellow-400 hover:underline">Discover →</a>
+              </div>
             </div>
             <div className="bg-black bg-opacity-20 p-6 rounded-lg border border-gray-700">
               <h3 className="text-sm font-semibold mb-2">Polish the cards</h3>
               <p className="text-sm text-gray-300">Built anticipation, then a clear result that feels smart and magical.</p>
+              <div className="mt-4">
+                <a href="#" className="text-xs text-yellow-400 hover:underline">Discover →</a>
+              </div>
             </div>
           </div>
         </div>
@@ -34,9 +45,15 @@ export default function NortonCaseStudy() {
       {/* Main Content */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="aspect-video bg-black bg-opacity-30 rounded-lg flex items-center justify-center mb-12">
-            {/* Placeholder for Norton Genie screenshot/mockup */}
-            <p className="text-gray-400">Norton Genie App Screenshot</p>
+          <div className="aspect-video rounded-lg mb-12 relative overflow-hidden">
+            <Image 
+              src="/images/norton/orb_ball_text.svg"
+              alt="Norton Genie Orb"
+              width={1200}
+              height={675}
+              className="object-contain w-full"
+              priority
+            />
           </div>
           
           <h2 className="text-2xl font-bold mb-6">Your personal AI-powered scam detector</h2>
@@ -87,16 +104,50 @@ export default function NortonCaseStudy() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
             <div>
-              <div className="aspect-[9/16] bg-black bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
-                <p className="text-gray-400">Phone Mockup 1</p>
+              <div className="aspect-[9/16] rounded-lg mb-4 relative">
+                <div className="relative w-full h-full">
+                  <Image 
+                    src="/images/norton/Phone Frame.png"
+                    alt="Phone Frame"
+                    width={375}
+                    height={812}
+                    className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <Image 
+                      src="/images/norton/intro_page.png"
+                      alt="Hello screen with the orb assistant ready to help"
+                      width={340}
+                      height={740}
+                      className="object-contain max-h-[95%] rounded-[22px]"
+                    />
+                  </div>
+                </div>
               </div>
               <p className="text-sm text-gray-400">
                 Hello screen with the orb assistant ready to help
               </p>
             </div>
             <div>
-              <div className="aspect-[9/16] bg-black bg-opacity-30 rounded-lg flex items-center justify-center mb-4">
-                <p className="text-gray-400">Phone Mockup 2</p>
+              <div className="aspect-[9/16] rounded-lg mb-4 relative">
+                <div className="relative w-full h-full">
+                  <Image 
+                    src="/images/norton/Phone Frame.png"
+                    alt="Phone Frame"
+                    width={375}
+                    height={812}
+                    className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <Image 
+                      src="/images/norton/landing_page.png"
+                      alt="Last week I flagged 23,735 scams"
+                      width={340}
+                      height={740}
+                      className="object-contain max-h-[95%] rounded-[22px]"
+                    />
+                  </div>
+                </div>
               </div>
               <p className="text-sm text-gray-400">
                 Last week I flagged 23,735 scams. I'm getting better at this every day!
@@ -108,8 +159,25 @@ export default function NortonCaseStudy() {
             <h3 className="text-xl font-bold mb-4">Like magic, Genie will detect possible scams in seconds</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="aspect-[9/16] bg-gray-900 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Scam Detection Screen</p>
+              <div className="aspect-[9/16] rounded-lg relative">
+                <div className="relative w-full h-full">
+                  <Image 
+                    src="/images/norton/Phone Frame.png"
+                    alt="Phone Frame"
+                    width={375}
+                    height={812}
+                    className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
+                  />
+                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
+                    <Image 
+                      src="/images/norton/assess_scam_page.png"
+                      alt="Scam Detection Screen"
+                      width={340}
+                      height={740}
+                      className="object-contain max-h-[95%] rounded-[22px]"
+                    />
+                  </div>
+                </div>
               </div>
               <div>
                 <p className="text-base mb-6">
@@ -126,13 +194,45 @@ export default function NortonCaseStudy() {
             <h3 className="text-xl font-bold mb-4">Get tips on what to do next & ask Genie your follow up questions</h3>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Diagnostics Screen</p>
+              <div className="aspect-video rounded-lg relative overflow-hidden">
+                <Image 
+                  src="/images/norton/deal_with_scam.png"
+                  alt="Diagnostics Screen"
+                  width={800}
+                  height={450}
+                  className="object-contain w-full"
+                />
               </div>
-              <div className="aspect-video bg-gray-900 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Recommendations Screen</p>
+              <div className="aspect-video rounded-lg relative overflow-hidden">
+                <Image 
+                  src="/images/norton/T3 Uploading Input.png"
+                  alt="Recommendations Screen"
+                  width={800}
+                  height={450}
+                  className="object-contain w-full"
+                />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Video Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <h3 className="text-xl font-bold mb-6">Watch the product in action</h3>
+          <div className="aspect-video rounded-lg overflow-hidden bg-black">
+            <video 
+              controls
+              className="w-full h-full"
+              poster="/images/norton/orb_ball_text.svg"
+            >
+              <source 
+                src="/images/norton/Introducing Norton Genie â__ Real-Time AI-powered Scam Detection at Your Fingertips.mp4" 
+                type="video/mp4" 
+              />
+              Your browser does not support the video tag.
+            </video>
           </div>
         </div>
       </section>

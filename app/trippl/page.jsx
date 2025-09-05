@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from '../../components/Button';
 import Badge from '../../components/Badge';
 
@@ -8,66 +9,54 @@ export default function TripplCaseStudy() {
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
+          <p className="text-sm uppercase tracking-wider text-purple-400 mb-2">ARTURO CANO</p>
           <h1 className="text-4xl md:text-5xl font-bold mb-4">
             <span className="text-purple-400">Built an app with</span><br/>
             <span className="text-purple-400">real social impact</span>
           </h1>
           <p className="text-xl mb-8">My female friends felt unsafe and often spent too much on taxis alone at night. During my Master's, I launched a platform that matches people traveling the same way to make urban transit safe and affordable.</p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-8">
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">6</div>
-                <div className="metric-label">Live Pilots</div>
-              </div>
-            </div>
-            
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">500+</div>
-                <div className="metric-label">Beta Users</div>
-              </div>
-            </div>
-            
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">4</div>
-                <div className="metric-label">Partnerships</div>
-              </div>
+          <div className="flex flex-wrap gap-4 mb-8">
+            <Button href="#video" variant="primary" className="bg-purple-600 hover:bg-purple-700">
+              Watch Demo
+            </Button>
+            <Button href="#details" variant="outline" className="text-purple-400 hover:text-white border-purple-400 hover:border-white">
+              See Case Study
+            </Button>
+          </div>
+
+          <div className="relative mt-12 mb-8">
+            <div className="relative rounded-lg overflow-hidden shadow-xl">
+              <Image 
+                src="/images/trippl/Iphone_Mockup.png"
+                alt="Trippl App Mockup"
+                width={400}
+                height={800}
+                className="mx-auto"
+                priority
+              />
             </div>
           </div>
-          
-          <Button href="#details" variant="outline" className="text-purple-400 hover:text-white">
-            See details
-          </Button>
         </div>
       </section>
       
       {/* Video Section */}
-      <section className="py-10">
+      <section id="video" className="py-10">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="aspect-video bg-black bg-opacity-30 rounded-lg flex items-center justify-center mb-12">
-            {/* Placeholder for Trippl video */}
-            <div className="flex flex-col items-center justify-center">
-              <svg className="w-16 h-16 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-              </svg>
-              <p className="text-gray-400 mt-2">Video Placeholder</p>
+          <div className="aspect-video rounded-lg overflow-hidden mb-12 relative">
+            <video 
+              controls
+              className="w-full h-full"
+              poster="/images/trippl/Meeting point.png"
+            >
+              <source 
+                src="/images/trippl/pitch_imperial.MOV" 
+                type="video/quicktime" 
+              />
+              Your browser does not support the video tag.
+            </video>
+            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4">
+              <p className="text-white text-sm">what I did</p>
             </div>
           </div>
         </div>
@@ -79,28 +68,28 @@ export default function TripplCaseStudy() {
           <h2 className="text-2xl font-bold mb-6">what I did</h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-purple-900 bg-opacity-50 p-6 rounded-lg border border-purple-800">
+            <div className="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-lg">
               <h3 className="text-sm font-semibold mb-2">Built the core algorithm</h3>
-              <p className="text-sm text-gray-300 mb-4">Designed and coded the algorithm to match users based on their routes and timing, ensuring optimal pairings.</p>
+              <p className="text-sm text-gray-100 mb-4">Designed and coded the algorithm to match users based on their routes and timing, ensuring optimal pairings.</p>
               <div className="flex gap-2">
-                <span className="text-xs bg-purple-800 px-2 py-1 rounded">Python</span>
-                <span className="text-xs bg-purple-800 px-2 py-1 rounded">Firebase</span>
+                <span className="text-xs bg-purple-900 bg-opacity-50 px-2 py-1 rounded">Python</span>
+                <span className="text-xs bg-purple-900 bg-opacity-50 px-2 py-1 rounded">Firebase</span>
               </div>
             </div>
-            <div className="bg-purple-900 bg-opacity-50 p-6 rounded-lg border border-purple-800">
+            <div className="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-lg">
               <h3 className="text-sm font-semibold mb-2">Created, tested and iterated the design</h3>
-              <p className="text-sm text-gray-300 mb-4">Created the full UI and UX flow using feedback from user testing groups to refine the design.</p>
+              <p className="text-sm text-gray-100 mb-4">Created the full UI and UX flow using feedback from user testing groups to refine the design.</p>
               <div className="flex gap-2">
-                <span className="text-xs bg-purple-800 px-2 py-1 rounded">Figma</span>
-                <span className="text-xs bg-purple-800 px-2 py-1 rounded">UserTesting</span>
+                <span className="text-xs bg-purple-900 bg-opacity-50 px-2 py-1 rounded">Figma</span>
+                <span className="text-xs bg-purple-900 bg-opacity-50 px-2 py-1 rounded">UserTesting</span>
               </div>
             </div>
-            <div className="bg-purple-900 bg-opacity-50 p-6 rounded-lg border border-purple-800">
+            <div className="bg-gradient-to-br from-purple-800 to-purple-600 p-6 rounded-lg">
               <h3 className="text-sm font-semibold mb-2">Launched in the real world</h3>
-              <p className="text-sm text-gray-300 mb-4">Ran live pilots in venues across London helping students get home safely with real-time matching, verification and guidance.</p>
+              <p className="text-sm text-gray-100 mb-4">Ran live pilots in venues across London helping students get home safely with real-time matching, verification and guidance.</p>
               <div className="flex gap-2">
-                <span className="text-xs bg-purple-800 px-2 py-1 rounded">React Native</span>
-                <span className="text-xs bg-purple-800 px-2 py-1 rounded">Expo</span>
+                <span className="text-xs bg-purple-900 bg-opacity-50 px-2 py-1 rounded">React Native</span>
+                <span className="text-xs bg-purple-900 bg-opacity-50 px-2 py-1 rounded">Expo</span>
               </div>
             </div>
           </div>
@@ -125,11 +114,60 @@ export default function TripplCaseStudy() {
           </p>
           
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-            {[1, 2, 3, 4, 5, 6].map((idx) => (
-              <div key={idx} className="aspect-square bg-black bg-opacity-30 rounded-lg flex items-center justify-center">
-                <p className="text-gray-400">Trippl Image {idx}</p>
-              </div>
-            ))}
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <Image 
+                src="/images/trippl/Enter_ride.png"
+                alt="Trippl App Enter Ride Screen"
+                width={300}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <Image 
+                src="/images/trippl/loading_screen.png"
+                alt="Trippl App Loading Screen"
+                width={300}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <Image 
+                src="/images/trippl/north.png"
+                alt="Trippl App North Screen"
+                width={300}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <Image 
+                src="/images/trippl/bathroom.png"
+                alt="Trippl Event Location"
+                width={300}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <Image 
+                src="/images/trippl/Meeting point.png"
+                alt="Trippl Meeting Point"
+                width={300}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
+            <div className="aspect-square rounded-lg overflow-hidden">
+              <Image 
+                src="/images/trippl/prize.JPG"
+                alt="Trippl Prize Ceremony"
+                width={300}
+                height={300}
+                className="object-cover w-full h-full"
+              />
+            </div>
           </div>
           
           <p className="text-base mb-6">
@@ -137,20 +175,88 @@ export default function TripplCaseStudy() {
           </p>
           
           <p className="text-base mb-12">
-            This journey led me to realize that products built using the app on their phones. Realtime at venues, friends full of people at each venue, each with their own phone. How these friends interact is a design model that's worth exploring. This is a design model that's worth exploring. This is a design model that's a product tested in the world, with students relying on it to get home safe.
+            This journey led me to realize that products built for safety need to be tested in the real world. Realtime at venues, friends full of people at each venue, each with their own phone. How these friends interact is a design model that's worth exploring. This was a product tested in the world, with students relying on it to get home safe.
           </p>
           
-          <div className="aspect-video bg-black bg-opacity-30 rounded-lg flex items-center justify-center mb-12">
-            <p className="text-gray-400">Trippl App Demo</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="aspect-[9/16] rounded-lg overflow-hidden">
+              <video 
+                controls
+                className="w-full h-full object-cover"
+                poster="/images/trippl/Enter_ride.png"
+              >
+                <source 
+                  src="/images/trippl/pitch_outside.MOV" 
+                  type="video/quicktime" 
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="aspect-[9/16] rounded-lg overflow-hidden">
+              <video 
+                controls
+                className="w-full h-full object-cover"
+                poster="/images/trippl/loading_screen.png"
+              >
+                <source 
+                  src="/images/trippl/protest.MOV" 
+                  type="video/quicktime" 
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
           </div>
         </div>
       </section>
       
+      {/* Metrics Section */}
+      <section className="py-16">
+        <div className="max-w-4xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="metric-pill bg-purple-900 bg-opacity-40">
+              <div className="metric-icon">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"></path>
+                </svg>
+              </div>
+              <div>
+                <div className="metric-number">6</div>
+                <div className="metric-label">Live Pilots</div>
+              </div>
+            </div>
+            
+            <div className="metric-pill bg-purple-900 bg-opacity-40">
+              <div className="metric-icon">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                </svg>
+              </div>
+              <div>
+                <div className="metric-number">500+</div>
+                <div className="metric-label">Beta Users</div>
+              </div>
+            </div>
+            
+            <div className="metric-pill bg-purple-900 bg-opacity-40">
+              <div className="metric-icon">
+                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"></path>
+                </svg>
+              </div>
+              <div>
+                <div className="metric-number">4</div>
+                <div className="metric-label">Partnerships</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Footer CTA */}
       <section className="py-16 border-t border-gray-700 bg-black bg-opacity-10">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
-          <Button href="/contact" variant="primary">Get in touch</Button>
+          <Button href="/contact" variant="primary" className="bg-purple-600 hover:bg-purple-700">Get in touch</Button>
         </div>
       </section>
     </div>
