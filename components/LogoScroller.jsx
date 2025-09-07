@@ -47,7 +47,7 @@ export default function LogoScroller({ logos = [], speed = 0.5 }) {
   }, [speed]);
 
   return (
-    <div className="logo-scroller-container overflow-hidden w-full py-4">
+    <div className="logo-scroller-container overflow-hidden w-full py-8">
       <div 
         ref={scrollerRef}
         className="logo-scroller flex whitespace-nowrap"
@@ -57,16 +57,17 @@ export default function LogoScroller({ logos = [], speed = 0.5 }) {
           {logos.map((logo, index) => (
             <div 
               key={index} 
-              className="logo-item flex-shrink-0 mx-24 flex items-center justify-center"
+              className="logo-item flex-shrink-0 mx-32 flex items-center justify-center"
             >
               {logo.image ? (
-                <div className="relative h-24 w-auto flex items-center">
+                <div className="relative h-28 w-auto flex items-center">
                   <Image 
                     src={logo.image} 
                     alt={logo.name} 
                     width={logo.width || 200}
                     height={logo.height || 100}
                     className="object-contain"
+                    style={{ maxHeight: '100px' }}
                   />
                 </div>
               ) : (

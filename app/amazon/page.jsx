@@ -1,10 +1,10 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import Badge from '../../components/Badge';
 import { useRef, useEffect } from 'react';
-
-"use client";
 
 export default function AmazonCaseStudy() {
   const businessReviewsRef = useRef(null);
@@ -63,7 +63,7 @@ export default function AmazonCaseStudy() {
           <p className="text-xl mb-8">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual tasks, saving time and increasing team efficiency.</p>
           
           <div className="relative w-full overflow-hidden mb-12">
-            <div ref={scrollerRef} className="flex gap-4 overflow-x-auto pb-4 snap-x scrollbar-hide">
+            <div ref={scrollerRef} className="flex gap-6 overflow-x-auto pb-4 snap-x scrollbar-hide" style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
               {/* Business Reviews Card */}
               <div 
                 className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform"
@@ -481,7 +481,13 @@ export default function AmazonCaseStudy() {
       <section className="py-16 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
-          <Button href="/contact" variant="primary">Get in touch</Button>
+          <Button href="/contact" variant="primary" className="btn-amazon">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            Get in touch
+          </Button>
         </div>
       </section>
     </div>

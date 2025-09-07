@@ -6,21 +6,29 @@ export default function Button({
   href, 
   variant = 'primary', 
   className = '',
-  onClick
+  onClick,
+  icon
 }) {
   const baseClass = `btn btn-${variant} ${className}`;
+  
+  const content = (
+    <>
+      {icon && <span className="mr-2">{icon}</span>}
+      {children}
+    </>
+  );
   
   if (href) {
     return (
       <a href={href} className={baseClass}>
-        {children}
+        {content}
       </a>
     );
   }
   
   return (
     <button onClick={onClick} className={baseClass}>
-      {children}
+      {content}
     </button>
   );
 }

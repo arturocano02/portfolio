@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
@@ -9,7 +11,7 @@ export default function NortonCaseStudy() {
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
             <span className="text-white">"make my product feel</span><br/>
             <span className="text-white">smart and magical"</span>
           </h1>
@@ -272,7 +274,13 @@ export default function NortonCaseStudy() {
       <section className="py-16 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
-          <Button href="/contact" variant="primary">Get in touch</Button>
+          <Button href="/contact" variant="primary" className="btn-norton">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            Get in touch
+          </Button>
         </div>
       </section>
     </div>
