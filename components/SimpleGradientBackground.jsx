@@ -17,11 +17,11 @@ export default function SimpleGradientBackground() {
     let width = window.innerWidth;
     let height = window.innerHeight;
     
-    // Colors that match the image reference - teal to orange to pink gradient
-    const primaryColor = '#FF9D45'; // Orange for mouse follow
-    const topColor = '#4ECDC4'; // Teal for top
-    const middleColor = '#FF9D45'; // Orange for middle
-    const bottomColor = '#FF6B81'; // Pink for bottom
+    // Colors for turquoise gradient with torch effect
+    const primaryColor = '#00D4FF'; // Cyan for mouse follow
+    const topColor = '#2A7A8A'; // Brighter turquoise for top
+    const middleColor = '#1A6B7A'; // Medium turquoise for middle
+    const bottomColor = '#0A4B5C'; // Darker turquoise for bottom
     
     const resizeCanvas = () => {
       width = window.innerWidth;
@@ -82,12 +82,12 @@ export default function SimpleGradientBackground() {
         mousePos.current.x, mousePos.current.y, torchRadius
       );
       
-      // More vibrant orange with better opacity transitions
-      torchGradient.addColorStop(0, 'rgba(255, 157, 69, 0.9)');
-      torchGradient.addColorStop(0.2, 'rgba(255, 157, 69, 0.7)');
-      torchGradient.addColorStop(0.5, 'rgba(255, 157, 69, 0.4)');
-      torchGradient.addColorStop(0.8, 'rgba(255, 157, 69, 0.1)');
-      torchGradient.addColorStop(1, 'rgba(255, 157, 69, 0)');
+      // Cyan glow with better opacity transitions
+      torchGradient.addColorStop(0, 'rgba(0, 212, 255, 0.9)');
+      torchGradient.addColorStop(0.2, 'rgba(0, 212, 255, 0.7)');
+      torchGradient.addColorStop(0.5, 'rgba(0, 212, 255, 0.4)');
+      torchGradient.addColorStop(0.8, 'rgba(0, 212, 255, 0.1)');
+      torchGradient.addColorStop(1, 'rgba(0, 212, 255, 0)');
       
       ctx.globalCompositeOperation = 'screen';
       ctx.fillStyle = torchGradient;

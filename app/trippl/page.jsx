@@ -13,7 +13,7 @@ export default function TripplCaseStudy() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+              <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
                 <span className="text-white">Built an app with</span><br/>
                 <span className="text-white">real social impact</span>
               </h1>

@@ -3,7 +3,7 @@ import React from 'react';
 import Image from 'next/image';
 import { useRef, useEffect } from 'react';
 
-export default function LogoScroller({ logos = [], speed = 0.5 }) {
+export default function LogoScroller({ logos = [], speed = 0.7 }) {
   const scrollerRef = useRef(null);
   const innerRef = useRef(null);
 
@@ -57,7 +57,7 @@ export default function LogoScroller({ logos = [], speed = 0.5 }) {
           {logos.map((logo, index) => (
             <div 
               key={index} 
-              className="logo-item flex-shrink-0 mx-32 flex items-center justify-center"
+              className="logo-item flex-shrink-0 mx-20 flex items-center justify-center"
             >
               {logo.image ? (
                 <div className="relative h-28 w-auto flex items-center">

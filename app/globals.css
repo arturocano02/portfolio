@@ -15,42 +15,44 @@
 }
 
 :root {
-  /* Core colors - Apple-inspired palette */
-  --bg-dark: #000000;
-  --text: #ffffff;
-  --accent: #0A84FF; /* Apple blue */
-  --accent-soft: rgba(10, 132, 255, 0.8);
-  --accent-hover: #007AFF; /* Slightly darker blue */
-  --glass-bg: rgba(255, 255, 255, 0.06);
-  --glass-border: rgba(255, 255, 255, 0.12);
+  /* Core colors - Turquoise gradient with torch effect */
+  --bg-dark: #0A4B5C; /* Dark turquoise */
+  --bg-dark-blue: #1A6B7A; /* Medium turquoise */
+  --text: #FFFFFF; /* Pure white */
+  --text-secondary: #B8D4D9; /* Light turquoise */
+  --accent: #00D4FF; /* Cyan accent */
+  --accent-soft: rgba(0, 212, 255, 0.8);
+  --accent-hover: #00B8E6; /* Slightly darker cyan */
+  --glass-bg: rgba(255, 255, 255, 0.08); /* Visible glass effect */
+  --glass-border: rgba(255, 255, 255, 0.15); /* Visible border */
   
-  /* Secondary accent colors - Apple-inspired */
-  --accent-green: #30D158; /* Apple green */
-  --accent-orange: #FF9F0A; /* Apple orange */
-  --accent-purple: #BF5AF2; /* Apple purple */
-  --accent-pink: #FF375F; /* Apple pink */
-  --accent-teal: #64D2FF; /* Apple teal */
+  /* Minimal accent colors */
+  --accent-green: #00FF88; /* Bright green */
+  --accent-orange: #FF6B35; /* Orange */
+  --accent-purple: #8B5CF6; /* Purple */
+  --accent-pink: #FF3B82; /* Pink */
+  --accent-teal: #00D4FF; /* Cyan */
   
-  /* Spacing - enhanced for full-screen sections */
+  /* Spacing - reduced for better horizontal use */
   --spacing-xs: 0.5rem;
   --spacing-sm: 1rem;
   --spacing-md: 1.5rem;
   --spacing-lg: 2rem;
-  --spacing-xl: 3rem;
-  --spacing-xxl: 5rem;
+  --spacing-xl: 2.5rem;
+  --spacing-xxl: 3rem;
   --spacing-section: 100vh;
   --spacing-section-compact: 90vh;
   
-  /* Project-specific accents */
-  --accent-norton: #FFD700; /* Gold for Norton */
-  --accent-trippl: #BF5AF2; /* Purple for Trippl - updated to Apple purple */
-  --accent-amazon: #FF9F0A; /* Orange for Amazon - updated to Apple orange */
+  /* Project-specific accents - minimal */
+  --accent-norton: #00FF88; /* Green for Norton */
+  --accent-trippl: #8B5CF6; /* Purple for Trippl */
+  --accent-amazon: #FF6B35; /* Orange for Amazon */
   
-  /* New colors from reference - updated to Apple palette */
-  --gradient-top: #64D2FF; /* Apple teal */
-  --gradient-bottom: #FF9F0A; /* Apple orange */
-  --purple-accent: #BF5AF2; /* Apple purple */
-  --pink-accent: #FF375F; /* Apple pink */
+  /* Gradient colors - turquoise with torch effect */
+  --gradient-top: #2A7A8A; /* Brighter turquoise */
+  --gradient-bottom: #0A4B5C; /* Darker turquoise */
+  --purple-accent: #8B5CF6; /* Purple */
+  --pink-accent: #FF3B82; /* Pink */
 }
 
 /* Base styles */
@@ -61,35 +63,36 @@ html, body, #__next {
 
 body {
   margin: 0;
-  background: var(--bg-dark);
+  background: linear-gradient(135deg, var(--bg-dark-blue) 0%, var(--bg-dark) 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   line-height: 1.6;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 
 /* Typography - Apple-inspired */
 h1, h2, h3, h4, h5, h6 {
-  font-weight: 600; /* Apple uses slightly lighter weights */
-  line-height: 1.3; /* Increased line height to prevent descenders from being cut off */
+  font-weight: 600;
+  line-height: 1.4;
   margin-top: 0;
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   letter-spacing: -0.02em;
-  padding-bottom: 0.2em; /* Added padding to ensure descenders are visible */
+  padding-bottom: 0.2em;
 }
 
 h1 {
   font-size: 3.5rem;
-  font-weight: 700; /* Bold but not extra bold */
+  font-weight: 700;
   letter-spacing: -0.03em;
-  background: linear-gradient(90deg, var(--text) 0%, rgba(255, 255, 255, 0.8) 100%);
+  background: linear-gradient(90deg, var(--text) 0%, var(--accent) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  padding-bottom: 0.3em; /* Extra padding for h1 to ensure descenders are visible */
-  line-height: 1.4; /* Increased line height specifically for h1 */
+  padding-bottom: 0.3em;
+  line-height: 1.4;
 }
 
 h2 {
@@ -107,62 +110,66 @@ h3 {
 }
 
 p {
-  margin-bottom: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
   font-weight: 400;
-  color: rgba(255, 255, 255, 0.9);
-  line-height: 1.7;
-  padding-bottom: 0.2em; /* Added padding to ensure descenders are visible */
+  color: var(--text-secondary);
+  line-height: 1.8;
+  padding-bottom: 0.2em;
+  max-width: 65ch;
 }
 
 /* Glassmorphism for readability - Apple-inspired */
 .glass {
   background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  border-radius: 20px; /* More rounded corners like Apple */
-  padding: var(--spacing-lg) var(--spacing-lg);
-  margin: var(--spacing-md);
-  backdrop-filter: blur(20px); /* Stronger blur like Apple */
+  border-radius: 16px;
+  padding: var(--spacing-xl) var(--spacing-xl);
+  margin: var(--spacing-lg);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
 }
 
 .glass-card {
-  background: rgba(30, 30, 35, 0.6); /* Slightly lighter */
+  background: var(--glass-bg);
   border: 1px solid var(--glass-border);
-  border-radius: 20px;
-  padding: var(--spacing-lg);
-  margin: var(--spacing-md);
+  border-radius: 16px;
+  padding: var(--spacing-xl);
+  margin: var(--spacing-lg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   transition: all 0.3s ease;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.4);
 }
 
 .glass-card:hover {
   transform: translateY(-4px);
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent);
+  background: rgba(0, 212, 255, 0.05);
 }
 
 /* Metric pill with glassmorphism effect - Apple-inspired */
 .metric-pill {
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--glass-bg);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--glass-border);
   border-radius: 16px;
-  padding: 1.25rem 1.75rem;
+  padding: 1.5rem 2rem;
   display: flex;
   align-items: center;
-  gap: 1.25rem;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  gap: 1.5rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
+  margin: var(--spacing-sm);
 }
 
 .metric-pill:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border-color: var(--accent);
+  background: rgba(0, 212, 255, 0.05);
 }
 
 .metric-number {
@@ -255,34 +262,35 @@ input:focus, textarea:focus, select:focus {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-hover) 100%);
+  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
   color: white;
-  box-shadow: 0 2px 12px rgba(10, 132, 255, 0.3);
+  box-shadow: 0 2px 12px rgba(255, 107, 53, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 20px rgba(10, 132, 255, 0.5);
+  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.6);
+  background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
 }
 
 .btn-primary:active {
   transform: translateY(1px) scale(0.98);
-  box-shadow: 0 2px 8px rgba(10, 132, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.4);
 }
 
 .btn-outline {
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  color: white;
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  color: var(--text);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .btn-outline:hover {
-  background: rgba(255, 255, 255, 0.15);
+  background: rgba(0, 212, 255, 0.1);
   transform: translateY(-2px) scale(1.02);
-  border-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  border-color: var(--accent);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
 }
 
 .btn-outline:active {
@@ -291,18 +299,21 @@ input:focus, textarea:focus, select:focus {
 
 /* Project-specific button styles */
 .btn-norton {
-  background: linear-gradient(135deg, var(--accent-norton) 0%, #FFA500 100%);
+  background: linear-gradient(135deg, #1A2F52 0%, var(--accent-norton) 100%);
   color: #000;
+  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.3);
 }
 
 .btn-trippl {
-  background: linear-gradient(135deg, var(--accent-purple) 0%, #9333EA 100%);
+  background: linear-gradient(135deg, #1A2F52 0%, var(--accent-purple) 100%);
   color: white;
+  box-shadow: 0 2px 12px rgba(191, 90, 242, 0.3);
 }
 
 .btn-amazon {
-  background: linear-gradient(135deg, var(--accent-amazon) 0%, #FF6B00 100%);
+  background: linear-gradient(135deg, #1A2F52 0%, var(--accent-amazon) 100%);
   color: white;
+  box-shadow: 0 2px 12px rgba(255, 159, 10, 0.3);
 }
 
 /* Badge styles - Apple-inspired */
@@ -310,26 +321,27 @@ input:focus, textarea:focus, select:focus {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.25rem;
   border-radius: 9999px;
   font-size: 0.875rem;
   font-weight: 500;
-  margin-right: 0.75rem;
-  margin-bottom: 0.75rem;
-  background-color: rgba(255, 255, 255, 0.08);
-  color: white;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-right: var(--spacing-sm);
+  margin-bottom: var(--spacing-sm);
+  background-color: var(--glass-bg);
+  color: var(--text-secondary);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
   transition: all 0.2s ease;
-  border: 1px solid rgba(255, 255, 255, 0.12);
+  border: 1px solid var(--glass-border);
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
 .badge:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
-  background-color: rgba(255, 255, 255, 0.12);
-  border-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 212, 255, 0.1);
+  border-color: var(--accent);
+  color: var(--accent);
 }
 
 .badge-icon {
@@ -607,4 +619,37 @@ input:focus, textarea:focus, select:focus {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Floating animations for icons */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-float-delay-1 {
+  animation: float 3s ease-in-out 0.6s infinite;
+}
+
+.animate-float-delay-2 {
+  animation: float 3s ease-in-out 1.2s infinite;
+}
+
+.animate-float-delay-3 {
+  animation: float 3s ease-in-out 1.8s infinite;
+}
+
+.animate-float-delay-4 {
+  animation: float 3s ease-in-out 2.4s infinite;
 }

@@ -20,175 +20,99 @@ export default function AmazonCaseStudy() {
     }
   };
   
-  useEffect(() => {
-    if (!scrollerRef.current) return;
-    
-    const scrollContainer = scrollerRef.current;
-    let animationId;
-    let scrollPosition = 0;
-    const scrollSpeed = 0.5;
-    
-    const scroll = () => {
-      scrollPosition += scrollSpeed;
-      
-      // Reset when we've scrolled a certain amount
-      if (scrollPosition >= 100) {
-        // Jump back but not completely to 0 to avoid visual jump
-        scrollContainer.scrollLeft = 0;
-        scrollPosition = 0;
-      } else {
-        scrollContainer.scrollLeft = scrollPosition;
-      }
-      
-      animationId = requestAnimationFrame(scroll);
-    };
-    
-    scroll();
-    
-    return () => {
-      if (animationId) {
-        cancelAnimationFrame(animationId);
-      }
-    };
-  }, []);
+  // No longer need the scrolling effect since we're using floating icons instead
   
   return (
     <div>
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
             <span className="text-orange-400">using AI to automate the boring tasks</span>
           </h1>
           <p className="text-xl mb-8">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual tasks, saving time and increasing team efficiency.</p>
           
-          <div className="relative w-full overflow-hidden mb-12">
-            <div ref={scrollerRef} className="flex gap-6 overflow-x-auto pb-4 snap-x scrollbar-hide" style={{ paddingLeft: '1rem', paddingRight: '1rem' }}>
-              {/* Business Reviews Card */}
+          <div className="flex justify-center items-center gap-8 mb-12">
+            <div className="flex flex-wrap justify-center gap-8">
+              {/* Business Reviews Icon */}
               <div 
-                className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => scrollToSection(businessReviewsRef)}
+                className="cursor-pointer group"
               >
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/business analytics on tablet screen.png"
-                      alt="Business Reviews"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Business Reviews</h3>
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full p-5 flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl animate-float">
+                  <Image 
+                    src="/icons/business analytics on tablet screen.png"
+                    alt="Business Reviews"
+                    width={60}
+                    height={60}
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
               
-              {/* Slack Bot Card */}
+              {/* Slack Bot Icon */}
               <div 
-                className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => scrollToSection(slackBotRef)}
+                className="cursor-pointer group"
               >
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/artificial intelligence on tablet screen.png"
-                      alt="Slack Bot"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Slack Bot Automation</h3>
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full p-5 flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl animate-float-delay-1">
+                  <Image 
+                    src="/icons/artificial intelligence on tablet screen.png"
+                    alt="Slack Bot"
+                    width={60}
+                    height={60}
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
               
-              {/* Leadership Briefing Card */}
+              {/* Leadership Briefing Icon */}
               <div 
-                className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => scrollToSection(leadershipBriefingRef)}
+                className="cursor-pointer group"
               >
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/Business tools for risk assessment and management.png"
-                      alt="Leadership Briefing"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Leadership Briefing</h3>
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full p-5 flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl animate-float-delay-2">
+                  <Image 
+                    src="/icons/Business tools for risk assessment and management.png"
+                    alt="Leadership Briefing"
+                    width={60}
+                    height={60}
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
               
-              {/* Newsletter Card */}
+              {/* Newsletter Icon */}
               <div 
-                className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => scrollToSection(newsletterRef)}
+                className="cursor-pointer group"
               >
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/email marketing and newsletter with new message.png"
-                      alt="Newsletter"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Newsletter Automation</h3>
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full p-5 flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl animate-float-delay-3">
+                  <Image 
+                    src="/icons/email marketing and newsletter with new message.png"
+                    alt="Newsletter"
+                    width={60}
+                    height={60}
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
               
-              {/* Stakeholder Map Card */}
+              {/* Stakeholder Map Icon */}
               <div 
-                className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform"
                 onClick={() => scrollToSection(stakeholderMapRef)}
+                className="cursor-pointer group"
               >
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/Project management, team work and idea generation.png"
-                      alt="Stakeholder Map"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Interactive Stakeholder Map</h3>
+                <div className="w-20 h-20 bg-gradient-to-br from-orange-400 to-orange-500 rounded-full p-5 flex items-center justify-center shadow-lg transform transition-all duration-300 group-hover:scale-110 group-hover:shadow-xl animate-float-delay-4">
+                  <Image 
+                    src="/icons/Project management, team work and idea generation.png"
+                    alt="Stakeholder Map"
+                    width={60}
+                    height={60}
+                    className="w-14 h-14 object-contain"
+                  />
                 </div>
               </div>
-              
-              {/* Duplicate cards for infinite scroll effect */}
-              <div className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform">
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/business analytics on tablet screen.png"
-                      alt="Business Reviews"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Business Reviews</h3>
-                </div>
-        </div>
-              
-              <div className="flex-shrink-0 w-36 bg-orange-500 rounded-lg overflow-hidden snap-center cursor-pointer hover:scale-105 transition-transform">
-                <div className="p-4 flex flex-col items-center justify-center h-48">
-                  <div className="bg-orange-400 bg-opacity-30 p-3 rounded-full mb-3">
-                    <Image 
-                      src="/icons/artificial intelligence on tablet screen.png"
-                      alt="Slack Bot"
-                      width={40}
-                      height={40}
-                      className="w-10 h-10 object-contain"
-                    />
-                  </div>
-                  <h3 className="text-center text-white font-medium">Slack Bot Automation</h3>
-            </div>
-            </div>
             </div>
           </div>
         </div>
