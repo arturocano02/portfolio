@@ -47,10 +47,10 @@ export default function HomePage() {
               </p>
               
               {/* Stats Pills - Horizontal */}
-              <div className="flex flex-wrap gap-4 mb-6">
+              <div className="flex flex-wrap gap-2 mb-6">
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                     </svg>
                   </div>
@@ -61,7 +61,7 @@ export default function HomePage() {
                 </div>
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                     </svg>
                   </div>
@@ -72,7 +72,7 @@ export default function HomePage() {
                 </div>
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5 text-orange-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11.14 12a4 4 0 01-2.28-7.33l.38.38a1 1 0 001.414-1.415l-.38-.38A4 4 0 0111.14 12z" clipRule="evenodd"></path>
                     </svg>
                   </div>
@@ -97,26 +97,15 @@ export default function HomePage() {
               </div>
             </div>
             
-            {/* Visuals - Right Side */}
-            <div className="lg:w-1/2 flex flex-col items-center gap-6">
-              {/* Take me a look - smaller image */}
-              <div className="w-full max-w-sm">
+            {/* Visual - Right Side */}
+            <div className="lg:w-1/2 flex justify-center">
+              <div className="w-full max-w-lg">
                 <Image 
-                  src="/images/norton/take_me_a_look.png"
-                  alt="Norton Take a Look"
-                  width={400}
-                  height={200}
-                  className="rounded-lg mx-auto"
-                />
-              </div>
-              {/* Analysing text - bigger image */}
-              <div className="w-full max-w-md">
-                <Image 
-                  src="/images/norton/analysing_text.png"
-                  alt="Norton Analysing Text"
-                  width={500}
-                  height={300}
-                  className="rounded-lg mx-auto"
+                  src="/images/norton/Visual_Home.svg"
+                  alt="Norton Genie Visual"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto"
                 />
               </div>
             </div>
@@ -142,7 +131,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 mb-6">
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
                     </svg>
                   </div>
@@ -153,7 +142,7 @@ export default function HomePage() {
                 </div>
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                     </svg>
                   </div>
@@ -164,7 +153,7 @@ export default function HomePage() {
                 </div>
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
                     </svg>
                   </div>
@@ -238,7 +227,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-4 mb-6">
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                     </svg>
                   </div>
@@ -249,7 +238,7 @@ export default function HomePage() {
                 </div>
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                     </svg>
                   </div>
@@ -260,7 +249,7 @@ export default function HomePage() {
                 </div>
                 <div className="metric-pill border-2 border-white border-opacity-20">
                   <div className="metric-icon">
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                       <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
                     </svg>
                   </div>
@@ -451,15 +440,19 @@ export default function HomePage() {
               arturocanodesigns@gmail.com
             </a>
           </p>
-          <div className="flex flex-wrap justify-center gap-8">
+          <div className="flexn the stats  flex-wrap justify-center gap-8">
             {/* LinkedIn */}
             <div className="flex flex-col items-center">
               <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
                 className="w-14 h-14 rounded-xl glass flex items-center justify-center hover:bg-blue-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-blue-500/30 mb-2" 
                 aria-label="LinkedIn">
-                <svg className="w-7 h-7 text-blue-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                </svg>
+                <Image 
+                  src="/links_icons/icons8-linkedin.svg"
+                  alt="LinkedIn"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 text-blue-500"
+                />
               </a>
               <span className="text-xs text-blue-400">LinkedIn</span>
             </div>
@@ -469,9 +462,13 @@ export default function HomePage() {
               <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
                 className="w-14 h-14 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30 mb-2" 
                 aria-label="GitHub">
-                <svg className="w-7 h-7 text-gray-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" clipRule="evenodd" d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/>
-                </svg>
+                <Image 
+                  src="/links_icons/icons8-github.svg"
+                  alt="GitHub"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 text-gray-300"
+                />
               </a>
               <span className="text-xs text-gray-300">GitHub</span>
             </div>
@@ -481,9 +478,13 @@ export default function HomePage() {
               <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
                 className="w-14 h-14 rounded-xl glass flex items-center justify-center hover:bg-pink-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-pink-500/30 mb-2" 
                 aria-label="Instagram">
-                <svg className="w-7 h-7 text-pink-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
-                </svg>
+                <Image 
+                  src="/links_icons/icons8-instagram.svg"
+                  alt="Instagram"
+                  width={28}
+                  height={28}
+                  className="w-7 h-7 text-pink-500"
+                />
               </a>
               <span className="text-xs text-pink-400">Instagram</span>
             </div>

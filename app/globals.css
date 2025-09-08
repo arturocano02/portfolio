@@ -155,11 +155,11 @@ p {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 16px;
-  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
   margin: var(--spacing-sm);
@@ -173,7 +173,7 @@ p {
 }
 
 .metric-number {
-  font-size: 2.75rem;
+  font-size: 2rem;
   font-weight: 600; /* Apple uses medium weights */
   line-height: 1;
   margin-right: 0.5rem;

@@ -316,11 +316,11 @@ export default function AmazonCaseStudy() {
           
           <h3 className="text-xl font-bold mb-6">Some of the highlights, including sort center visit</h3>
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-16">
-            {/* First row - Images */}
+            {/* Top row - 3 images */}
             <div className="aspect-square glass rounded-lg overflow-hidden">
               <Image 
-                src="/images/amazon/office1.jpg" 
-                alt="Amazon Office" 
+                src="/images/amazon/amazon_office.png" 
+                alt="Amazon Office with City View" 
                 width={300}
                 height={300}
                 className="w-full h-full object-cover"
@@ -328,8 +328,8 @@ export default function AmazonCaseStudy() {
             </div>
             <div className="aspect-square glass rounded-lg overflow-hidden">
               <Image 
-                src="/images/amazon/sort_center.jpg" 
-                alt="Amazon Sort Center" 
+                src="/images/amazon/amazon_meeting.png" 
+                alt="Amazon Meeting Room" 
                 width={300}
                 height={300}
                 className="w-full h-full object-cover"
@@ -337,16 +337,25 @@ export default function AmazonCaseStudy() {
             </div>
             <div className="aspect-square glass rounded-lg overflow-hidden">
               <Image 
-                src="/images/amazon/presentation.jpg" 
-                alt="Amazon Presentation" 
+                src="/images/amazon/SC_visit.png" 
+                alt="Amazon Sort Center Visit" 
                 width={300}
                 height={300}
                 className="w-full h-full object-cover"
               />
-        </div>
+            </div>
             
-            {/* Second row - Videos */}
-            <div className="aspect-square glass rounded-lg overflow-hidden col-span-2 md:col-span-1">
+            {/* Bottom row - 4 items (1 image, 3 videos) */}
+            <div className="aspect-square glass rounded-lg overflow-hidden">
+              <Image 
+                src="/images/amazon/tables.jpg" 
+                alt="Amazon Selfie" 
+                width={300}
+                height={300}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="aspect-square glass rounded-lg overflow-hidden">
               <video 
                 autoPlay
                 muted
@@ -354,7 +363,7 @@ export default function AmazonCaseStudy() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/images/amazon/dashboard_demo.mp4" type="video/mp4" />
+                <source src="/images/amazon/warehouse1.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -366,7 +375,7 @@ export default function AmazonCaseStudy() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/images/amazon/slack_bot_demo.mp4" type="video/mp4" />
+                <source src="/images/amazon/warehouse2.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -378,7 +387,7 @@ export default function AmazonCaseStudy() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/images/amazon/warehouse_tour.mp4" type="video/mp4" />
+                <source src="/images/amazon/warehouse3.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
@@ -405,6 +414,52 @@ export default function AmazonCaseStudy() {
       <section className="py-16 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            {/* Instagram */}
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-pink-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-pink-500/30" 
+              aria-label="Instagram">
+              <Image 
+                src="/links_icons/icons8-instagram.svg"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="w-6 h-6 text-pink-500"
+              />
+            </a>
+            
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-blue-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-blue-500/30" 
+              aria-label="LinkedIn">
+              <Image 
+                src="/links_icons/icons8-linkedin.svg"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+                className="w-6 h-6 text-blue-500"
+              />
+            </a>
+            
+            {/* X (Twitter) */}
+            <a href="https://x.com" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="X (Twitter)">
+              <svg className="w-6 h-6 text-gray-300" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+              </svg>
+            </a>
+            
+            {/* Email */}
+            <a href="mailto:arturocanodesigns@gmail.com" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-orange-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-orange-500/30" 
+              aria-label="Email">
+              <svg className="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+                <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+              </svg>
+            </a>
+          </div>
           <Button href="/contact" variant="primary" className="btn-amazon">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>

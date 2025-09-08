@@ -1,7 +1,7 @@
 "use client";
 import React from 'react';
 
-export default function Badge({ text, color, icon }) {
+export default function Badge({ text, color, icon, iconColor }) {
   // Function to determine which icon to use based on the text
   const getIcon = () => {
     if (icon) return icon;
@@ -60,7 +60,7 @@ export default function Badge({ text, color, icon }) {
       className="badge" 
       style={color ? { backgroundColor: color } : {}}
     >
-      <span className="badge-icon">{getIcon()}</span>
+      <span className="badge-icon" style={iconColor ? { color: iconColor } : {}}>{getIcon()}</span>
       <span className="badge-text">{text}</span>
     </span>
   );
