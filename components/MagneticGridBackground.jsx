@@ -6,8 +6,8 @@ export default function MagneticGridBackground({
   dotRadius = 1.6,
   lineMax = 22,
   influence = 200, // Reduced influence radius for more concentrated effect
-  color = '#ff3b3b',
-  bg = '#07080a'
+  color = '#00D4FF', // Turquoise/cyan color
+  bg = '#1A6B7A' // Lighter turquoise background
 }){
   const canvasRef = useRef(null);
   const gridRef = useRef([]); // array of { x, y }
@@ -120,7 +120,7 @@ export default function MagneticGridBackground({
         ctx.lineWidth = 1;
         const grad = ctx.createLinearGradient(d.x, d.y, ex, ey);
         grad.addColorStop(0, color);
-        grad.addColorStop(1, 'rgba(255,59,59,0)');
+        grad.addColorStop(1, 'rgba(0,212,255,0)');
         ctx.strokeStyle = grad;
         ctx.beginPath();
         ctx.moveTo(d.x, d.y);

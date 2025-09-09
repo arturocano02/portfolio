@@ -24,55 +24,70 @@ export default function ContactPage() {
             </a>
           </p>
           
-          <div className="flex flex-wrap gap-6 mt-8">
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            {/* Instagram */}
+            <a href="https://instagram.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="Instagram">
+              <img 
+                src="/links_icons/icons8-instagram-48.png"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('Instagram icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('Instagram icon loaded successfully')}
+              />
+            </a>
+            
             {/* LinkedIn */}
-            <div className="flex flex-col items-center">
-              <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
-                className="w-16 h-16 rounded-xl glass flex items-center justify-center hover:bg-blue-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-blue-500/30 mb-2" 
-                aria-label="LinkedIn">
-                <Image 
-                  src="/links_icons/icons8-linkedin.svg"
-                  alt="LinkedIn"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 text-blue-500"
-                />
-              </a>
-              <span className="text-sm text-blue-400">LinkedIn</span>
-            </div>
+            <a href="https://linkedin.com/in/arturo-cano" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="LinkedIn">
+              <img 
+                src="/links_icons/icons8-linkedin-50.png"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('LinkedIn icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('LinkedIn icon loaded successfully')}
+              />
+            </a>
             
             {/* GitHub */}
-            <div className="flex flex-col items-center">
-              <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
-                className="w-16 h-16 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30 mb-2" 
-                aria-label="GitHub">
-                <Image 
-                  src="/links_icons/icons8-github.svg"
-                  alt="GitHub"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 text-gray-300"
-                />
-              </a>
-              <span className="text-sm text-gray-300">GitHub</span>
-            </div>
+            <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="GitHub">
+              <img 
+                src="/links_icons/icons8-github-50.png"
+                alt="GitHub"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('GitHub icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('GitHub icon loaded successfully')}
+              />
+            </a>
             
-            {/* Instagram */}
-            <div className="flex flex-col items-center">
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" 
-                className="w-16 h-16 rounded-xl glass flex items-center justify-center hover:bg-pink-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-pink-500/30 mb-2" 
-                aria-label="Instagram">
-                <Image 
-                  src="/links_icons/icons8-instagram.svg"
-                  alt="Instagram"
-                  width={32}
-                  height={32}
-                  className="w-8 h-8 text-pink-500"
-                />
-              </a>
-              <span className="text-sm text-pink-400">Instagram</span>
-            </div>
           </div>
+          
+          <Button href="/contact" variant="primary" className="btn-contact">
+            <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
+              <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
+            </svg>
+            Get in touch
+          </Button>
         </div>
         
         <form className="space-y-8">

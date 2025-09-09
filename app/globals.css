@@ -16,8 +16,8 @@
 
 :root {
   /* Core colors - Turquoise gradient with torch effect */
-  --bg-dark: #0A4B5C; /* Dark turquoise */
-  --bg-dark-blue: #1A6B7A; /* Medium turquoise */
+  --bg-dark: #1A6B7A; /* Lighter turquoise */
+  --bg-dark-blue: #2A7A8A; /* Brighter turquoise */
   --text: #FFFFFF; /* Pure white */
   --text-secondary: #B8D4D9; /* Light turquoise */
   --accent: #00D4FF; /* Cyan accent */
@@ -49,8 +49,8 @@
   --accent-amazon: #FF6B35; /* Orange for Amazon */
   
   /* Gradient colors - turquoise with torch effect */
-  --gradient-top: #2A7A8A; /* Brighter turquoise */
-  --gradient-bottom: #0A4B5C; /* Darker turquoise */
+  --gradient-top: #3A8A9A; /* Even brighter turquoise */
+  --gradient-bottom: #1A6B7A; /* Lighter turquoise */
   --purple-accent: #8B5CF6; /* Purple */
   --pink-accent: #FF3B82; /* Pink */
 }
@@ -63,7 +63,7 @@ html, body, #__next {
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, var(--bg-dark-blue) 0%, var(--bg-dark) 100%);
+  background: linear-gradient(135deg, var(--gradient-top) 0%, var(--gradient-bottom) 100%);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -155,14 +155,14 @@ p {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid var(--glass-border);
-  border-radius: 12px;
-  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.75rem;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   transition: all 0.3s ease;
-  margin: var(--spacing-sm);
+  margin: var(--spacing-xs);
 }
 
 .metric-pill:hover {
@@ -173,7 +173,7 @@ p {
 }
 
 .metric-number {
-  font-size: 2rem;
+  font-size: 1.5rem;
   font-weight: 600; /* Apple uses medium weights */
   line-height: 1;
   margin-right: 0.5rem;
@@ -184,7 +184,7 @@ p {
 }
 
 .metric-label {
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 500;
   color: rgba(255, 255, 255, 0.8);
   letter-spacing: 0.02em;
@@ -652,4 +652,62 @@ input:focus, textarea:focus, select:focus {
 
 .animate-float-delay-4 {
   animation: float 3s ease-in-out 2.4s infinite;
+}
+
+/* Project Card Styles */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  padding: 2rem;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.project-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.4);
+  border-color: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Modal Animation */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-in {
+  animation: modal-in 0.3s ease-out;
+}
+
+/* Infinite scroll animation */
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-scroll-left {
+  animation: scroll-left 30s linear infinite;
 }

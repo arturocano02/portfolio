@@ -15,50 +15,59 @@ export default function NortonCaseStudy() {
             <span className="text-white">"make my product feel</span><br/>
             <span className="text-white">smart and magical"</span>
           </h1>
-          <p className="text-xl mb-12">what I did for <span className="font-semibold">Genie</span></p>
+          <div className="flex items-center gap-4 mb-12">
+            <p className="text-xl">what I did for</p>
+            <Image 
+              src="/images/norton/Genie Logo.png"
+              alt="Genie Logo"
+              width={120}
+              height={40}
+              className="h-10 w-auto"
+            />
+          </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="glass p-6 rounded-lg border border-white border-opacity-10">
-              <div className="flex items-start mb-3">
-                <div className="p-2 bg-yellow-400 bg-opacity-20 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <div className="flex flex-col md:flex-row gap-2 mb-12 max-w-full mx-auto px-2">
+            <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
+              <div className="flex items-start mb-4">
+                <div className="p-3 bg-yellow-400 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold">Research & Strategy</h3>
+                <h3 className="text-lg font-semibold whitespace-nowrap">Research & Strategy</h3>
               </div>
-              <p className="text-sm text-gray-300">Studied how AI-led intelligence can augment human decision-making in scam detection.</p>
+              <p className="text-base text-gray-300 leading-relaxed">Studied how AI-led intelligence can augment human decision-making in scam detection.</p>
             </div>
-            <div className="glass p-6 rounded-lg border border-white border-opacity-10">
-              <div className="flex items-start mb-3">
-                <div className="p-2 bg-yellow-400 bg-opacity-20 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
+              <div className="flex items-start mb-4">
+                <div className="p-3 bg-yellow-400 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold">Design the orb</h3>
+                <h3 className="text-lg font-semibold whitespace-nowrap">Design the orb</h3>
               </div>
-              <p className="text-sm text-gray-300">Made Genie's UI dynamic with fine orb animation that responds with intelligence.</p>
+              <p className="text-base text-gray-300 leading-relaxed">Made Genie's UI dynamic with fine orb animation that responds with intelligence.</p>
             </div>
-            <div className="glass p-6 rounded-lg border border-white border-opacity-10">
-              <div className="flex items-start mb-3">
-                <div className="p-2 bg-yellow-400 bg-opacity-20 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
+              <div className="flex items-start mb-4">
+                <div className="p-3 bg-yellow-400 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold">Polish the cards</h3>
+                <h3 className="text-lg font-semibold whitespace-nowrap">Polish the cards</h3>
               </div>
-              <p className="text-sm text-gray-300">Built anticipation, then a clear result that feels smart and magical.</p>
+              <p className="text-base text-gray-300 leading-relaxed">Built anticipation, then a clear result that feels smart and magical.</p>
             </div>
           </div>
         </div>
       </section>
       
       {/* Main Content */}
-      <section className="py-16">
+      <section className="py-8">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="aspect-video rounded-lg mb-12 relative overflow-hidden">
+          <div className="aspect-video rounded-lg mb-6 relative overflow-hidden">
             <Image 
               src="/images/norton/orb_ball_text.svg"
               alt="Norton Genie Orb"
@@ -115,7 +124,7 @@ export default function NortonCaseStudy() {
             </div>
           </div>
           
-          {/* Video Section - Moved higher up */}
+          {/* Video Section */}
           <section className="mb-16">
             <div className="aspect-video rounded-lg overflow-hidden glass">
               <video 
@@ -124,7 +133,7 @@ export default function NortonCaseStudy() {
                 muted
                 loop
                 playsInline
-                className="w-full h-full"
+                className="w-full h-full object-cover rounded-lg"
                 poster="/images/norton/orb_ball_text.svg"
               >
                 <source 
@@ -136,9 +145,9 @@ export default function NortonCaseStudy() {
             </div>
           </section>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div>
-              <div className="aspect-[9/16] rounded-lg mb-4 relative glass overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
+            <div className="text-center">
+              <div className="aspect-[9/16] rounded-2xl mb-4 relative glass overflow-hidden max-w-sm mx-auto">
                 <div className="relative w-full h-full">
                   <Image 
                     src="/images/norton/Phone Frame.png"
@@ -149,8 +158,8 @@ export default function NortonCaseStudy() {
                   />
                   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                     <Image 
-                      src="/images/norton/intro_page.png"
-                      alt="Hello screen with the orb assistant ready to help"
+                      src="/images/norton/analysing_text.png"
+                      alt="Analyzing content screen"
                       width={340}
                       height={740}
                       className="object-contain max-h-[95%] rounded-[22px]"
@@ -159,11 +168,11 @@ export default function NortonCaseStudy() {
                 </div>
               </div>
               <p className="text-sm text-gray-400">
-                Hello screen with the orb assistant ready to help
+                Analyzing content screen
               </p>
             </div>
-            <div>
-              <div className="aspect-[9/16] rounded-lg mb-4 relative glass overflow-hidden">
+            <div className="text-center">
+              <div className="aspect-[9/16] rounded-2xl mb-4 relative glass overflow-hidden max-w-sm mx-auto">
                 <div className="relative w-full h-full">
                   <Image 
                     src="/images/norton/Phone Frame.png"
@@ -174,8 +183,8 @@ export default function NortonCaseStudy() {
                   />
                   <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
                     <Image 
-                      src="/images/norton/landing_page.png"
-                      alt="Last week I flagged 23,735 scams"
+                      src="/images/norton/analysing_text.png"
+                      alt="Analyzing content screen"
                       width={340}
                       height={740}
                       className="object-contain max-h-[95%] rounded-[22px]"
@@ -184,69 +193,31 @@ export default function NortonCaseStudy() {
                 </div>
               </div>
               <p className="text-sm text-gray-400">
-                Last week I flagged 23,735 scams. I'm getting better at this every day!
+                Analyzing content screen
               </p>
             </div>
           </div>
           
-          <div className="mb-16">
-            <h3 className="text-xl font-bold mb-4">Like magic, Genie will detect possible scams in seconds</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-              <div className="aspect-[9/16] rounded-lg relative glass overflow-hidden">
-                <div className="relative w-full h-full">
-                  <Image 
-                    src="/images/norton/Phone Frame.png"
-                    alt="Phone Frame"
-                    width={375}
-                    height={812}
-                    className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
-                  />
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <Image 
-                      src="/images/norton/assess_scam_page.png"
-                      alt="Scam Detection Screen"
-                      width={340}
-                      height={740}
-                      className="object-contain max-h-[95%] rounded-[22px]"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div>
-                <p className="text-base mb-6">
-                  The orb animation provides visual feedback as Genie analyzes text for potential scams. The animation is carefully designed to convey intelligence and processing without feeling mechanical.
-                </p>
-                <p className="text-base">
-                  When a scam is detected, the UI transitions to a clear warning with actionable advice, maintaining the magical feel while providing serious security information.
-                </p>
-              </div>
-            </div>
+          {/* Assess Scam Page - No Background */}
+          <div className="mb-20 text-center">
+            <Image 
+              src="/images/norton/assess_scam_page.png"
+              alt="Scam Detection Screen"
+              width={800}
+              height={450}
+              className="mx-auto"
+            />
           </div>
           
-          <div className="mb-16">
-            <h3 className="text-xl font-bold mb-4">Get tips on what to do next & ask Genie your follow up questions</h3>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              <div className="aspect-video rounded-lg relative overflow-hidden glass">
-                <Image 
-                  src="/images/norton/deal_with_scam.png"
-                  alt="Diagnostics Screen"
-                  width={800}
-                  height={450}
-                  className="object-cover w-full"
-                />
-              </div>
-              <div className="aspect-video rounded-lg relative overflow-hidden glass">
-                <Image 
-                  src="/images/norton/T3 Uploading Input.png"
-                  alt="Recommendations Screen"
-                  width={800}
-                  height={450}
-                  className="object-cover w-full"
-                />
-              </div>
-            </div>
+          {/* Deal With Scam Page - No Background */}
+          <div className="mb-20 text-center">
+            <Image 
+              src="/images/norton/deal_with_scam.png"
+              alt="Deal With Scam Screen"
+              width={800}
+              height={450}
+              className="mx-auto"
+            />
           </div>
         </div>
       </section>
@@ -274,6 +245,64 @@ export default function NortonCaseStudy() {
       <section className="py-16 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
+          
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            {/* Instagram */}
+            <a href="https://instagram.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="Instagram">
+              <img 
+                src="/links_icons/icons8-instagram-48.png"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('Instagram icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('Instagram icon loaded successfully')}
+              />
+            </a>
+            
+            {/* LinkedIn */}
+            <a href="https://linkedin.com/in/arturo-cano" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="LinkedIn">
+              <img 
+                src="/links_icons/icons8-linkedin-50.png"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('LinkedIn icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('LinkedIn icon loaded successfully')}
+              />
+            </a>
+            
+            {/* GitHub */}
+            <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="GitHub">
+              <img 
+                src="/links_icons/icons8-github-50.png"
+                alt="GitHub"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('GitHub icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('GitHub icon loaded successfully')}
+              />
+            </a>
+            
+          </div>
+          
           <Button href="/contact" variant="primary" className="btn-norton">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>

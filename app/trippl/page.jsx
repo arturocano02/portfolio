@@ -117,7 +117,7 @@ export default function TripplCaseStudy() {
           </div>
         </div>
       </section>
-      
+
       {/* Story Section */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4">
@@ -135,79 +135,51 @@ export default function TripplCaseStudy() {
             We set up our pilots. Six venues across London agreed to trial Trippl. I negotiated partnerships, printed posters, and created a marketing plan. We launched with 500 people across the trials. We had a custom-built matching algorithm that matched students and shared rides home.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
-            <div className="aspect-square rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
-              <Image 
-                src="/images/trippl/Enter_ride.png"
-                alt="Trippl App Enter Ride Screen"
-                width={400}
-                height={400}
-                className="object-cover w-full h-full"
-                priority
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">Enter ride details screen</p>
-              </div>
-            </div>
-            <div className="aspect-square rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+          {/* Main Image Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            {/* Left: Loading Screen (Mobile Format) */}
+            <div className="aspect-[9/16] overflow-hidden">
               <Image 
                 src="/images/trippl/loading_screen.png"
                 alt="Trippl App Loading Screen"
-                width={400}
-                height={400}
+                width={300}
+                height={533}
                 className="object-cover w-full h-full"
+                priority
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">Matching algorithm in action</p>
-              </div>
             </div>
-            <div className="aspect-square rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
+            
+            {/* Center: Prize and Bathroom stacked vertically */}
+            <div className="flex flex-col gap-6">
+              <div className="aspect-[4/3] overflow-hidden">
+                <Image 
+                  src="/images/trippl/prize.JPG"
+                  alt="Trippl Prize Ceremony"
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+              <div className="aspect-[4/3] overflow-hidden">
+                <Image 
+                  src="/images/trippl/bathroom.png"
+                  alt="Trippl Event Location"
+                  width={400}
+                  height={300}
+                  className="object-cover w-full h-full"
+                />
+              </div>
+          </div>
+
+            {/* Right: Enter Ride (Mobile Format) */}
+            <div className="aspect-[9/16] overflow-hidden">
               <Image 
-                src="/images/trippl/north.png"
-                alt="Trippl App North Screen"
-                width={400}
-                height={400}
+                src="/images/trippl/Enter_ride.png"
+                alt="Trippl App Enter Ride Screen"
+                width={300}
+                height={533}
                 className="object-cover w-full h-full"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">Route planning interface</p>
-              </div>
-            </div>
-            <div className="aspect-square rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl md:col-span-2">
-              <Image 
-                src="/images/trippl/bathroom.png"
-                alt="Trippl Event Location"
-                width={800}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">Promotional material at event locations</p>
-              </div>
-            </div>
-            <div className="aspect-square rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
-              <Image 
-                src="/images/trippl/Meeting point.png"
-                alt="Trippl Meeting Point"
-                width={400}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">Meeting point interface</p>
-              </div>
-            </div>
-            <div className="aspect-square rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl md:col-span-2">
-              <Image 
-                src="/images/trippl/prize.JPG"
-                alt="Trippl Prize Ceremony"
-                width={800}
-                height={400}
-                className="object-cover w-full h-full"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                <p className="text-white text-sm font-medium">Venture Catalyst Challenge award ceremony</p>
-              </div>
             </div>
           </div>
 
@@ -219,50 +191,52 @@ export default function TripplCaseStudy() {
             This journey led me to realize that products built for safety need to be tested in the real world. Realtime at venues, friends full of people at each venue, each with their own phone. How these friends interact is a design model that's worth exploring. This was a product tested in the world, with students relying on it to get home safe.
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
-            <div className="aspect-[9/16] rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
-              <div className="relative w-full h-full">
-                <video 
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                  poster="/images/trippl/Enter_ride.png"
-                >
-                  <source 
-                    src="/images/trippl/pitch_outside.MOV" 
-                    type="video/quicktime" 
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
-                  <p className="text-white text-sm font-medium">Pitching at Imperial Enterprise Lab</p>
-                </div>
-              </div>
+          {/* Three Vertical Videos */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+            <div className="aspect-[9/16] overflow-hidden">
+              <video 
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source 
+                  src="/images/trippl/pitch_imperial.mp4" 
+                  type="video/mp4" 
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
-            <div className="aspect-[9/16] rounded-2xl overflow-hidden glass shadow-xl transform transition-transform duration-500 hover:scale-105 hover:shadow-2xl">
-              <div className="relative w-full h-full">
-                <video 
-                  controls
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  className="w-full h-full object-cover"
-                  poster="/images/trippl/loading_screen.png"
-                >
-                  <source 
-                    src="/images/trippl/protest.MOV" 
-                    type="video/quicktime" 
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <div className="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black/80 to-transparent">
-                  <p className="text-white text-sm font-medium">Live demo at campus event</p>
-                </div>
-              </div>
+            <div className="aspect-[9/16] overflow-hidden">
+              <video 
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source 
+                  src="/images/trippl/pitch_outside.mp4" 
+                  type="video/mp4" 
+                />
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <div className="aspect-[9/16] overflow-hidden">
+              <video 
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="w-full h-full object-cover"
+              >
+                <source 
+                  src="/images/trippl/protest.mp4" 
+                  type="video/mp4" 
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>
@@ -360,6 +334,64 @@ export default function TripplCaseStudy() {
       <section className="py-16 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
+          
+          <div className="flex flex-wrap justify-center gap-6 mb-8">
+            {/* Instagram */}
+            <a href="https://instagram.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="Instagram">
+              <img 
+                src="/links_icons/icons8-instagram-48.png"
+                alt="Instagram"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('Instagram icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('Instagram icon loaded successfully')}
+              />
+            </a>
+            
+            {/* LinkedIn */}
+            <a href="https://linkedin.com/in/arturo-cano" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="LinkedIn">
+              <img 
+                src="/links_icons/icons8-linkedin-50.png"
+                alt="LinkedIn"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('LinkedIn icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('LinkedIn icon loaded successfully')}
+              />
+            </a>
+            
+            {/* GitHub */}
+            <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="GitHub">
+              <img 
+                src="/links_icons/icons8-github-50.png"
+                alt="GitHub"
+                width={24}
+                height={24}
+                className="w-6 h-6 object-contain"
+                onError={(e) => {
+                  console.log('GitHub icon failed to load');
+                  e.target.style.display = 'none';
+                }}
+                onLoad={() => console.log('GitHub icon loaded successfully')}
+              />
+            </a>
+            
+          </div>
+          
           <Button href="/contact" variant="primary" className="btn-trippl">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
