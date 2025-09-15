@@ -1,18 +1,24 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import Badge from '../../components/Badge';
+import TypewriterEffect from '../../components/TypewriterEffect';
 import { useRef, useEffect } from 'react';
 
 export default function AmazonCaseStudy() {
+  const [showContent, setShowContent] = useState(false);
   const businessReviewsRef = useRef(null);
   const slackBotRef = useRef(null);
   const leadershipBriefingRef = useRef(null);
   const newsletterRef = useRef(null);
   const stakeholderMapRef = useRef(null);
   const scrollerRef = useRef(null);
+  
+  const handleTitleComplete = () => {
+    setShowContent(true);
+  };
   
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -34,13 +40,25 @@ export default function AmazonCaseStudy() {
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
-            Using AI to automate the boring tasks
+            <TypewriterEffect 
+              text="Using AI to automate the boring tasks"
+              speed={80}
+              delay={500}
+              onComplete={handleTitleComplete}
+              className="block"
+            />
           </h1>
-          <p className="text-xl text-white mb-8">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual tasks, saving time and increasing team efficiency.</p>
+          {showContent && (
+            <>
+              <p className="text-xl text-white mb-8 transition-all duration-1000 opacity-100 translate-y-0">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual tasks, saving time and increasing team efficiency.</p>
+            </>
+          )}
         </div>
         
-        {/* Full width scrolling cards section */}
-        <div className="w-screen overflow-hidden mb-12 -mx-4">
+        {showContent && (
+          <>
+            {/* Full width scrolling cards section */}
+            <div className="w-screen overflow-hidden mb-12 -mx-4 transition-all duration-1000 opacity-100 translate-y-0">
           <div className="flex gap-6 animate-scroll-left">
             {/* Duplicate the tools for infinite scroll effect */}
             {[...Array(3)].map((_, repeat) => 
@@ -70,11 +88,14 @@ export default function AmazonCaseStudy() {
               ))
             )}
           </div>
-        </div>
+            </div>
+          </>
+        )}
       </section>
 
       {/* Main Content */}
-      <section className="py-16">
+      {showContent && (
+        <section className="py-16 transition-all duration-1000 opacity-100 translate-y-0">
         <div className="max-w-4xl mx-auto px-4 flex flex-col items-center gap-8">
           {/* Automated Business Reviews */}
           <div ref={businessReviewsRef} className="glass p-6 rounded-lg border border-white border-opacity-10 w-full">
@@ -396,7 +417,8 @@ export default function AmazonCaseStudy() {
             </div>
           </div>
         </div>
-      </section>
+        </section>
+      )}
 
       {/* Partner Logos */}
       <section className="py-16">

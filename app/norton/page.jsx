@@ -1,73 +1,90 @@
 "use client";
 
-import React from 'react';
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from '../../components/Button';
 import Badge from '../../components/Badge';
+import TypewriterEffect from '../../components/TypewriterEffect';
 
 export default function NortonCaseStudy() {
+  const [showContent, setShowContent] = useState(false);
+
+  const handleTitleComplete = () => {
+    setShowContent(true);
+  };
+
   return (
     <div>
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center py-20">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
-            "make my product feel<br/>
-            smart and magical"
-          </h1>
-          <div className="flex items-center justify-center gap-4 mb-12">
-            <p className="text-xl text-white">what I did for</p>
-            <Image 
-              src="/images/norton/NortonGenie_logo.png"
-              alt="Norton Genie Logo"
-              width={120}
-              height={40}
-              className="h-12 w-auto"
-              style={{ width: 'auto', height: 'auto' }}
+            <TypewriterEffect 
+              text='"make my product feel smart and magical"'
+              speed={80}
+              delay={500}
+              onComplete={handleTitleComplete}
+              className="block"
             />
-          </div>
-          
-          <div className="flex flex-col md:flex-row gap-2 max-w-full mx-auto px-2 justify-center">
-            <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
-              <div className="flex items-start mb-4">
-                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
-                  </svg>
-                </div>
-                <h3 className="text-lg font-semibold whitespace-nowrap">Research & Strategy</h3>
+          </h1>
+          {showContent && (
+            <>
+              <div className="flex items-center justify-center gap-4 mb-12 transition-all duration-1000 opacity-100 translate-y-0">
+                <p className="text-xl text-white">what I did for</p>
+                <Image 
+                  src="/images/norton/NortonGenie_logo.png"
+                  alt="Norton Genie Logo"
+                  width={120}
+                  height={40}
+                  className="h-12 w-auto"
+                  style={{ width: 'auto', height: 'auto' }}
+                />
               </div>
-              <p className="text-base text-white leading-relaxed">Studied how AI-led intelligence can augment human decision-making in scam detection.</p>
-            </div>
-            <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
-              <div className="flex items-start mb-4">
-                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path>
-                  </svg>
+              
+              <div className="flex flex-col md:flex-row gap-2 max-w-full mx-auto px-2 justify-center transition-all duration-1000 opacity-100 translate-y-0">
+                <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
+                  <div className="flex items-start mb-4">
+                    <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                      <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold whitespace-nowrap">Research & Strategy</h3>
+                  </div>
+                  <p className="text-base text-white leading-relaxed">Studied how AI-led intelligence can augment human decision-making in scam detection.</p>
                 </div>
-                <h3 className="text-lg font-semibold whitespace-nowrap">Design the orb</h3>
-              </div>
-              <p className="text-base text-white leading-relaxed">Made Genie's UI dynamic with fine orb animation that responds with intelligence.</p>
-            </div>
-            <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
-              <div className="flex items-start mb-4">
-                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
-                  </svg>
+                <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
+                  <div className="flex items-start mb-4">
+                    <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                      <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path>
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold whitespace-nowrap">Design the orb</h3>
+                  </div>
+                  <p className="text-base text-white leading-relaxed">Made Genie's UI dynamic with fine orb animation that responds with intelligence.</p>
                 </div>
-                <h3 className="text-lg font-semibold whitespace-nowrap">Polish the cards</h3>
+                <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
+                  <div className="flex items-start mb-4">
+                    <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                      <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
+                      </svg>
+                    </div>
+                    <h3 className="text-lg font-semibold whitespace-nowrap">Polish the cards</h3>
+                  </div>
+                  <p className="text-base text-white leading-relaxed">Built anticipation, then a clear result that feels smart and magical.</p>
+                </div>
               </div>
-              <p className="text-base text-white leading-relaxed">Built anticipation, then a clear result that feels smart and magical.</p>
-            </div>
-          </div>
+            </>
+          )}
         </div>
       </section>
       
       {/* Main Content */}
-      <section className="py-8">
-        <div className="max-w-4xl mx-auto px-4">
+      {showContent && (
+        <section className="py-8 transition-all duration-1000 opacity-100 translate-y-0">
+          <div className="max-w-4xl mx-auto px-4">
           <div className="aspect-video rounded-lg mb-6 relative overflow-hidden">
             <Image 
               src="/images/norton/orb_ball_text.svg"
@@ -209,8 +226,8 @@ export default function NortonCaseStudy() {
             />
           </div>
         </div>
-      </section>
-      
+        </section>
+      )}
       
       {/* Partner Logos */}
       <section className="py-16">

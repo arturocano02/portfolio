@@ -45,13 +45,13 @@ export default function HomePage() {
                 onComplete={handleTitleComplete}
                 className="block"
               />
-            </h1>
+          </h1>
           )}
           {showButtons && (
             <div className="flex justify-center gap-6 mb-12 transition-all duration-1000 opacity-100 translate-y-0">
-              <Button href="/contact" variant="primary">Work with me</Button>
-              <Button href="/cv" variant="outline">CV</Button>
-            </div>
+            <Button href="/contact" variant="primary">Work with me</Button>
+            <Button href="/cv" variant="outline">CV</Button>
+          </div>
           )}
         </div>
       </section>

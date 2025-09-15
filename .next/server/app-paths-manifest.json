@@ -1,7 +1,9 @@
 {
+  "/_not-found/page": "app/_not-found/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/cv/page": "app/cv/page.js",
+  "/page": "app/page.js",
   "/trippl/page": "app/trippl/page.js",
   "/amazon/page": "app/amazon/page.js",
-  "/page": "app/page.js",
-  "/contact/page": "app/contact/page.js",
   "/norton/page": "app/norton/page.js"
 }

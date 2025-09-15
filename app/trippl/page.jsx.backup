@@ -174,12 +174,8 @@ export default function TripplCaseStudy() {
           </div>
         </div>
         </section>
-      )}
 
-      {/* YouTube Video Section */}
-      {showContent && (
-        <>
-          {/* YouTube Video Section */}
+        {/* YouTube Video Section */}
         <section id="video" className="py-6">
           <div className="max-w-6xl mx-auto px-2">
             <div className="aspect-video rounded-lg overflow-hidden mb-12 relative">
@@ -465,8 +461,6 @@ export default function TripplCaseStudy() {
           </div>
         </div>
         </section>
-          </>
-        )}
 
       {/* Footer CTA */}
       <section className="py-4 border-t border-gray-700 glass">
