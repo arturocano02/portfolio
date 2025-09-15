@@ -16,11 +16,11 @@ export default function TripplCaseStudy() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row gap-8">
+      <section className="py-safe">
+        <div className="max-w-6xl mx-auto px-safe">
+          <div className="flex flex-col md:flex-row gap-8 space-fluid-lg">
             <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+              <h1 className="text-fluid-3xl sm:text-fluid-4xl lg:text-fluid-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
                 <TypewriterEffect 
                   text="Built an app with real social impact"
                   speed={80}
@@ -31,13 +31,13 @@ export default function TripplCaseStudy() {
               </h1>
               {showContent && (
                 <>
-                  <p className="text-xl text-white mb-8 transition-all duration-1000 opacity-100 translate-y-0">My female friends felt unsafe and often spent too much on taxis alone at night. During my Master's, I launched a platform that matches people travelling the same way to make urban transit safe and affordable.</p>
+                  <p className="text-fluid-lg text-white mb-8 transition-all duration-1000 opacity-100 translate-y-0 break-words">My female friends felt unsafe and often spent too much on taxis alone at night. During my Master's, I launched a platform that matches people travelling the same way to make urban transit safe and affordable.</p>
               
-                  <div className="flex flex-wrap gap-4 mb-8 transition-all duration-1000 opacity-100 translate-y-0">
-                    <Button href="#video" variant="primary" className="btn-trippl">
+                  <div className="flex flex-wrap gap-4 mb-8 transition-all duration-1000 opacity-100 translate-y-0 space-fluid-sm">
+                    <Button href="#video" variant="primary" className="btn-trippl touch-target">
                       Watch Demo
                     </Button>
-                    <Button href="#details" variant="outline" className="hover:border-purple-400">
+                    <Button href="#details" variant="outline" className="hover:border-purple-400 touch-target">
                       See Case Study
                     </Button>
                   </div>
@@ -64,9 +64,9 @@ export default function TripplCaseStudy() {
 
       {/* Metrics Section */}
       {showContent && (
-        <section className="py-8 transition-all duration-1000 opacity-100 translate-y-0">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+        <section className="py-safe transition-all duration-1000 opacity-100 translate-y-0">
+        <div className="max-w-7xl mx-auto px-safe">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mb-12 space-fluid-sm">
             {/* Live Pilots */}
             <div className="metric-card group">
               <div className="metric-card-inner">
@@ -180,9 +180,9 @@ export default function TripplCaseStudy() {
       {showContent && (
         <>
           {/* YouTube Video Section */}
-        <section id="video" className="py-6">
-          <div className="max-w-6xl mx-auto px-2">
-            <div className="aspect-video rounded-lg overflow-hidden mb-12 relative">
+        <section id="video" className="py-safe">
+          <div className="max-w-6xl mx-auto px-safe">
+            <div className="aspect-responsive rounded-lg overflow-hidden mb-12 relative">
               <iframe 
                 src="https://www.youtube.com/embed/bHCXWi60BKU?autoplay=1&controls=1" 
                 title="Trippl Demo Video"
@@ -464,8 +464,8 @@ export default function TripplCaseStudy() {
             </a>
           </div>
         </div>
-        </section>
-          </>
+      </section>
+    </>
         )}
 
       {/* Footer CTA */}

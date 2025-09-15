@@ -37,9 +37,9 @@ export default function AmazonCaseStudy() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="py-20">
-        <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+      <section className="py-safe">
+        <div className="max-w-4xl mx-auto px-safe">
+          <h1 className="text-fluid-3xl sm:text-fluid-4xl lg:text-fluid-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent leading-tight">
             <TypewriterEffect 
               text="Using AI to automate the boring tasks"
               speed={80}
@@ -50,7 +50,7 @@ export default function AmazonCaseStudy() {
           </h1>
           {showContent && (
             <>
-              <p className="text-xl text-white mb-8 transition-all duration-1000 opacity-100 translate-y-0">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual tasks, saving time and increasing team efficiency.</p>
+              <p className="text-fluid-lg text-white mb-8 transition-all duration-1000 opacity-100 translate-y-0 break-words">During my time at Amazon I built AI tools and systems to automate boring and repetitive manual tasks, saving time and increasing team efficiency.</p>
             </>
           )}
         </div>
@@ -58,7 +58,7 @@ export default function AmazonCaseStudy() {
         {showContent && (
           <>
             {/* Full width scrolling cards section */}
-            <div className="w-screen overflow-hidden mb-12 -mx-4 transition-all duration-1000 opacity-100 translate-y-0">
+            <div className="w-screen overflow-hidden mb-12 -mx-safe transition-all duration-1000 opacity-100 translate-y-0">
           <div className="flex gap-6 animate-scroll-left">
             {/* Duplicate the tools for infinite scroll effect */}
             {[...Array(3)].map((_, repeat) => 
@@ -95,23 +95,23 @@ export default function AmazonCaseStudy() {
 
       {/* Main Content */}
       {showContent && (
-        <section className="py-16 transition-all duration-1000 opacity-100 translate-y-0">
-        <div className="max-w-4xl mx-auto px-4 flex flex-col items-center gap-8">
+        <section className="py-safe transition-all duration-1000 opacity-100 translate-y-0">
+        <div className="max-w-4xl mx-auto px-safe flex flex-col items-center gap-8 space-fluid-lg">
           {/* Automated Business Reviews */}
           <div ref={businessReviewsRef} className="glass p-6 rounded-lg border border-white border-opacity-10 w-full">
-            <h3 className="text-lg font-bold mb-4 text-white">Automated Business Reviews</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <h3 className="text-fluid-lg font-bold mb-4 text-white">Automated Business Reviews</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 space-fluid-sm">
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Problem</h4>
-                <p className="text-sm text-white">Team members spent hours manually summarizing Business Reviews (BRs), leading to delays and inconsistent reporting across teams.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Problem</h4>
+                <p className="text-fluid-sm text-white">Team members spent hours manually summarizing Business Reviews (BRs), leading to delays and inconsistent reporting across teams.</p>
               </div>
             <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Insight</h4>
-                <p className="text-sm text-white">AI-powered systems could process large amounts of data more accurately and consistently than manual review processes.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Insight</h4>
+                <p className="text-fluid-sm text-white">AI-powered systems could process large amounts of data more accurately and consistently than manual review processes.</p>
             </div>
             <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Solution</h4>
-                <p className="text-sm text-white">Created intelligent agents with automated data extraction and visualization for faster insights and decision making.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Solution</h4>
+                <p className="text-fluid-sm text-white">Created intelligent agents with automated data extraction and visualization for faster insights and decision making.</p>
               </div>
             </div>
             
@@ -156,19 +156,19 @@ export default function AmazonCaseStudy() {
 
           {/* Slack Bot Automation */}
           <div ref={slackBotRef} className="glass p-6 rounded-lg border border-white border-opacity-10 w-full">
-            <h3 className="text-lg font-bold mb-4 text-white">Slack Bot Automation</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <h3 className="text-fluid-lg font-bold mb-4 text-white">Slack Bot Automation</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 space-fluid-sm">
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Problem</h4>
-                <p className="text-sm text-white">Teams were overwhelmed with repetitive queries and manual information routing, causing delays and inconsistent responses.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Problem</h4>
+                <p className="text-fluid-sm text-white">Teams were overwhelmed with repetitive queries and manual information routing, causing delays and inconsistent responses.</p>
               </div>
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Insight</h4>
-                <p className="text-sm text-white">Automated systems could handle common queries and route information more efficiently than manual processes.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Insight</h4>
+                <p className="text-fluid-sm text-white">Automated systems could handle common queries and route information more efficiently than manual processes.</p>
               </div>
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Solution</h4>
-                <p className="text-sm text-white">Built a system that automatically responds to common queries, routes information to the right people, and simplifies team workflows.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Solution</h4>
+                <p className="text-fluid-sm text-white">Built a system that automatically responds to common queries, routes information to the right people, and simplifies team workflows.</p>
               </div>
             </div>
             
@@ -202,19 +202,19 @@ export default function AmazonCaseStudy() {
 
           {/* Leadership Briefing Automation */}
           <div ref={leadershipBriefingRef} className="glass p-6 rounded-lg border border-white border-opacity-10 w-full">
-            <h3 className="text-lg font-bold mb-4 text-white">Leadership Briefing Automation</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <h3 className="text-fluid-lg font-bold mb-4 text-white">Leadership Briefing Automation</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 space-fluid-sm">
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Problem</h4>
-                <p className="text-sm text-white">Executives spent significant time reading lengthy reports to extract key insights, leading to information overload and delayed decision-making.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Problem</h4>
+                <p className="text-fluid-sm text-white">Executives spent significant time reading lengthy reports to extract key insights, leading to information overload and delayed decision-making.</p>
               </div>
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Insight</h4>
-                <p className="text-sm text-white">AI could automatically identify and summarize the most critical metrics and insights from complex reports.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Insight</h4>
+                <p className="text-fluid-sm text-white">AI could automatically identify and summarize the most critical metrics and insights from complex reports.</p>
               </div>
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Solution</h4>
-                <p className="text-sm text-white">Created an AI system that automatically generates executive summaries from lengthy reports, highlighting key metrics and insights.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Solution</h4>
+                <p className="text-fluid-sm text-white">Created an AI system that automatically generates executive summaries from lengthy reports, highlighting key metrics and insights.</p>
               </div>
             </div>
             
@@ -225,8 +225,8 @@ export default function AmazonCaseStudy() {
                   <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
                   </svg>
-                </div>
-                <div>
+            </div>
+            <div>
                   <div className="metric-number">25</div>
                   <div className="metric-label">Minutes Saved</div>
                 </div>
@@ -247,19 +247,19 @@ export default function AmazonCaseStudy() {
           
           {/* Newsletter Automation */}
           <div ref={newsletterRef} className="glass p-6 rounded-lg border border-white border-opacity-10 w-full">
-            <h3 className="text-lg font-bold mb-4 text-white">Newsletter Automation</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <h3 className="text-fluid-lg font-bold mb-4 text-white">Newsletter Automation</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 space-fluid-sm">
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Problem</h4>
-                <p className="text-sm text-white">Team members spent a lot of time manually compiling newsletters, making the digest of new content time-consuming to produce.</p>
-              </div>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Problem</h4>
+                <p className="text-fluid-sm text-white">Team members spent a lot of time manually compiling newsletters, making the digest of new content time-consuming to produce.</p>
+          </div>
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Insight</h4>
-                <p className="text-sm text-white">Automated systems could scan repositories for changes and format updates more efficiently than manual processes.</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Solution</h4>
-                <p className="text-sm text-white">Built a custom automation that scans repositories for changes, summarizes key updates, and formats them into a digestible newsletter.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Insight</h4>
+                <p className="text-fluid-sm text-white">Automated systems could scan repositories for changes and format updates more efficiently than manual processes.</p>
+        </div>
+            <div>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Solution</h4>
+                <p className="text-fluid-sm text-white">Built a custom automation that scans repositories for changes, summarizes key updates, and formats them into a digestible newsletter.</p>
               </div>
             </div>
             
@@ -270,8 +270,8 @@ export default function AmazonCaseStudy() {
                   <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                </div>
-                <div>
+            </div>
+            <div>
                   <div className="metric-number">2.5x</div>
                   <div className="metric-label">Frequency</div>
                 </div>
@@ -292,19 +292,19 @@ export default function AmazonCaseStudy() {
 
           {/* Interactive Stakeholder Map */}
           <div ref={stakeholderMapRef} className="glass p-6 rounded-lg border border-white border-opacity-10 w-full">
-            <h3 className="text-lg font-bold mb-4 text-white">Interactive Stakeholder Map</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+            <h3 className="text-fluid-lg font-bold mb-4 text-white">Interactive Stakeholder Map</h3>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6 space-fluid-sm">
               <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Problem</h4>
-                <p className="text-sm text-white">Complex network of stakeholders and dependencies across teams was difficult to understand and navigate, leading to communication gaps.</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Insight</h4>
-                <p className="text-sm text-white">Visual mapping could help identify key relationships and improve understanding of organizational structures.</p>
-              </div>
-              <div>
-                <h4 className="text-sm font-bold mb-2 text-white">Solution</h4>
-                <p className="text-sm text-white">Created an interactive map that visualizes relationships between teams, projects, and dependencies for better clarity.</p>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Problem</h4>
+                <p className="text-fluid-sm text-white">Complex network of stakeholders and dependencies across teams was difficult to understand and navigate, leading to communication gaps.</p>
+        </div>
+            <div>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Insight</h4>
+                <p className="text-fluid-sm text-white">Visual mapping could help identify key relationships and improve understanding of organizational structures.</p>
+            </div>
+            <div>
+                <h4 className="text-fluid-sm font-bold mb-2 text-white">Solution</h4>
+                <p className="text-fluid-sm text-white">Created an interactive map that visualizes relationships between teams, projects, and dependencies for better clarity.</p>
               </div>
             </div>
             
@@ -326,8 +326,8 @@ export default function AmazonCaseStudy() {
                   <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                   </svg>
-                </div>
-                <div>
+            </div>
+            <div>
                   <div className="metric-number">95%</div>
                   <div className="metric-label">Accuracy Rate</div>
                 </div>

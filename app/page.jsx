@@ -25,11 +25,11 @@ export default function HomePage() {
     <>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center">
-        <div className="max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
-          <p className="text-xl text-white mb-4 text-center">
+      <section className="min-h-screen flex items-center justify-center py-20 px-safe">
+        <div className="max-w-5xl mx-auto text-center flex flex-col items-center space-fluid-lg">
+          <p className="text-fluid-lg text-white text-center break-words-smart" style={{wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'none'}}>
             <TypewriterEffect 
-              text="a London-based Imperial graduate"
+              text="a London-based Imperial engineering graduate"
               speed={60}
               delay={500}
               onComplete={handleSubtitleComplete}
@@ -37,7 +37,7 @@ export default function HomePage() {
             />
           </p>
           {showTitle && (
-            <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent text-center" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+            <h1 className="text-fluid-4xl sm:text-fluid-5xl lg:text-fluid-6xl font-extrabold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent text-center leading-tight">
               <TypewriterEffect 
                 text="designing and building AI products"
                 speed={80}
@@ -48,40 +48,40 @@ export default function HomePage() {
           </h1>
           )}
           {showButtons && (
-            <div className="flex justify-center gap-6 mb-12 transition-all duration-1000 opacity-100 translate-y-0">
-            <Button href="/contact" variant="primary">Work with me</Button>
-            <Button href="/cv" variant="outline">CV</Button>
-          </div>
+            <div className="flex flex-col sm:flex-row justify-center gap-4 sm:gap-6 transition-all duration-1000 opacity-100 translate-y-0 w-full max-w-sm sm:max-w-none">
+              <Button href="/contact" variant="primary" className="touch-target w-full sm:w-auto">Work with me</Button>
+              <Button href="/cv" variant="outline" className="touch-target w-full sm:w-auto">CV</Button>
+            </div>
           )}
-        </div>
+          </div>
       </section>
 
       {/* Partners Strip */}
-      <section className="py-8 w-full overflow-hidden">
-        <div className="w-full text-center">
-          <p className="text-lg text-white mb-6 font-medium">Who I have worked with</p>
+      <section className="py-safe w-full overflow-hidden">
+        <div className="w-full text-center px-safe">
+          <p className="text-fluid-lg text-white mb-6 font-medium">Who I have worked with</p>
           <LogoScroller logos={partnerLogos} />
         </div>
       </section>
 
       {/* Norton Case Study Preview */}
-      <section className="py-6">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+      <section className="py-safe">
+        <div className="max-w-6xl mx-auto px-safe">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 space-fluid-lg">
             <div className="lg:w-1/2">
               {/* Headline */}
-              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Make AI feel "magical"</h2>
+              <h2 className="text-fluid-2xl sm:text-fluid-3xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Make AI feel "magical"</h2>
               
               {/* Subheader */}
-              <p className="text-lg text-white mb-4 text-left">
+              <p className="text-fluid-base text-white mb-4 text-left break-words">
                 Led interaction design and UI elements for Norton Genie's scam-detection experience. 
                 I designed the signature 'orb' animation and results banner so the product feels smart, magical and trustworthy.
               </p>
               
               {/* Key Results */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
-                <div className="flex flex-wrap gap-1">
+                <h3 className="text-fluid-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
+                <div className="flex flex-wrap gap-1 space-fluid-xs">
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
                       <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -120,8 +120,8 @@ export default function HomePage() {
 
               {/* Skills & Expertise */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
-                <div className="grid grid-cols-2 gap-1">
+                <h3 className="text-fluid-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 space-fluid-xs">
                   <Badge text="UI/UX Design" />
                   <Badge text="Interaction Design" />
                   <Badge text="Animation" />
@@ -131,7 +131,7 @@ export default function HomePage() {
 
               {/* CTA */}
               <div className="text-left">
-                <Button href="/norton" variant="primary">View Case Study</Button>
+                <Button href="/norton" variant="primary" className="touch-target">View Case Study</Button>
               </div>
             </div>
             
@@ -144,6 +144,7 @@ export default function HomePage() {
                   width={600}
                   height={400}
                   className="w-full h-auto"
+                  priority
                 />
               </div>
             </div>
@@ -152,15 +153,15 @@ export default function HomePage() {
       </section>
 
       {/* Amazon Case Study Preview */}
-      <section className="py-6">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+      <section className="py-safe">
+        <div className="max-w-6xl mx-auto px-safe">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 space-fluid-lg">
             <div className="lg:w-1/2">
               {/* Headline */}
-              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Automate the boring tasks</h2>
+              <h2 className="text-fluid-2xl sm:text-fluid-3xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Automate the boring tasks</h2>
               
               {/* Subheader */}
-              <p className="text-base text-white mb-4 text-left">
+              <p className="text-fluid-base text-white mb-4 text-left break-words">
                 Created five AI tools and a stakeholder map to cut repetitive work and improve clarity. 
                 Saved teams hours each week and gave leaders faster, cleaner reviews.
               </p>
@@ -207,8 +208,8 @@ export default function HomePage() {
 
               {/* Skills & Expertise */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
-                <div className="flex flex-wrap gap-1">
+                <h3 className="text-fluid-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
+                <div className="flex flex-wrap gap-1 space-fluid-xs">
                   <Badge text="AI agents & automation" />
                   <Badge text="Knowledge management" />
                   <Badge text="Dashboard & KPI design" />
@@ -270,23 +271,23 @@ export default function HomePage() {
       </section>
 
       {/* Trippl Case Study Preview */}
-      <section className="py-6">
-        <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
+      <section className="py-safe">
+        <div className="max-w-6xl mx-auto px-safe">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6 space-fluid-lg">
             <div className="lg:w-1/2">
               {/* Headline */}
-              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Build an app with social impact</h2>
+              <h2 className="text-fluid-2xl sm:text-fluid-3xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Build an app with social impact</h2>
               
               {/* Subheader */}
-              <p className="text-base text-white mb-4 text-left">
+              <p className="text-fluid-base text-white mb-4 text-left break-words">
                 Founded Trippl to help people travel together so rides are safer, cheaper, and more social. 
                 Born from friends feeling unsafe at night, tested with students across London.
               </p>
               
               {/* Key Results */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
-                <div className="flex flex-wrap gap-1">
+                <h3 className="text-fluid-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
+                <div className="flex flex-wrap gap-1 space-fluid-xs">
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
                       <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
@@ -325,8 +326,8 @@ export default function HomePage() {
 
               {/* Skills & Expertise */}
               <div className="mb-6">
-                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
-                <div className="grid grid-cols-2 gap-1">
+                <h3 className="text-fluid-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 space-fluid-xs">
                   <Badge text="Product design & algorithms" />
                   <Badge text="UX/UI design & branding" />
                   <Badge text="Partnerships & pitching" />
