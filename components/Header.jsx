@@ -55,7 +55,7 @@ export default function Header() {
             
             {isDropdownOpen && (
               <div 
-                className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white bg-opacity-10 backdrop-blur-md border border-white border-opacity-20"
+                className="absolute right-0 mt-2 w-48 rounded-md shadow-lg bg-white bg-opacity-25 backdrop-blur-md border border-white border-opacity-30"
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <div className="py-1">
@@ -63,7 +63,7 @@ export default function Header() {
                     <a
                       key={index}
                       href={project.path}
-                      className="block px-4 py-2 text-sm text-white hover:bg-white hover:bg-opacity-20 transition-colors"
+                      className="block px-4 py-2 text-sm text-white hover:bg-white hover:bg-opacity-30 transition-colors"
                       onClick={() => setIsDropdownOpen(false)}
                     >
                       {project.name}

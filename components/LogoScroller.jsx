@@ -67,7 +67,7 @@ export default function LogoScroller({ logos = [], speed = 0.7 }) {
                     width={logo.width || 200}
                     height={logo.height || 100}
                     className="object-contain"
-                    style={{ maxHeight: '100px' }}
+                    style={{ maxHeight: '100px', width: 'auto', height: 'auto' }}
                   />
                 </div>
               ) : (

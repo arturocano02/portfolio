@@ -17,11 +17,11 @@ export default function SimpleGradientBackground() {
     let width = window.innerWidth;
     let height = window.innerHeight;
     
-    // Colors for turquoise gradient with torch effect
-    const primaryColor = '#00D4FF'; // Cyan for mouse follow
-    const topColor = '#2A7A8A'; // Brighter turquoise for top
-    const middleColor = '#1A6B7A'; // Medium turquoise for middle
-    const bottomColor = '#0A4B5C'; // Darker turquoise for bottom
+    // Colors for purple gradient with torch effect
+    const primaryColor = '#A855F7'; // Light purple for mouse follow
+    const topColor = '#8B5CF6'; // Vibrant purple for top
+    const middleColor = '#7C3AED'; // Medium purple for middle
+    const bottomColor = '#5B21B6'; // Deep purple for bottom
     
     const resizeCanvas = () => {
       width = window.innerWidth;
@@ -82,12 +82,12 @@ export default function SimpleGradientBackground() {
         mousePos.current.x, mousePos.current.y, torchRadius
       );
       
-      // Cyan glow with better opacity transitions
-      torchGradient.addColorStop(0, 'rgba(0, 212, 255, 0.9)');
-      torchGradient.addColorStop(0.2, 'rgba(0, 212, 255, 0.7)');
-      torchGradient.addColorStop(0.5, 'rgba(0, 212, 255, 0.4)');
-      torchGradient.addColorStop(0.8, 'rgba(0, 212, 255, 0.1)');
-      torchGradient.addColorStop(1, 'rgba(0, 212, 255, 0)');
+      // Purple glow with better opacity transitions
+      torchGradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
+      torchGradient.addColorStop(0.2, 'rgba(168, 85, 247, 0.7)');
+      torchGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.4)');
+      torchGradient.addColorStop(0.8, 'rgba(168, 85, 247, 0.1)');
+      torchGradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
       
       ctx.globalCompositeOperation = 'screen';
       ctx.fillStyle = torchGradient;

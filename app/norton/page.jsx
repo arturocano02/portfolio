@@ -11,26 +11,27 @@ export default function NortonCaseStudy() {
       {/* Hero Section */}
       <section className="py-20">
         <div className="max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
-            <span className="text-white">"make my product feel</span><br/>
-            <span className="text-white">smart and magical"</span>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+            "make my product feel<br/>
+            smart and magical"
           </h1>
-          <div className="flex items-center gap-4 mb-12">
+          <div className="flex items-center justify-center gap-4 mb-12">
             <p className="text-xl">what I did for</p>
             <Image 
-              src="/images/norton/Genie Logo.png"
-              alt="Genie Logo"
+              src="/images/norton/NortonGenie_logo.png"
+              alt="Norton Genie Logo"
               width={120}
               height={40}
               className="h-10 w-auto"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
           
           <div className="flex flex-col md:flex-row gap-2 mb-12 max-w-full mx-auto px-2">
             <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
               <div className="flex items-start mb-4">
-                <div className="p-3 bg-yellow-400 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-8-3a1 1 0 00-.867.5 1 1 0 11-1.731-1A3 3 0 0113 8a3.001 3.001 0 01-2 2.83V11a1 1 0 11-2 0v-1a1 1 0 011-1 1 1 0 100-2zm0 8a1 1 0 100-2 1 1 0 000 2z" clipRule="evenodd"></path>
                   </svg>
                 </div>
@@ -40,8 +41,8 @@ export default function NortonCaseStudy() {
             </div>
             <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
               <div className="flex items-start mb-4">
-                <div className="p-3 bg-yellow-400 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path>
                   </svg>
                 </div>
@@ -51,8 +52,8 @@ export default function NortonCaseStudy() {
             </div>
             <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
               <div className="flex items-start mb-4">
-                <div className="p-3 bg-yellow-400 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path>
                   </svg>
                 </div>
@@ -147,49 +148,39 @@ export default function NortonCaseStudy() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div className="text-center">
-              <div className="aspect-[9/16] rounded-2xl mb-4 relative glass overflow-hidden max-w-sm mx-auto">
-                <div className="relative w-full h-full">
+              <div className="h-[500px] rounded-2xl mb-4 relative glass overflow-hidden max-w-md mx-auto">
+                <div className="relative w-full h-full flex items-center justify-center p-3">
                   <Image 
-                    src="/images/norton/Phone Frame.png"
-                    alt="Phone Frame"
-                    width={375}
-                    height={812}
-                    className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
+                    src="/images/norton/landing_page.png"
+                    alt="Landing page screen"
+                    width={500}
+                    height={889}
+                    className="w-full h-full object-contain rounded-[20px]"
+                    quality={100}
+                    priority
+                    unoptimized
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <Image 
-                      src="/images/norton/analysing_text.png"
-                      alt="Analyzing content screen"
-                      width={340}
-                      height={740}
-                      className="object-contain max-h-[95%] rounded-[22px]"
-                    />
-                  </div>
                 </div>
               </div>
               <p className="text-sm text-gray-400">
-                Analyzing content screen
+                Landing page screen
               </p>
             </div>
             <div className="text-center">
-              <div className="aspect-[9/16] rounded-2xl mb-4 relative glass overflow-hidden max-w-sm mx-auto">
-                <div className="relative w-full h-full">
+              <div className="h-[500px] rounded-2xl mb-4 relative glass overflow-hidden max-w-md mx-auto">
+                <div className="relative w-full h-full flex items-center justify-center p-3">
                   <Image 
-                    src="/images/norton/Phone Frame.png"
-                    alt="Phone Frame"
-                    width={375}
-                    height={812}
-                    className="absolute top-0 left-0 w-full h-full z-10 pointer-events-none"
+                    src="/images/norton/analysing_text.png"
+                    alt="Analyzing content screen"
+                    width={500}
+                    height={889}
+                    className="w-full h-full object-contain rounded-[20px]"
+                    quality={100}
+                    priority
+                    unoptimized
+                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
                   />
-                  <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center">
-                    <Image 
-                      src="/images/norton/analysing_text.png"
-                      alt="Analyzing content screen"
-                      width={340}
-                      height={740}
-                      className="object-contain max-h-[95%] rounded-[22px]"
-                    />
-                  </div>
                 </div>
               </div>
               <p className="text-sm text-gray-400">
@@ -206,6 +197,7 @@ export default function NortonCaseStudy() {
               width={800}
               height={450}
               className="mx-auto"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
           
@@ -217,6 +209,7 @@ export default function NortonCaseStudy() {
               width={800}
               height={450}
               className="mx-auto"
+              style={{ width: 'auto', height: 'auto' }}
             />
           </div>
         </div>
@@ -229,10 +222,10 @@ export default function NortonCaseStudy() {
           <h3 className="text-xl font-bold mb-6">Partners & Collaborators</h3>
           <div className="flex flex-wrap items-center gap-8 mb-12">
             <div className="h-12">
-              <Image src="/logos/norton.png" alt="Norton" width={120} height={48} className="h-full w-auto" />
+              <Image src="/logos/norton.png" alt="Norton" width={120} height={48} className="h-full w-auto" style={{ width: 'auto', height: 'auto' }} />
             </div>
             <div className="h-12">
-              <Image src="/logos/else.png" alt="Else" width={120} height={48} className="h-full w-auto" />
+              <Image src="/logos/else.png" alt="Else" width={120} height={48} className="h-full w-auto" style={{ width: 'auto', height: 'auto' }} />
             </div>
             <div className="h-12 flex items-center justify-center">
               <span className="text-indigo-600 font-bold text-xl">IMPERIAL</span>
@@ -242,13 +235,11 @@ export default function NortonCaseStudy() {
       </section>
       
       {/* Footer CTA */}
-      <section className="py-16 border-t border-gray-700 glass">
+      <section className="py-4 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
-          
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex justify-center gap-6 mb-6">
             {/* Instagram */}
-            <a href="https://instagram.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
               className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
               aria-label="Instagram">
               <img 
@@ -257,16 +248,11 @@ export default function NortonCaseStudy() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('Instagram icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('Instagram icon loaded successfully')}
               />
             </a>
             
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/arturo-cano" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
               className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
               aria-label="LinkedIn">
               <img 
@@ -275,11 +261,6 @@ export default function NortonCaseStudy() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('LinkedIn icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('LinkedIn icon loaded successfully')}
               />
             </a>
             
@@ -293,17 +274,11 @@ export default function NortonCaseStudy() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('GitHub icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('GitHub icon loaded successfully')}
               />
             </a>
-            
           </div>
           
-          <Button href="/contact" variant="primary" className="btn-norton">
+          <Button href="/contact" variant="primary" className="btn-primary">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>

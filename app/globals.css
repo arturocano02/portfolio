@@ -15,7 +15,7 @@
 }
 
 :root {
-  /* Core colors - Turquoise gradient with torch effect */
+  /* Core colors - Purple gradient with torch effect */
   --bg-dark: #1A6B7A; /* Lighter turquoise */
   --bg-dark-blue: #2A7A8A; /* Brighter turquoise */
   --text: #FFFFFF; /* Pure white */
@@ -48,9 +48,9 @@
   --accent-trippl: #8B5CF6; /* Purple for Trippl */
   --accent-amazon: #FF6B35; /* Orange for Amazon */
   
-  /* Gradient colors - turquoise with torch effect */
-  --gradient-top: #3A8A9A; /* Even brighter turquoise */
-  --gradient-bottom: #1A6B7A; /* Lighter turquoise */
+  /* Gradient colors - beautiful purple gradient */
+  --gradient-top: #8B5CF6; /* Vibrant purple */
+  --gradient-bottom: #5B21B6; /* Deep purple */
   --purple-accent: #8B5CF6; /* Purple */
   --pink-accent: #FF3B82; /* Pink */
 }
@@ -262,20 +262,23 @@ input:focus, textarea:focus, select:focus {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #FF6B35 0%, #F7931E 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   color: white;
-  box-shadow: 0 2px 12px rgba(255, 107, 53, 0.4);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px) scale(1.02);
-  box-shadow: 0 4px 20px rgba(255, 107, 53, 0.6);
-  background: linear-gradient(135deg, #F7931E 0%, #FF6B35 100%);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5), 0 0 20px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #2a2a2a 0%, #1a1a1a 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:active {
-  transform: translateY(1px) scale(0.98);
-  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.4);
+  transform: translateY(1px) scale(0.95);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  background: linear-gradient(135deg, #0a0a0a 0%, #000000 100%);
 }
 
 .btn-outline {
@@ -299,21 +302,31 @@ input:focus, textarea:focus, select:focus {
 
 /* Project-specific button styles */
 .btn-norton {
-  background: linear-gradient(135deg, #1A2F52 0%, var(--accent-norton) 100%);
-  color: #000;
-  box-shadow: 0 2px 12px rgba(255, 215, 0, 0.3);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-trippl {
-  background: linear-gradient(135deg, #1A2F52 0%, var(--accent-purple) 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   color: white;
-  box-shadow: 0 2px 12px rgba(191, 90, 242, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .btn-amazon {
-  background: linear-gradient(135deg, #1A2F52 0%, var(--accent-amazon) 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
   color: white;
-  box-shadow: 0 2px 12px rgba(255, 159, 10, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-contact {
+  background: linear-gradient(135deg, #1a1a1a 0%, #000000 100%);
+  color: white;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Badge styles - Apple-inspired */
@@ -701,7 +714,7 @@ input:focus, textarea:focus, select:focus {
 /* Infinite scroll animation */
 @keyframes scroll-left {
   0% {
-    transform: translateX(100vw);
+    transform: translateX(0);
   }
   100% {
     transform: translateX(-100%);

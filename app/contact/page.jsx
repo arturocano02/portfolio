@@ -8,14 +8,14 @@ export default function ContactPage() {
   return (
     <div className="section-full flex items-center justify-center py-16">
       <div className="glass max-w-2xl mx-auto py-16">
-        <h1 className="text-4xl md:text-5xl font-bold mb-8">Let's work together</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Let's work together</h1>
         <p className="text-xl mb-12">I am open to full-time roles and selected freelance collaborations.</p>
         
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Contact options</h2>
           <p className="mb-6 text-lg">
             <span className="block text-gray-400 mb-2">Email:</span>
-            <a href="mailto:arturocanodesigns@gmail.com" className="text-orange-400 hover:text-orange-300 hover:underline text-xl flex items-center gap-2 transition-colors">
+            <a href="mailto:arturocanodesigns@gmail.com" className="text-amber-500 hover:text-amber-400 hover:underline text-xl flex items-center gap-2 transition-colors">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
                 <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>
@@ -24,9 +24,9 @@ export default function ContactPage() {
             </a>
           </p>
           
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex justify-center gap-6 mb-6">
             {/* Instagram */}
-            <a href="https://instagram.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
               className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
               aria-label="Instagram">
               <img 
@@ -35,16 +35,11 @@ export default function ContactPage() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('Instagram icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('Instagram icon loaded successfully')}
               />
             </a>
             
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/arturo-cano" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
               className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
               aria-label="LinkedIn">
               <img 
@@ -53,11 +48,6 @@ export default function ContactPage() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('LinkedIn icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('LinkedIn icon loaded successfully')}
               />
             </a>
             
@@ -71,17 +61,11 @@ export default function ContactPage() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('GitHub icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('GitHub icon loaded successfully')}
               />
             </a>
-            
           </div>
           
-          <Button href="/contact" variant="primary" className="btn-contact">
+          <Button href="/contact" variant="primary" className="btn-primary">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>

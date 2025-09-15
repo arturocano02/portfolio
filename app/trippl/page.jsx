@@ -13,9 +13,9 @@ export default function TripplCaseStudy() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="flex flex-col md:flex-row gap-8">
             <div className="md:w-1/2">
-              <h1 className="text-4xl md:text-5xl font-bold mb-4" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
-                <span className="text-white">Built an app with</span><br/>
-                <span className="text-white">real social impact</span>
+              <h1 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+                Built an app with<br/>
+                real social impact
               </h1>
               <p className="text-xl mb-8">My female friends felt unsafe and often spent too much on taxis alone at night. During my Master's, I launched a platform that matches people traveling the same way to make urban transit safe and affordable.</p>
               
@@ -51,67 +51,64 @@ export default function TripplCaseStudy() {
             <iframe 
               src="https://www.youtube.com/embed/bHCXWi60BKU?autoplay=1&controls=1" 
               title="Trippl Demo Video"
-              className="w-full h-full"
+              className="w-full h-full object-cover"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
             ></iframe>
-            <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black to-transparent p-4">
-              <p className="text-white text-sm">what I did</p>
-            </div>
           </div>
         </div>
       </section>
 
       {/* What I Did Section */}
       <section id="details" className="py-10">
-        <div className="max-w-4xl mx-auto px-4">
+        <div className="max-w-7xl mx-auto px-4">
           <h2 className="text-2xl font-bold mb-6">what I did</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12 min-h-[300px]">
-            <div className="glass p-6 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
-              <div className="flex items-start mb-3">
-                <div className="p-2 bg-accent-purple bg-opacity-20 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-accent-purple" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 min-h-[300px]">
+            <div className="glass p-8 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
+              <div className="flex items-start mb-4">
+                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold">Built the core algorithm</h3>
+                <h3 className="text-base font-semibold">Built the core algorithm</h3>
               </div>
-              <p className="text-sm text-gray-300 mb-4">Designed and coded the algorithm to match users based on their routes and timing, ensuring optimal pairings.</p>
-              <div className="flex gap-2">
-                <span className="badge text-xs">Python</span>
-                <span className="badge text-xs">Firebase</span>
+              <p className="text-base text-gray-300 mb-6">Designed and coded the algorithm to match users based on their routes and timing, ensuring optimal pairings.</p>
+              <div className="flex gap-3">
+                <span className="badge text-sm">Python</span>
+                <span className="badge text-sm">Firebase</span>
               </div>
             </div>
-            <div className="glass p-6 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
-              <div className="flex items-start mb-3">
-                <div className="p-2 bg-accent-purple bg-opacity-20 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-accent-purple" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div className="glass p-8 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
+              <div className="flex items-start mb-4">
+                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold">Created, tested and iterated design</h3>
+                <h3 className="text-base font-semibold">Created, tested and iterated design</h3>
               </div>
-              <p className="text-sm text-gray-300 mb-4">Created the full UI and UX flow using feedback from user testing groups to refine the design.</p>
-              <div className="flex gap-2">
-                <span className="badge text-xs">Figma</span>
-                <span className="badge text-xs">UserTesting</span>
+              <p className="text-base text-gray-300 mb-6">Created the full UI and UX flow using feedback from user testing groups to refine the design.</p>
+              <div className="flex gap-3">
+                <span className="badge text-sm">Figma</span>
+                <span className="badge text-sm">UserTesting</span>
               </div>
             </div>
-            <div className="glass p-6 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
-              <div className="flex items-start mb-3">
-                <div className="p-2 bg-accent-purple bg-opacity-20 rounded-full mr-3">
-                  <svg className="w-5 h-5 text-accent-purple" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <div className="glass p-8 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
+              <div className="flex items-start mb-4">
+                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
                   </svg>
                 </div>
-                <h3 className="text-sm font-semibold">Launched in the real world</h3>
+                <h3 className="text-base font-semibold">Launched in the real world</h3>
               </div>
-              <p className="text-sm text-gray-300 mb-4">Ran live pilots in venues across London helping students get home safely with real-time matching, verification and guidance.</p>
-              <div className="flex gap-2">
-                <span className="badge text-xs">React Native</span>
-                <span className="badge text-xs">Expo</span>
+              <p className="text-base text-gray-300 mb-6">Ran live pilots in venues across London helping students get home safely with real-time matching, verification and guidance.</p>
+              <div className="flex gap-3">
+                <span className="badge text-sm">React Native</span>
+                <span className="badge text-sm">Expo</span>
               </div>
             </div>
           </div>
@@ -302,7 +299,7 @@ export default function TripplCaseStudy() {
               <span className="text-indigo-600 font-bold text-xl">IMPERIAL</span>
             </div>
             <div className="h-12 flex items-center justify-center">
-              <span className="text-purple-400 font-bold text-xl">UCL</span>
+              <span className="text-amber-500 font-bold text-xl">UCL</span>
             </div>
             <div className="h-12 flex items-center justify-center glass px-4 py-2 rounded-lg">
               <span className="font-medium">Imperial Enterprise Lab</span>
@@ -315,13 +312,13 @@ export default function TripplCaseStudy() {
           {/* App Link */}
           <div className="flex items-center gap-4 mb-12">
             <a href="https://trippl.co.uk" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 glass px-6 py-4 rounded-lg hover:bg-purple-900 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl border border-purple-500/30 hover:border-purple-500/60">
-              <svg className="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path>
               </svg>
               <span className="font-medium">Visit Trippl Website</span>
             </a>
             <div className="flex items-center gap-2 glass px-6 py-4 rounded-lg border border-purple-500/30 shadow-lg">
-              <svg className="w-6 h-6 text-purple-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
               </svg>
               <span className="font-medium">App Available on iOS & Android</span>
@@ -331,13 +328,11 @@ export default function TripplCaseStudy() {
       </section>
 
       {/* Footer CTA */}
-      <section className="py-16 border-t border-gray-700 glass">
+      <section className="py-4 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl font-bold mb-6">Let's work together</h2>
-          
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <div className="flex justify-center gap-6 mb-6">
             {/* Instagram */}
-            <a href="https://instagram.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
               className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
               aria-label="Instagram">
               <img 
@@ -346,16 +341,11 @@ export default function TripplCaseStudy() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('Instagram icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('Instagram icon loaded successfully')}
               />
             </a>
             
             {/* LinkedIn */}
-            <a href="https://linkedin.com/in/arturo-cano" target="_blank" rel="noopener noreferrer" 
+            <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
               className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
               aria-label="LinkedIn">
               <img 
@@ -364,11 +354,6 @@ export default function TripplCaseStudy() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('LinkedIn icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('LinkedIn icon loaded successfully')}
               />
             </a>
             
@@ -382,17 +367,11 @@ export default function TripplCaseStudy() {
                 width={24}
                 height={24}
                 className="w-6 h-6 object-contain"
-                onError={(e) => {
-                  console.log('GitHub icon failed to load');
-                  e.target.style.display = 'none';
-                }}
-                onLoad={() => console.log('GitHub icon loaded successfully')}
               />
             </a>
-            
           </div>
           
-          <Button href="/contact" variant="primary" className="btn-trippl">
+          <Button href="/contact" variant="primary" className="btn-primary">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
               <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
               <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"></path>

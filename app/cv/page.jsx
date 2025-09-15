@@ -20,7 +20,7 @@ export default function CVPage() {
         {/* Right side - Download options */}
         <div className="w-full md:w-1/4 flex items-center justify-center p-8">
           <div className="glass max-w-sm mx-auto text-center p-8 rounded-lg">
-            <h1 className="text-3xl font-bold mb-6">CV</h1>
+            <h1 className="text-3xl font-bold mb-6 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">CV</h1>
             <p className="text-lg mb-8">Download my résumé or email me for a tailored version.</p>
             <div className="flex flex-col gap-4">
               <Link href="/CV/CV_Arturo_2025.pdf" download="CV_Arturo_Cano.pdf">
