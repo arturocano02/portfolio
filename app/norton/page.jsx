@@ -15,19 +15,19 @@ export default function NortonCaseStudy() {
             "make my product feel<br/>
             smart and magical"
           </h1>
-          <div className="flex items-center justify-center gap-4 mb-12 text-center">
+          <div className="flex items-center justify-center gap-4 mb-12">
             <p className="text-xl text-white">what I did for</p>
             <Image 
               src="/images/norton/NortonGenie_logo.png"
               alt="Norton Genie Logo"
               width={120}
               height={40}
-              className="h-10 w-auto"
+              className="h-12 w-auto"
               style={{ width: 'auto', height: 'auto' }}
             />
           </div>
           
-          <div className="flex flex-col md:flex-row gap-2 max-w-full mx-auto px-2 justify-start">
+          <div className="flex flex-col md:flex-row gap-2 max-w-full mx-auto px-2 justify-center">
             <div className="glass p-8 rounded-xl border border-white border-opacity-10 flex-1">
               <div className="flex items-start mb-4">
                 <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
@@ -82,7 +82,7 @@ export default function NortonCaseStudy() {
           <h2 className="text-2xl font-bold mb-6">Your personal AI-powered scam detector</h2>
           
           <div className="mb-12">
-            <p className="text-lg mb-6">
+            <p className="text-lg mb-6 text-white">
               Led interaction design and UI elements for Norton Genie's scam-detection experience. I designed the signature 'orb' animation and results banner so the product feels smart, magical and trustworthy.
             </p>
             
@@ -127,7 +127,7 @@ export default function NortonCaseStudy() {
           
           {/* Video Section */}
           <section className="mb-16">
-            <div className="aspect-video rounded-lg overflow-hidden glass">
+            <div className="aspect-video rounded-lg overflow-hidden">
               <video 
                 controls
                 autoPlay
@@ -148,42 +148,38 @@ export default function NortonCaseStudy() {
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-16">
             <div className="text-center">
-              <div className="h-[500px] rounded-2xl mb-4 relative glass overflow-hidden max-w-md mx-auto">
-                <div className="relative w-full h-full flex items-center justify-center p-3">
-                  <Image 
-                    src="/images/norton/landing_page.png"
-                    alt="Landing page screen"
-                    width={500}
-                    height={889}
-                    className="w-full h-full object-contain rounded-[20px]"
-                    quality={100}
-                    priority
-                    unoptimized
-                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                  />
-                </div>
+              <div className="h-[500px] rounded-t-2xl rounded-b-none mb-4 relative overflow-hidden max-w-md mx-auto">
+                <Image 
+                  src="/images/norton/landing_page.png"
+                  alt="Landing page screen"
+                  width={500}
+                  height={889}
+                  className="w-full h-full object-contain rounded-t-[20px] rounded-b-none"
+                  quality={100}
+                  priority
+                  unoptimized
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
               </div>
-              <p className="text-sm text-gray-400">
+              <p className="text-xs text-white opacity-80 text-center">
                 Landing page screen
               </p>
             </div>
             <div className="text-center">
-              <div className="h-[500px] rounded-2xl mb-4 relative glass overflow-hidden max-w-md mx-auto">
-                <div className="relative w-full h-full flex items-center justify-center p-3">
-                  <Image 
-                    src="/images/norton/analysing_text.png"
-                    alt="Analyzing content screen"
-                    width={500}
-                    height={889}
-                    className="w-full h-full object-contain rounded-[20px]"
-                    quality={100}
-                    priority
-                    unoptimized
-                    style={{ width: '100%', height: '100%', objectFit: 'contain' }}
-                  />
-                </div>
+              <div className="h-[600px] rounded-2xl mb-4 relative overflow-hidden max-w-lg mx-auto">
+                <Image 
+                  src="/images/norton/analysing_text.png"
+                  alt="Analyzing content screen"
+                  width={500}
+                  height={889}
+                  className="w-full h-full object-contain rounded-[20px]"
+                  quality={100}
+                  priority
+                  unoptimized
+                  style={{ width: '100%', height: '100%', objectFit: 'contain' }}
+                />
               </div>
-              <p className="text-sm text-gray-400">
+              <p className="text-xs text-white opacity-80 text-center">
                 Analyzing content screen
               </p>
             </div>
@@ -237,36 +233,36 @@ export default function NortonCaseStudy() {
           <div className="flex justify-center gap-6 mb-6">
             {/* Instagram */}
             <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
               aria-label="Instagram">
               <img 
                 src="/links_icons/icons8-instagram-48.png"
                 alt="Instagram"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </a>
             
             {/* LinkedIn */}
             <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
               aria-label="LinkedIn">
               <img 
                 src="/links_icons/icons8-linkedin-50.png"
                 alt="LinkedIn"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </a>
             
             {/* GitHub */}
             <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
               aria-label="GitHub">
               <img 
                 src="/links_icons/icons8-github-50.png"
                 alt="GitHub"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </a>

@@ -1,27 +1,58 @@
-import React from 'react';
+"use client";
+import React, { useState } from 'react';
 import Image from 'next/image';
 import Button from '../components/Button';
 import Badge from '../components/Badge';
 import LogoScroller from '../components/LogoScroller';
 import ProjectCard from '../components/ProjectCard';
+import TypewriterEffect from '../components/TypewriterEffect';
 import { partnerLogos } from '../public/logos';
 
 export default function HomePage() {
+  const [showSubtitle, setShowSubtitle] = useState(false);
+  const [showTitle, setShowTitle] = useState(false);
+  const [showButtons, setShowButtons] = useState(false);
+
+  const handleSubtitleComplete = () => {
+    setShowTitle(true);
+  };
+
+  const handleTitleComplete = () => {
+    setShowButtons(true);
+  };
+
   return (
     <>
 
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center pt-20">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-xl text-white mb-4">a London-based Imperial graduate</p>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
-            designing and<br/>
-            building AI products
-          </h1>
-          <div className="flex justify-center gap-6 mb-12">
-            <Button href="/contact" variant="primary">Work with me</Button>
-            <Button href="/cv" variant="outline">CV</Button>
-          </div>
+      <section className="min-h-screen flex items-center justify-center">
+        <div className="max-w-5xl mx-auto px-6 text-center flex flex-col items-center">
+          <p className="text-xl text-white mb-4 text-center">
+            <TypewriterEffect 
+              text="a London-based Imperial graduate"
+              speed={60}
+              delay={500}
+              onComplete={handleSubtitleComplete}
+              className="block"
+            />
+          </p>
+          {showTitle && (
+            <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent text-center" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+              <TypewriterEffect 
+                text="designing and building AI products"
+                speed={80}
+                delay={200}
+                onComplete={handleTitleComplete}
+                className="block"
+              />
+            </h1>
+          )}
+          {showButtons && (
+            <div className="flex justify-center gap-6 mb-12 transition-all duration-1000 opacity-100 translate-y-0">
+              <Button href="/contact" variant="primary">Work with me</Button>
+              <Button href="/cv" variant="outline">CV</Button>
+            </div>
+          )}
         </div>
       </section>
 
@@ -39,7 +70,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/2">
               {/* Headline */}
-              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">make AI feel "magical"</h2>
+              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Make AI feel "magical"</h2>
               
               {/* Subheader */}
               <p className="text-lg text-white mb-4 text-left">
@@ -126,7 +157,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/2">
               {/* Headline */}
-              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">automate the boring tasks</h2>
+              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Automate the boring tasks</h2>
               
               {/* Subheader */}
               <p className="text-base text-white mb-4 text-left">
@@ -138,7 +169,7 @@ export default function HomePage() {
               <div className="mb-6">
                 <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
                 <div className="grid grid-cols-3 gap-3">
-                  <div className="metric-pill border-2 border-white border-opacity-20 h-20 flex items-center">
+                  <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
                       <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
@@ -149,7 +180,7 @@ export default function HomePage() {
                       <div className="metric-label">hours saved</div>
                     </div>
                   </div>
-                  <div className="metric-pill border-2 border-white border-opacity-20 h-20 flex items-center">
+                  <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
                       <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
@@ -160,7 +191,7 @@ export default function HomePage() {
                       <div className="metric-label">faster cycles</div>
                     </div>
                   </div>
-                  <div className="metric-pill border-2 border-white border-opacity-20 h-20 flex items-center">
+                  <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
                       <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
@@ -244,7 +275,7 @@ export default function HomePage() {
           <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/2">
               {/* Headline */}
-              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">build an app with social impact</h2>
+              <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">Build an app with social impact</h2>
               
               {/* Subheader */}
               <p className="text-base text-white mb-4 text-left">
@@ -429,40 +460,37 @@ export default function HomePage() {
     <div className="flex justify-center gap-6 mb-3">
       {/* Instagram */}
       <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
-        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+        className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
         aria-label="Instagram">
         <img 
           src="/links_icons/icons8-instagram-48.png" 
           alt="Instagram" 
-          className="w-6 h-6 object-contain"
-          style={{ width: 'auto', height: 'auto' }}
+          className="w-10 h-10 object-contain"
         />
       </a>
       
       {/* LinkedIn */}
       <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
-        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+        className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
         aria-label="LinkedIn">
         <img 
           src="/links_icons/icons8-linkedin-50.png" 
           alt="LinkedIn" 
-          className="w-6 h-6 object-contain"
-          style={{ width: 'auto', height: 'auto' }}
+          className="w-10 h-10 object-contain"
         />
       </a>
       
       {/* GitHub */}
       <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
-        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+        className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
         aria-label="GitHub">
         <img 
           src="/links_icons/icons8-github-50.png" 
           alt="GitHub" 
-          className="w-6 h-6 object-contain"
-          style={{ width: 'auto', height: 'auto' }}
+          className="w-10 h-10 object-contain"
         />
-      </a>
-    </div>
+            </a>
+          </div>
           
           <Button href="/contact" variant="primary" className="btn-primary">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">

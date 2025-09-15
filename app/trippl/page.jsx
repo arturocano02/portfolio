@@ -449,36 +449,36 @@ export default function TripplCaseStudy() {
           <div className="flex justify-center gap-6 mb-6">
             {/* Instagram */}
             <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
               aria-label="Instagram">
               <img 
                 src="/links_icons/icons8-instagram-48.png"
                 alt="Instagram"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </a>
             
             {/* LinkedIn */}
             <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
               aria-label="LinkedIn">
               <img 
                 src="/links_icons/icons8-linkedin-50.png"
                 alt="LinkedIn"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </a>
             
             {/* GitHub */}
             <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              className="w-14 h-14 rounded-xl flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105" 
               aria-label="GitHub">
               <img 
                 src="/links_icons/icons8-github-50.png"
                 alt="GitHub"
-                className="w-6 h-6 object-contain"
+                className="w-10 h-10 object-contain"
                 style={{ width: 'auto', height: 'auto' }}
               />
             </a>

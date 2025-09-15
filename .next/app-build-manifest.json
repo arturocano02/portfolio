@@ -26,15 +26,15 @@
       "static/chunks/main-app.js",
       "static/chunks/app/cv/page.js"
     ],
-    "/amazon/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/amazon/page.js"
-    ],
     "/trippl/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/chunks/app/trippl/page.js"
+    ],
+    "/amazon/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/chunks/app/amazon/page.js"
     ],
     "/contact/page": [
       "static/chunks/webpack.js",

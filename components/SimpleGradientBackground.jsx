@@ -14,14 +14,18 @@ export default function SimpleGradientBackground() {
     const ctx = canvas.getContext('2d');
     if (!ctx) return;
     
+    // Performance optimizations
+    ctx.imageSmoothingEnabled = false;
+    ctx.imageSmoothingQuality = 'low';
+    
     let width = window.innerWidth;
     let height = window.innerHeight;
     
-    // Colors for purple gradient with torch effect
-    const primaryColor = '#A855F7'; // Light purple for mouse follow
-    const topColor = '#8B5CF6'; // Vibrant purple for top
-    const middleColor = '#7C3AED'; // Medium purple for middle
-    const bottomColor = '#5B21B6'; // Deep purple for bottom
+    // Colors for light purple gradient with torch effect
+    const primaryColor = '#C084FC'; // Light purple for mouse follow
+    const topColor = '#A855F7'; // Light purple for top
+    const middleColor = '#9333EA'; // Medium light purple for middle
+    const bottomColor = '#7C3AED'; // Medium purple for bottom
     
     const resizeCanvas = () => {
       width = window.innerWidth;
@@ -66,28 +70,28 @@ export default function SimpleGradientBackground() {
       // Clear canvas
       ctx.clearRect(0, 0, width, height);
       
-      // Draw base gradient (teal to orange to pink - like the reference image)
+      // Draw base gradient (light purple gradient)
       const baseGradient = ctx.createLinearGradient(0, 0, width, height * 1.5);
-      baseGradient.addColorStop(0, topColor); // Teal at top
-      baseGradient.addColorStop(0.4, middleColor); // Orange in middle
-      baseGradient.addColorStop(0.8, bottomColor); // Pink at bottom
+      baseGradient.addColorStop(0, topColor); // Light purple at top
+      baseGradient.addColorStop(0.4, middleColor); // Medium light purple in middle
+      baseGradient.addColorStop(0.8, bottomColor); // Medium purple at bottom
       
       ctx.fillStyle = baseGradient;
       ctx.fillRect(0, 0, width, height);
       
-      // Draw orange "torch" following mouse - more pronounced effect
+      // Draw light purple "torch" following mouse - full effect
       const torchRadius = Math.max(width, height) * 0.6;
       const torchGradient = ctx.createRadialGradient(
         mousePos.current.x, mousePos.current.y, 0,
         mousePos.current.x, mousePos.current.y, torchRadius
       );
       
-      // Purple glow with better opacity transitions
-      torchGradient.addColorStop(0, 'rgba(168, 85, 247, 0.9)');
-      torchGradient.addColorStop(0.2, 'rgba(168, 85, 247, 0.7)');
-      torchGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.4)');
-      torchGradient.addColorStop(0.8, 'rgba(168, 85, 247, 0.1)');
-      torchGradient.addColorStop(1, 'rgba(168, 85, 247, 0)');
+      // Light purple glow with full opacity transitions
+      torchGradient.addColorStop(0, 'rgba(192, 132, 252, 0.9)');
+      torchGradient.addColorStop(0.2, 'rgba(192, 132, 252, 0.7)');
+      torchGradient.addColorStop(0.5, 'rgba(192, 132, 252, 0.4)');
+      torchGradient.addColorStop(0.8, 'rgba(192, 132, 252, 0.1)');
+      torchGradient.addColorStop(1, 'rgba(192, 132, 252, 0)');
       
       ctx.globalCompositeOperation = 'screen';
       ctx.fillStyle = torchGradient;

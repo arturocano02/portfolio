@@ -14,7 +14,7 @@ export default function FeatureCard({
   return (
     <article className="glass-card p-5 md:p-6 lg:p-8 m-2 md:m-3">
       {eyebrow && (
-        <div className="text-sm uppercase tracking-wide text-gray-400 mb-3">
+        <div className="text-sm uppercase tracking-wide text-white mb-3">
           {eyebrow}
         </div>
       )}
