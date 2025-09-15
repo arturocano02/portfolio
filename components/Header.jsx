@@ -24,12 +24,12 @@ export default function Header() {
     { name: "Norton Genie", path: "/norton" },
     { name: "Amazon AI Tools", path: "/amazon" },
     { name: "Trippl", path: "/trippl" },
-    { name: "All Projects", path: "/#projects" }
+    { name: "More Projects", path: "/#projects" }
   ];
   
   return (
     <header className="fixed top-0 left-0 w-full z-50 py-6 px-6 backdrop-blur-md bg-white bg-opacity-10 border-b border-white border-opacity-10 shadow-lg">
-      <div className="max-w-7xl mx-auto flex items-center justify-between">
+      <div className="max-w-7xl mx-auto flex items-center justify-between relative">
         <a href="/" className="text-2xl font-bold text-white no-underline">
           Arturo Cano
         </a>

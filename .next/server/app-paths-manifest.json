@@ -1,3 +1,7 @@
 {
-  "/page": "app/page.js"
+  "/trippl/page": "app/trippl/page.js",
+  "/amazon/page": "app/amazon/page.js",
+  "/contact/page": "app/contact/page.js",
+  "/cv/page": "app/cv/page.js",
+  "/norton/page": "app/norton/page.js"
 }

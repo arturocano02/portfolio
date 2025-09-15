@@ -5,7 +5,7 @@ export default function ScrollIndicator({ targetId }) {
   const handleClick = () => {
     const element = document.getElementById(targetId);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({ behaviour: 'smooth' });
     }
   };
 

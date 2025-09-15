@@ -14,7 +14,7 @@ export default function ContactPage() {
         <div className="mb-12">
           <h2 className="text-2xl font-semibold mb-6">Contact options</h2>
           <p className="mb-6 text-lg">
-            <span className="block text-gray-400 mb-2">Email:</span>
+            <span className="block text-white mb-2">Email:</span>
             <a href="mailto:arturocanodesigns@gmail.com" className="text-amber-500 hover:text-amber-400 hover:underline text-xl flex items-center gap-2 transition-colors">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"></path>
@@ -76,7 +76,7 @@ export default function ContactPage() {
         
         <form className="space-y-8">
           <div>
-            <label htmlFor="name" className="block text-lg font-medium text-gray-300 mb-2">
+            <label htmlFor="name" className="block text-lg font-medium text-white mb-2">
               Name
             </label>
             <input
@@ -88,7 +88,7 @@ export default function ContactPage() {
           </div>
           
           <div>
-            <label htmlFor="email" className="block text-lg font-medium text-gray-300 mb-2">
+            <label htmlFor="email" className="block text-lg font-medium text-white mb-2">
               Email
             </label>
             <input
@@ -100,7 +100,7 @@ export default function ContactPage() {
           </div>
           
           <div>
-            <label htmlFor="message" className="block text-lg font-medium text-gray-300 mb-2">
+            <label htmlFor="message" className="block text-lg font-medium text-white mb-2">
               Message
             </label>
             <textarea
@@ -119,6 +119,49 @@ export default function ContactPage() {
           </Button>
         </form>
       </div>
+      
+      {/* Footer CTA */}
+      <section className="py-4 border-t border-gray-700 glass">
+        <div className="max-w-4xl mx-auto px-4 text-center">
+          <div className="flex justify-center gap-6 mb-6">
+            {/* Instagram */}
+            <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="Instagram">
+              <img 
+                src="/links_icons/icons8-instagram-48.png"
+                alt="Instagram"
+                className="w-6 h-6 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
+              />
+            </a>
+            
+            {/* LinkedIn */}
+            <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="LinkedIn">
+              <img 
+                src="/links_icons/icons8-linkedin-50.png"
+                alt="LinkedIn"
+                className="w-6 h-6 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
+              />
+            </a>
+            
+            {/* GitHub */}
+            <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+              aria-label="GitHub">
+              <img 
+                src="/links_icons/icons8-github-50.png"
+                alt="GitHub"
+                className="w-6 h-6 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
+              />
+            </a>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

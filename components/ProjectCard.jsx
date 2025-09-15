@@ -61,8 +61,8 @@ export default function ProjectCard({
         
         <div className="flex items-center text-orange-400 text-sm font-medium group-hover:text-orange-300 transition-colors">
           Learn more
-          <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" strokeWidth="1.25" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+          <svg className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform text-black" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
           </svg>
         </div>
       </div>
@@ -88,8 +88,8 @@ export default function ProjectCard({
               aria-label="Close modal"
               style={{ float: 'right', marginTop: '1.5rem', marginRight: '1.5rem' }}
             >
-              <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <path d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
 

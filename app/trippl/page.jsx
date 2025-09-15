@@ -17,7 +17,7 @@ export default function TripplCaseStudy() {
                 Built an app with<br/>
                 real social impact
               </h1>
-              <p className="text-xl mb-8">My female friends felt unsafe and often spent too much on taxis alone at night. During my Master's, I launched a platform that matches people traveling the same way to make urban transit safe and affordable.</p>
+              <p className="text-xl text-white mb-8">My female friends felt unsafe and often spent too much on taxis alone at night. During my Master's, I launched a platform that matches people travelling the same way to make urban transit safe and affordable.</p>
               
               <div className="flex flex-wrap gap-4 mb-8">
                 <Button href="#video" variant="primary" className="btn-trippl">
@@ -30,11 +30,11 @@ export default function TripplCaseStudy() {
             </div>
             
             <div className="md:w-1/2">
-              <div className="glass rounded-lg overflow-hidden h-full">
+              <div className="overflow-hidden h-full rounded-lg">
                 <iframe 
                   src="https://trippl.co.uk" 
                   title="Trippl Website"
-                  className="w-full h-[500px] border-0"
+                  className="w-full h-[600px] border-0"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 />
@@ -44,14 +44,126 @@ export default function TripplCaseStudy() {
         </div>
       </section>
 
+      {/* Metrics Section */}
+      <section className="py-8">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-5 gap-6 mb-12">
+            {/* Live Pilots */}
+            <div className="metric-card group">
+              <div className="metric-card-inner">
+                <div className="metric-card-front">
+                  <div className="metric-icon-large">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"></path>
+                    </svg>
+                  </div>
+                  <div className="metric-number-large">6</div>
+                  <div className="metric-label-large">Live Pilots</div>
+                </div>
+                <div className="metric-card-back">
+                  <div className="metric-details">
+                    <h3 className="metric-title">6 Live Pilots</h3>
+                    <p className="metric-description">We ran six pilots across London, from student bars to launch parties with 100+ people. Each event gave us feedback on matching, safety, and the user journey, which we used to iterate the app.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Beta Users */}
+            <div className="metric-card group">
+              <div className="metric-card-inner">
+                <div className="metric-card-front">
+                  <div className="metric-icon-large">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
+                    </svg>
+                  </div>
+                  <div className="metric-number-large">500+</div>
+                  <div className="metric-label-large">Beta Users</div>
+                </div>
+                <div className="metric-card-back">
+                  <div className="metric-details">
+                    <h3 className="metric-title">500+ Beta Users</h3>
+                    <p className="metric-description">Our beta included students and young professionals. They tested Trippl in real settings, helping us refine the experience. The main challenge was sparking enough matches without big marketing spend.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Partnerships */}
+            <div className="metric-card group">
+              <div className="metric-card-inner">
+                <div className="metric-card-front">
+                  <div className="metric-icon-large">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div className="metric-number-large">4</div>
+                  <div className="metric-label-large">Partnerships</div>
+                </div>
+                <div className="metric-card-back">
+                  <div className="metric-details">
+                    <h3 className="metric-title">4 Partnerships</h3>
+                    <p className="metric-description">We built partnerships with venues, student societies, accelerator programs, Black Cabs, and safety groups like Our Safer City. These gave us reach and credibility in real nightlife contexts.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Awards */}
+            <div className="metric-card group">
+              <div className="metric-card-inner">
+                <div className="metric-card-front">
+                  <div className="metric-icon-large">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div className="metric-number-large">3</div>
+                  <div className="metric-label-large">Awards</div>
+                </div>
+                <div className="metric-card-back">
+                  <div className="metric-details">
+                    <h3 className="metric-title">3 Awards</h3>
+                    <p className="metric-description">Trippl was a Samsung Solve for Tomorrow finalist, won Data Analytics for Sustainability, and was showcased in Imperial's WeInnovate and accelerator programs.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Proprietary Algorithm */}
+            <div className="metric-card group">
+              <div className="metric-card-inner">
+                <div className="metric-card-front">
+                  <div className="metric-icon-large">
+                    <svg className="w-8 h-8" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <path fillRule="evenodd" d="M11.3 1.046A1 1 0 0112 2v5h4a1 1 0 01.82 1.573l-7 10A1 1 0 018 18v-5H4a1 1 0 01-.82-1.573l7-10a1 1 0 011.12-.38z" clipRule="evenodd"></path>
+                    </svg>
+                  </div>
+                  <div className="metric-number-large">1</div>
+                  <div className="metric-label-large">Proprietary Algorithm</div>
+                </div>
+                <div className="metric-card-back">
+                  <div className="metric-details">
+                    <h3 className="metric-title">Proprietary Algorithm</h3>
+                    <p className="metric-description">We designed a custom ride-splitting algorithm using Shapley values. It guaranteed rides were always cheaper to share than go alone, and fair for every rider — an Imperial Master's project in game theory applied to real travel.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* YouTube Video Section */}
-      <section id="video" className="py-10">
-        <div className="max-w-4xl mx-auto px-4">
-          <div className="aspect-video rounded-lg overflow-hidden mb-12 relative glass">
+      <section id="video" className="py-6">
+        <div className="max-w-6xl mx-auto px-2">
+          <div className="aspect-video rounded-lg overflow-hidden mb-12 relative">
             <iframe 
               src="https://www.youtube.com/embed/bHCXWi60BKU?autoplay=1&controls=1" 
               title="Trippl Demo Video"
-              className="w-full h-full object-cover"
+              className="w-full h-full"
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
@@ -63,52 +175,69 @@ export default function TripplCaseStudy() {
       {/* What I Did Section */}
       <section id="details" className="py-10">
         <div className="max-w-7xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">what I did</h2>
+          <h2 className="text-2xl font-bold mb-6 text-white">what I did</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 min-h-[300px]">
-            <div className="glass p-8 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+            <div className="glass p-6 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
               <div className="flex items-start mb-4">
-                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <div className="p-3 bg-white bg-opacity-10 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
                   </svg>
                 </div>
-                <h3 className="text-base font-semibold">Built the core algorithm</h3>
+                <h3 className="text-lg font-semibold text-white">Built the core algorithm</h3>
               </div>
-              <p className="text-base text-gray-300 mb-6">Designed and coded the algorithm to match users based on their routes and timing, ensuring optimal pairings.</p>
-              <div className="flex gap-3">
-                <span className="badge text-sm">Python</span>
-                <span className="badge text-sm">Firebase</span>
+              <p className="text-sm text-white mb-2 flex-grow">Designed and coded the algorithm to match users based on their routes and timing, ensuring optimal pairings.</p>
+              <div className="mt-auto">
+                <p className="text-xs text-white opacity-70 mb-2">Skills & Tools</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="badge text-xs">Python</span>
+                  <span className="badge text-xs">Firebase</span>
+                  <span className="badge text-xs">Algorithm Design</span>
+                  <span className="badge text-xs">Data Structures</span>
+                </div>
               </div>
             </div>
-            <div className="glass p-8 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
+            <div className="glass p-6 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
               <div className="flex items-start mb-4">
-                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10 3.5a1.5 1.5 0 013 0V4a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-.5a1.5 1.5 0 000 3h.5a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-.5a1.5 1.5 0 00-3 0v.5a1 1 0 01-1 1H6a1 1 0 01-1-1v-3a1 1 0 00-1-1h-.5a1.5 1.5 0 010-3H4a1 1 0 001-1V6a1 1 0 011-1h3a1 1 0 001-1v-.5z"></path>
+                <div className="p-3 bg-white bg-opacity-10 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                    <path fillRule="evenodd" d="M4 2a1 1 0 011 1v2.101a7.002 7.002 0 0111.601 2.566 1 1 0 11-1.885.666A5.002 5.002 0 005.999 7H9a1 1 0 010 2H4a1 1 0 01-1-1V3a1 1 0 011-1zm.008 9.057a1 1 0 011.276.61A5.002 5.002 0 0014.001 13H11a1 1 0 110-2h5a1 1 0 011 1v5a1 1 0 11-2 0v-2.101a7.002 7.002 0 01-11.601-2.566 1 1 0 01.61-1.276z" clipRule="evenodd"></path>
                   </svg>
                 </div>
-                <h3 className="text-base font-semibold">Created, tested and iterated design</h3>
+                <h3 className="text-lg font-semibold text-white">Created, tested and iterated design</h3>
               </div>
-              <p className="text-base text-gray-300 mb-6">Created the full UI and UX flow using feedback from user testing groups to refine the design.</p>
-              <div className="flex gap-3">
-                <span className="badge text-sm">Figma</span>
-                <span className="badge text-sm">UserTesting</span>
+              <p className="text-sm text-white mb-2 flex-grow">Created the full UI and UX flow using feedback from user testing groups to refine the design.</p>
+              <div className="mt-auto">
+                <p className="text-xs text-white opacity-70 mb-2">Skills & Tools</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="badge text-xs">Figma</span>
+                  <span className="badge text-xs">User Testing</span>
+                  <span className="badge text-xs">Co-Designing</span>
+                  <span className="badge text-xs">Prototyping</span>
+                  <span className="badge text-xs">Wireframing</span>
+                </div>
               </div>
             </div>
-            <div className="glass p-8 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
+            <div className="glass p-6 rounded-lg border border-white border-opacity-10 flex flex-col h-full">
               <div className="flex items-start mb-4">
-                <div className="p-3 bg-amber-500 bg-opacity-20 rounded-full mr-4">
-                  <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                <div className="p-3 bg-white bg-opacity-10 rounded-full mr-4">
+                  <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
                   </svg>
                 </div>
-                <h3 className="text-base font-semibold">Launched in the real world</h3>
+                <h3 className="text-lg font-semibold text-white">Launched in the real world</h3>
               </div>
-              <p className="text-base text-gray-300 mb-6">Ran live pilots in venues across London helping students get home safely with real-time matching, verification and guidance.</p>
-              <div className="flex gap-3">
-                <span className="badge text-sm">React Native</span>
-                <span className="badge text-sm">Expo</span>
+              <p className="text-sm text-white mb-2 flex-grow">Ran live pilots in venues across London helping students get home safely with real-time matching, verification and guidance.</p>
+              <div className="mt-auto">
+                <p className="text-xs text-white opacity-70 mb-2">Skills & Tools</p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="badge text-xs">React Native</span>
+                  <span className="badge text-xs">Expo</span>
+                  <span className="badge text-xs">Mobile Development</span>
+                  <span className="badge text-xs">Real-time Systems</span>
+                  <span className="badge text-xs">API Integration</span>
+                </div>
               </div>
             </div>
           </div>
@@ -118,182 +247,155 @@ export default function TripplCaseStudy() {
       {/* Story Section */}
       <section className="py-10">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-2xl font-bold mb-6">the story of my first venture</h2>
+          <h2 className="text-2xl font-bold mb-6 text-white">the story of my first venture</h2>
           
-          <p className="text-base mb-6">
-            I launched Trippl, with my co-founder Theo Bot, during our final year of Design Engineering at Imperial. The idea came after watching my friends, mostly women, trying to get home safely after a night out. Many of them were on a tight budget, so a lot of money had been spent because they didn't feel safe walking or using public transport.
+          <p className="text-base text-white mb-6">
+            I launched Trippl, with my co-founder Theo Bui, during our final year of Design Engineering at Imperial. The idea came after watching my friends, mostly women, trying to get home safely after a night out. Many of them were on a tight budget, so a lot of money had been spent because they didn't feel safe walking or using public transport.
           </p>
           
-          <p className="text-base mb-6">
+          <p className="text-base text-white mb-6">
             After running 6 campus trials with 500+ students and an app store soft launch, we realized this was a real problem worth solving. We were invited to pitch at Imperial Enterprise Lab competitions (3 of which we won) and were offered a place in their incubator. At the start it was simple, just a team matching algorithm and an email interface. I kept iterating. I talked to groups who'd experienced what we were trying to solve, and what would make them safer. Eventually, we had a product that matched people based on their route, verified their student status, and helped them find others who to travel with.
           </p>
           
-          <p className="text-base mb-12">
+          <p className="text-base text-white mb-12">
             We set up our pilots. Six venues across London agreed to trial Trippl. I negotiated partnerships, printed posters, and created a marketing plan. We launched with 500 people across the trials. We had a custom-built matching algorithm that matched students and shared rides home.
           </p>
           
           {/* Main Image Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {/* Left: Loading Screen (Mobile Format) */}
-            <div className="aspect-[9/16] overflow-hidden">
-              <Image 
-                src="/images/trippl/loading_screen.png"
-                alt="Trippl App Loading Screen"
-                width={300}
-                height={533}
-                className="object-cover w-full h-full"
-                priority
-              />
+            {/* Left: Login/Sign Up Screen (Mobile Format) */}
+            <div className="flex flex-col">
+              <div className="aspect-[9/16] overflow-hidden rounded-lg mb-3">
+                <Image 
+                  src="/images/trippl/loading_screen.png"
+                  alt="Trippl Login/Sign Up Screen"
+                  width={300}
+                  height={533}
+                  className="object-contain w-full h-full"
+                  priority
+                />
+              </div>
+              <p className="text-xs text-white opacity-80 text-center">Login / Sign Up Screen — Trippl's first screen where users sign up to travel safer together.</p>
             </div>
             
             {/* Center: Prize and Bathroom stacked vertically */}
             <div className="flex flex-col gap-6">
-              <div className="aspect-[4/3] overflow-hidden">
-                <Image 
-                  src="/images/trippl/prize.JPG"
-                  alt="Trippl Prize Ceremony"
-                  width={400}
-                  height={300}
-                  className="object-cover w-full h-full"
-                />
-              </div>
-              <div className="aspect-[4/3] overflow-hidden">
-                <Image 
-                  src="/images/trippl/bathroom.png"
-                  alt="Trippl Event Location"
-                  width={400}
-                  height={300}
-                  className="object-cover w-full h-full"
-                />
-              </div>
+              <div className="flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+                  <Image 
+                    src="/images/trippl/prize.JPG"
+                    alt="Trippl Award Ceremony"
+                    width={400}
+                    height={300}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <p className="text-xs text-white opacity-80 text-center">Award — Data Analytics for Sustainability. Trippl winning the award.</p>
           </div>
 
-            {/* Right: Enter Ride (Mobile Format) */}
-            <div className="aspect-[9/16] overflow-hidden">
-              <Image 
-                src="/images/trippl/Enter_ride.png"
-                alt="Trippl App Enter Ride Screen"
-                width={300}
-                height={533}
-                className="object-cover w-full h-full"
-              />
+              <div className="flex flex-col">
+                <div className="aspect-[4/3] overflow-hidden rounded-lg mb-3">
+                  <Image 
+                    src="/images/trippl/bathroom.png"
+                    alt="Trippl Pilot Night"
+                    width={400}
+                    height={300}
+                    className="object-cover w-full h-full"
+                  />
+                </div>
+                <p className="text-xs text-white opacity-80 text-center">Pilot Night — Students testing Trippl during one of our six London pilots.</p>
+              </div>
+            </div>
+
+            {/* Right: Poster/Ride Page (Mobile Format) */}
+            <div className="flex flex-col">
+              <div className="aspect-[9/16] overflow-hidden rounded-lg mb-3">
+                <Image 
+                  src="/images/trippl/Enter_ride.png"
+                  alt="Trippl Poster/Ride Page"
+                  width={300}
+                  height={533}
+                  className="object-contain w-full h-full"
+                />
+              </div>
+              <p className="text-xs text-white opacity-80 text-center">Poster / Ride Page — How Trippl spread at venues and student societies.</p>
             </div>
           </div>
 
-          <p className="text-base mb-6">
+          <p className="text-base text-white mb-6">
             At the same time, I was pitching. Trippl reached the UK Top 5 of campaigns made for Tomorrow and several targeted startup competitions. I also pitched to UCL, Angel investors, and accelerator programs. Sadly, but importantly, we realized that the business model wasn't viable in the long run without significant funding.
           </p>
           
-          <p className="text-base mb-12">
+          <p className="text-base text-white mb-12">
             This journey led me to realize that products built for safety need to be tested in the real world. Realtime at venues, friends full of people at each venue, each with their own phone. How these friends interact is a design model that's worth exploring. This was a product tested in the world, with students relying on it to get home safe.
           </p>
           
           {/* Three Vertical Videos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            <div className="aspect-[9/16] overflow-hidden">
-              <video 
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source 
-                  src="/images/trippl/pitch_imperial.mp4" 
-                  type="video/mp4" 
-                />
-                Your browser does not support the video tag.
-              </video>
+            <div className="flex flex-col">
+              <div className="aspect-[9/16] overflow-hidden rounded-lg mb-3">
+                <video 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source 
+                    src="/images/trippl/pitch_imperial.mp4" 
+                    type="video/mp4" 
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-xs text-white opacity-80 text-center">Pitch — Imperial WeInnovate. Pitching Trippl at Imperial's WeInnovate competition.</p>
             </div>
-            <div className="aspect-[9/16] overflow-hidden">
-              <video 
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source 
-                  src="/images/trippl/pitch_outside.mp4" 
-                  type="video/mp4" 
-                />
-                Your browser does not support the video tag.
-              </video>
+            
+            <div className="flex flex-col">
+              <div className="aspect-[9/16] overflow-hidden rounded-lg mb-3">
+                <video 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source 
+                    src="/images/trippl/pitch_outside.mp4" 
+                    type="video/mp4" 
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-xs text-white opacity-80 text-center">Pitch — AI Forge. Trippl presented at AI Forge, exploring the role of AI in safer travel.</p>
             </div>
-            <div className="aspect-[9/16] overflow-hidden">
-              <video 
-                autoPlay
-                muted
-                loop
-                playsInline
-                className="w-full h-full object-cover"
-              >
-                <source 
-                  src="/images/trippl/protest.mp4" 
-                  type="video/mp4" 
-                />
-                Your browser does not support the video tag.
-              </video>
+            
+            <div className="flex flex-col">
+              <div className="aspect-[9/16] overflow-hidden rounded-lg mb-3">
+                <video 
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  className="w-full h-full object-cover"
+                >
+                  <source 
+                    src="/images/trippl/protest.mp4" 
+                    type="video/mp4" 
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <p className="text-xs text-white opacity-80 text-center">Women's March Interview. Interview during the Women's March, sharing Trippl's mission around women's safety at night.</p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Metrics Section */}
+      {/* Partners & Collaborators Section */}
       <section className="py-16">
         <div className="max-w-4xl mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">6</div>
-                <div className="metric-label">Live Pilots</div>
-              </div>
-            </div>
-            
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3zM6 8a2 2 0 11-4 0 2 2 0 014 0zM16 18v-3a5.972 5.972 0 00-.75-2.906A3.005 3.005 0 0119 15v3h-3zM4.75 12.094A5.973 5.973 0 004 15v3H1v-3a3 3 0 013.75-2.906z"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">500+</div>
-                <div className="metric-label">Beta Users</div>
-              </div>
-            </div>
-            
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path fillRule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" clipRule="evenodd"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">4</div>
-                <div className="metric-label">Partnerships</div>
-              </div>
-            </div>
-            
-            <div className="metric-pill">
-              <div className="metric-icon">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z" clipRule="evenodd"></path>
-                </svg>
-              </div>
-              <div>
-                <div className="metric-number">3</div>
-                <div className="metric-label">Awards</div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Partner Logos */}
-          <h3 className="text-xl font-bold mb-6">Partners & Collaborators</h3>
+          <h3 className="text-xl font-bold mb-6 text-white">Partners & Collaborators</h3>
           <div className="flex flex-wrap items-center gap-8 mb-12">
             <div className="h-12 flex items-center justify-center">
               <span className="text-indigo-600 font-bold text-xl">IMPERIAL</span>
@@ -301,28 +403,42 @@ export default function TripplCaseStudy() {
             <div className="h-12 flex items-center justify-center">
               <span className="text-amber-500 font-bold text-xl">UCL</span>
             </div>
-            <div className="h-12 flex items-center justify-center glass px-4 py-2 rounded-lg">
-              <span className="font-medium">Imperial Enterprise Lab</span>
+            <div className="h-12">
+              <Image 
+                src="/logos/imperial-enterprise-lab.png" 
+                alt="Imperial Enterprise Lab" 
+                width={120} 
+                height={48} 
+                className="h-full w-auto" 
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </div>
-            <div className="h-12 flex items-center justify-center glass px-4 py-2 rounded-lg">
-              <span className="font-medium">Venture Catalyst Challenge</span>
+            <div className="h-6">
+              <Image 
+                src="/logos/scotch.png" 
+                alt="Scotch of St James" 
+                width={60} 
+                height={24} 
+                className="h-full w-auto" 
+                style={{ width: 'auto', height: 'auto' }}
+              />
             </div>
           </div>
           
           {/* App Link */}
           <div className="flex items-center gap-4 mb-12">
             <a href="https://trippl.co.uk" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 glass px-6 py-4 rounded-lg hover:bg-purple-900 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl border border-purple-500/30 hover:border-purple-500/60">
-              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+              <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path fillRule="evenodd" d="M12.586 4.586a2 2 0 112.828 2.828l-3 3a2 2 0 01-2.828 0 1 1 0 00-1.414 1.414 4 4 0 005.656 0l3-3a4 4 0 00-5.656-5.656l-1.5 1.5a1 1 0 101.414 1.414l1.5-1.5zm-5 5a2 2 0 012.828 0 1 1 0 101.414-1.414 4 4 0 00-5.656 0l-3 3a4 4 0 105.656 5.656l1.5-1.5a1 1 0 10-1.414-1.414l-1.5 1.5a2 2 0 11-2.828-2.828l3-3z" clipRule="evenodd"></path>
               </svg>
               <span className="font-medium">Visit Trippl Website</span>
             </a>
-            <div className="flex items-center gap-2 glass px-6 py-4 rounded-lg border border-purple-500/30 shadow-lg">
-              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+            <a href="https://trippl.co.uk/download/ref_website" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 glass px-6 py-4 rounded-lg border border-purple-500/30 shadow-lg hover:bg-purple-900 hover:bg-opacity-20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl hover:border-purple-500/60">
+              <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                 <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6zM10 18a3 3 0 01-3-3h6a3 3 0 01-3 3z"></path>
               </svg>
-              <span className="font-medium">App Available on iOS & Android</span>
-            </div>
+              <span className="font-medium text-white">App Available on iOS & Android</span>
+            </a>
           </div>
         </div>
       </section>
@@ -338,9 +454,8 @@ export default function TripplCaseStudy() {
               <img 
                 src="/links_icons/icons8-instagram-48.png"
                 alt="Instagram"
-                width={24}
-                height={24}
                 className="w-6 h-6 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </a>
             
@@ -351,9 +466,8 @@ export default function TripplCaseStudy() {
               <img 
                 src="/links_icons/icons8-linkedin-50.png"
                 alt="LinkedIn"
-                width={24}
-                height={24}
                 className="w-6 h-6 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </a>
             
@@ -364,9 +478,8 @@ export default function TripplCaseStudy() {
               <img 
                 src="/links_icons/icons8-github-50.png"
                 alt="GitHub"
-                width={24}
-                height={24}
                 className="w-6 h-6 object-contain"
+                style={{ width: 'auto', height: 'auto' }}
               />
             </a>
           </div>

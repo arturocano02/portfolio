@@ -13,12 +13,12 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center pt-20">
         <div className="max-w-5xl mx-auto px-6 text-center">
-          <p className="text-xl mb-6">a London-based Imperial graduate</p>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-12 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
+          <p className="text-xl text-white mb-4">a London-based Imperial graduate</p>
+          <h1 className="text-5xl md:text-6xl font-extrabold mb-8 bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent" style={{ lineHeight: '1.4', paddingBottom: '0.3em' }}>
             designing and<br/>
-            implementing AI products
+            building AI products
           </h1>
-          <div className="flex justify-center gap-6 mb-20">
+          <div className="flex justify-center gap-6 mb-12">
             <Button href="/contact" variant="primary">Work with me</Button>
             <Button href="/cv" variant="outline">CV</Button>
           </div>
@@ -26,34 +26,34 @@ export default function HomePage() {
       </section>
 
       {/* Partners Strip */}
-      <section className="py-16 w-full overflow-hidden">
+      <section className="py-8 w-full overflow-hidden">
         <div className="w-full text-center">
-          <p className="text-lg text-white mb-8 font-medium">Who I have worked with</p>
+          <p className="text-lg text-white mb-6 font-medium">Who I have worked with</p>
           <LogoScroller logos={partnerLogos} />
         </div>
       </section>
 
       {/* Norton Case Study Preview */}
-      <section className="py-16">
+      <section className="py-6">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-12">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/2">
               {/* Headline */}
               <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">make AI feel "magical"</h2>
               
               {/* Subheader */}
-              <p className="text-lg mb-6 text-left">
+              <p className="text-lg text-white mb-4 text-left">
                 Led interaction design and UI elements for Norton Genie's scam-detection experience. 
                 I designed the signature 'orb' animation and results banner so the product feels smart, magical and trustworthy.
               </p>
               
               {/* Key Results */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Key Results</h3>
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
                 <div className="flex flex-wrap gap-1">
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                       </svg>
                     </div>
@@ -64,7 +64,7 @@ export default function HomePage() {
                   </div>
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
                       </svg>
                     </div>
@@ -75,7 +75,7 @@ export default function HomePage() {
                   </div>
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M10 1.944A11.954 11.954 0 012.166 5C2.056 5.649 2 6.319 2 7c0 5.225 3.34 9.67 8 11.317C14.66 16.67 18 12.225 18 7c0-.682-.057-1.35-.166-2.001A11.954 11.954 0 0110 1.944zM11.14 12a4 4 0 01-2.28-7.33l.38.38a1 1 0 001.414-1.415l-.38-.38A4 4 0 0111.14 12z" clipRule="evenodd"></path>
                       </svg>
                     </div>
@@ -88,9 +88,9 @@ export default function HomePage() {
               </div>
 
               {/* Skills & Expertise */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Skills & Expertise</h3>
-                <div className="grid grid-cols-2 gap-2">
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
+                <div className="grid grid-cols-2 gap-1">
                   <Badge text="UI/UX Design" />
                   <Badge text="Interaction Design" />
                   <Badge text="Animation" />
@@ -121,26 +121,26 @@ export default function HomePage() {
       </section>
 
       {/* Amazon Case Study Preview */}
-      <section className="py-16">
+      <section className="py-6">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-12">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/2">
               {/* Headline */}
               <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">automate the boring tasks</h2>
               
               {/* Subheader */}
-              <p className="text-base mb-6 text-left">
+              <p className="text-base text-white mb-4 text-left">
                 Created five AI tools and a stakeholder map to cut repetitive work and improve clarity. 
                 Saved teams hours each week and gave leaders faster, cleaner reviews.
               </p>
               
               {/* Key Results */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Key Results</h3>
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
                 <div className="grid grid-cols-3 gap-3">
                   <div className="metric-pill border-2 border-white border-opacity-20 h-20 flex items-center">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12a1 1 0 10-2 0v4a1 1 0 00.293.707l2.828 2.829a1 1 0 101.415-1.415L11 9.586V6z" clipRule="evenodd"></path>
                       </svg>
                     </div>
@@ -151,7 +151,7 @@ export default function HomePage() {
                   </div>
                   <div className="metric-pill border-2 border-white border-opacity-20 h-20 flex items-center">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M3 3a1 1 0 000 2v8a2 2 0 002 2h2.586l-1.293 1.293a1 1 0 101.414 1.414L10 15.414l2.293 2.293a1 1 0 001.414-1.414L12.414 15H15a2 2 0 002-2V5a1 1 0 100-2H3zm11.707 4.707a1 1 0 00-1.414-1.414L10 9.586 8.707 8.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd"></path>
                       </svg>
                     </div>
@@ -162,7 +162,7 @@ export default function HomePage() {
                   </div>
                   <div className="metric-pill border-2 border-white border-opacity-20 h-20 flex items-center">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clipRule="evenodd"></path>
                       </svg>
                     </div>
@@ -175,9 +175,9 @@ export default function HomePage() {
               </div>
 
               {/* Skills & Expertise */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Skills & Expertise</h3>
-                <div className="flex flex-wrap gap-2">
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
+                <div className="flex flex-wrap gap-1">
                   <Badge text="AI agents & automation" />
                   <Badge text="Knowledge management" />
                   <Badge text="Dashboard & KPI design" />
@@ -194,42 +194,44 @@ export default function HomePage() {
             {/* Tools - Right Side */}
             <div className="lg:w-1/2 flex justify-center">
               <div className="grid grid-cols-3 gap-6 justify-items-center">
-                {/* Top row - 3 tools */}
-                {['Business Reviews', 'Slack Bot', 'Leadership Briefing'].map((item, idx) => (
-                  <div key={idx} className="relative group">
-                    <div className="w-40 h-32 rounded-xl glass flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg border border-white border-opacity-20 p-4">
-                      <Image 
-                        src={`/icons/${idx === 0 ? 'business analytics on tablet screen.png' : 
-                               idx === 1 ? 'artificial intelligence on tablet screen.png' :
-                               'Business tools for risk assessment and management.png'}`}
-                        alt={item}
-                        width={60}
-                        height={60}
-                        className="w-15 h-15 object-contain mb-2"
-                      />
-                      <span className="text-white text-xs font-medium text-center">{item}</span>
-                    </div>
-                  </div>
-                ))}
+        {/* Top row - 3 tools */}
+        {['Business Reviews', 'Slack Bot', 'Leadership Briefing'].map((item, idx) => (
+          <div key={idx} className="relative flex flex-col items-center">
+            <div className="relative w-16 h-16 mb-3">
+              <Image 
+                src={`/icons/${idx === 0 ? 'business analytics on tablet screen.png' : 
+                       idx === 1 ? 'artificial intelligence on tablet screen.png' :
+                       'Business tools for risk assessment and management.png'}`}
+                alt={item}
+                width={60}
+                height={60}
+                className="w-16 h-16 object-contain floating-icon"
+                style={{ width: 'auto', height: 'auto' }}
+              />
+            </div>
+            <span className="text-white text-xs font-medium text-center">{item}</span>
+          </div>
+        ))}
                 
-                {/* Bottom row - 2 tools, centered */}
-                <div className="col-span-3 flex justify-center gap-12 mt-4">
-                  {['Newsletter', 'Stakeholder Map'].map((item, idx) => (
-                    <div key={idx + 3} className="relative group">
-                      <div className="w-40 h-32 rounded-xl glass flex flex-col items-center justify-center hover:scale-105 transition-transform duration-300 shadow-lg border border-white border-opacity-20 p-4">
-                        <Image 
-                          src={`/icons/${idx === 0 ? 'email marketing and newsletter with new message.png' :
-                                 'Project management, team work and idea generation.png'}`}
-                          alt={item}
-                          width={60}
-                          height={60}
-                          className="w-15 h-15 object-contain mb-2"
-                        />
-                        <span className="text-white text-xs font-medium text-center">{item}</span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
+        {/* Bottom row - 2 tools, centered */}
+        <div className="col-span-3 flex justify-center gap-12 mt-4">
+          {['Newsletter', 'Stakeholder Map'].map((item, idx) => (
+            <div key={idx + 3} className="relative flex flex-col items-center">
+              <div className="relative w-16 h-16 mb-3">
+                <Image 
+                  src={`/icons/${idx === 0 ? 'email marketing and newsletter with new message.png' :
+                         'Project management, team work and idea generation.png'}`}
+                  alt={item}
+                  width={60}
+                  height={60}
+                  className="w-16 h-16 object-contain floating-icon"
+                  style={{ width: 'auto', height: 'auto' }}
+                />
+              </div>
+              <span className="text-white text-xs font-medium text-center">{item}</span>
+            </div>
+          ))}
+        </div>
               </div>
             </div>
           </div>
@@ -237,26 +239,26 @@ export default function HomePage() {
       </section>
 
       {/* Trippl Case Study Preview */}
-      <section className="py-16">
+      <section className="py-6">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="flex flex-col lg:flex-row lg:items-center gap-12">
+          <div className="flex flex-col lg:flex-row lg:items-center gap-6">
             <div className="lg:w-1/2">
               {/* Headline */}
               <h2 className="text-2xl font-bold mb-4 text-left bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent">build an app with social impact</h2>
               
               {/* Subheader */}
-              <p className="text-base mb-6 text-left">
+              <p className="text-base text-white mb-4 text-left">
                 Founded Trippl to help people travel together so rides are safer, cheaper, and more social. 
                 Born from friends feeling unsafe at night, tested with students across London.
               </p>
               
               {/* Key Results */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Key Results</h3>
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Key Results</h3>
                 <div className="flex flex-wrap gap-1">
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path d="M13 6a3 3 0 11-6 0 3 3 0 016 0zM18 8a2 2 0 11-4 0 2 2 0 014 0zM14 15a4 4 0 00-8 0v3h8v-3z"></path>
                       </svg>
                     </div>
@@ -267,7 +269,7 @@ export default function HomePage() {
                   </div>
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"></path>
                       </svg>
                     </div>
@@ -278,7 +280,7 @@ export default function HomePage() {
                   </div>
                   <div className="metric-pill border-2 border-white border-opacity-20">
                     <div className="metric-icon">
-                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 text-black" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                         <path fillRule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clipRule="evenodd"></path>
                       </svg>
                     </div>
@@ -291,9 +293,9 @@ export default function HomePage() {
               </div>
 
               {/* Skills & Expertise */}
-              <div className="mb-8">
-                <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">Skills & Expertise</h3>
-                <div className="grid grid-cols-2 gap-2">
+              <div className="mb-6">
+                <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-3">Skills & Expertise</h3>
+                <div className="grid grid-cols-2 gap-1">
                   <Badge text="Product design & algorithms" />
                   <Badge text="UX/UI design & branding" />
                   <Badge text="Partnerships & pitching" />
@@ -337,11 +339,11 @@ export default function HomePage() {
       </section>
 
       {/* More Projects Section */}
-      <section id="projects" className="py-16">
+      <section id="projects" className="py-6">
         <div className="max-w-6xl mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-12 text-white">More Projects</h2>
+          <h2 className="text-3xl font-bold text-center mb-6 text-white">More Projects</h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
             {/* Base360.ai */}
             <ProjectCard
               title="Base360.ai"
@@ -355,8 +357,8 @@ export default function HomePage() {
               ]}
               skills={["UX/UI design", "Human-AI interaction", "Product strategy", "Front-end build", "Figma", "Web stack"]}
               icon={
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.25" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
+                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456L21.75 6l-1.035.259a3.375 3.375 0 00-2.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z" />
                 </svg>
               }
             />
@@ -374,8 +376,8 @@ export default function HomePage() {
               ]}
               skills={["User research", "Market analysis", "Ideation", "Wireframing", "Strategy", "Figma", "AI platforms"]}
               icon={
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.25" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                  <path  d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               }
             />
@@ -393,8 +395,8 @@ export default function HomePage() {
               ]}
               skills={["Market research", "Data analysis", "Strategy", "Opportunity identification", "Spreadsheets", "Prototyping tools"]}
               icon={
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.25" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
+                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                  <path  d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
               }
             />
@@ -411,8 +413,8 @@ export default function HomePage() {
               ]}
               skills={["AI agents", "Human-AI interaction", "Rapid prototyping", "UX/UI design"]}
               icon={
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="1.25" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h16.5A2.25 2.25 0 0022.5 19.5v-7.5a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v7.5a2.25 2.25 0 002.25 2.25z" />
+                <svg className="w-6 h-6 text-black" fill="currentColor" viewBox="0 0 24 24">
+                  <path  d="M13.5 10.5V6.75a4.5 4.5 0 119 0v3.75M3.75 21.75h16.5A2.25 2.25 0 0022.5 19.5v-7.5a2.25 2.25 0 00-2.25-2.25H3.75a2.25 2.25 0 00-2.25 2.25v7.5a2.25 2.25 0 002.25 2.25z" />
                 </svg>
               }
               isComingSoon={true}
@@ -424,34 +426,43 @@ export default function HomePage() {
       {/* Footer CTA */}
       <section className="py-4 border-t border-gray-700 glass">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <div className="flex justify-center gap-6 mb-6">
-            {/* Instagram */}
-            <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
-              aria-label="Instagram">
-              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-              </svg>
-            </a>
-            
-            {/* LinkedIn */}
-            <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
-              aria-label="LinkedIn">
-              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-              </svg>
-            </a>
-            
-            {/* GitHub */}
-            <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
-              className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
-              aria-label="GitHub">
-              <svg className="w-6 h-6 text-amber-500" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-              </svg>
-            </a>
-          </div>
+    <div className="flex justify-center gap-6 mb-3">
+      {/* Instagram */}
+      <a href="https://www.instagram.com/arturocan0/" target="_blank" rel="noopener noreferrer" 
+        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+        aria-label="Instagram">
+        <img 
+          src="/links_icons/icons8-instagram-48.png" 
+          alt="Instagram" 
+          className="w-6 h-6 object-contain"
+          style={{ width: 'auto', height: 'auto' }}
+        />
+      </a>
+      
+      {/* LinkedIn */}
+      <a href="https://www.linkedin.com/in/arturo-cano-designs/" target="_blank" rel="noopener noreferrer" 
+        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+        aria-label="LinkedIn">
+        <img 
+          src="/links_icons/icons8-linkedin-50.png" 
+          alt="LinkedIn" 
+          className="w-6 h-6 object-contain"
+          style={{ width: 'auto', height: 'auto' }}
+        />
+      </a>
+      
+      {/* GitHub */}
+      <a href="https://github.com/arturocano02" target="_blank" rel="noopener noreferrer" 
+        className="w-12 h-12 rounded-xl glass flex items-center justify-center hover:bg-gray-600 hover:bg-opacity-20 transition-all transform hover:scale-105 border border-gray-500/30" 
+        aria-label="GitHub">
+        <img 
+          src="/links_icons/icons8-github-50.png" 
+          alt="GitHub" 
+          className="w-6 h-6 object-contain"
+          style={{ width: 'auto', height: 'auto' }}
+        />
+      </a>
+    </div>
           
           <Button href="/contact" variant="primary" className="btn-primary">
             <svg className="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
