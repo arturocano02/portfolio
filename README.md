@@ -15,6 +15,7 @@ A modern, responsive portfolio website showcasing AI product design and developm
 - Next.js 15 with App Router
 - React 18
 - Tailwind CSS
+- Resend (Email Service)
 - Vercel deployment
 
 ## Analytics
@@ -29,3 +30,15 @@ npm run dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Email Setup
+
+To enable the contact form to send emails:
+
+1. Sign up for a free account at [Resend](https://resend.com)
+2. Get your API key from the dashboard
+3. Create a `.env.local` file in the root directory:
+   ```env
+   RESEND_API_KEY=your_resend_api_key_here
+   ```
+4. The contact form will automatically send emails to `arturocanodesigns@gmail.com`

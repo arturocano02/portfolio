@@ -29,7 +29,7 @@ export default function HomePage() {
         <div className="max-w-5xl mx-auto text-center flex flex-col items-center space-fluid-lg">
           <p className="text-fluid-lg text-white text-center break-words-smart" style={{wordBreak: 'normal', overflowWrap: 'break-word', hyphens: 'none'}}>
             <TypewriterEffect 
-              text="a London-based Imperial engineering graduate"
+              text="Imperial College London Engineering Graduate"
               speed={60}
               delay={500}
               onComplete={handleSubtitleComplete}
@@ -39,7 +39,7 @@ export default function HomePage() {
           {showTitle && (
             <h1 className="text-fluid-4xl sm:text-fluid-5xl lg:text-fluid-6xl font-extrabold bg-gradient-to-r from-white to-gray-300 bg-clip-text text-transparent text-center leading-tight">
               <TypewriterEffect 
-                text="designing and building AI products"
+                text="designing and scaling AI products"
                 speed={80}
                 delay={200}
                 onComplete={handleTitleComplete}

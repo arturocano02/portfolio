@@ -84,12 +84,16 @@ export default function ProjectCard({
             {/* Close Button - Sticky at top right */}
             <button
               onClick={handleClose}
-              className="sticky top-6 right-6 z-10 p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 border border-white border-opacity-50 transition-all duration-200 backdrop-blur-sm shadow-lg ml-auto"
+              className="sticky top-6 right-6 z-10 p-3 rounded-full bg-white bg-opacity-20 hover:bg-opacity-30 border border-white border-opacity-50 transition-all duration-200 backdrop-blur-lg shadow-xl ml-auto"
               aria-label="Close modal"
               style={{ float: 'right', marginTop: '1.5rem', marginRight: '1.5rem' }}
             >
-              <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor" strokeWidth="2">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+              <svg 
+                className="w-6 h-6" 
+                fill="white" 
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
               </svg>
             </button>
 

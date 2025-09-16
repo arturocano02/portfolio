@@ -4,6 +4,7 @@ import Button from './Button';
 
 export default function Header() {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
   
   // Close dropdown when clicking outside
@@ -38,7 +39,7 @@ export default function Header() {
         {/* Mobile menu button */}
         <button 
           className="md:hidden p-2 text-white hover:text-gray-300 transition-colors"
-          onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           aria-label="Toggle menu"
         >
           <svg 
@@ -73,7 +74,7 @@ export default function Header() {
             
             {isDropdownOpen && (
               <div 
-                className="absolute left-0 mt-4 w-48 rounded-lg shadow-xl bg-white bg-opacity-20 backdrop-blur-lg border border-white border-opacity-30"
+                className="absolute top-full left-0 mt-2 w-48 rounded-lg shadow-xl bg-white bg-opacity-40 backdrop-blur-lg border border-white border-opacity-50 z-50"
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <div className="py-2">
@@ -102,8 +103,8 @@ export default function Header() {
         </nav>
         
         {/* Mobile navigation menu */}
-        {isDropdownOpen && (
-          <div className="md:hidden absolute top-full left-0 right-0 bg-white bg-opacity-20 backdrop-blur-lg border-b border-white border-opacity-30 shadow-xl">
+        {isMobileMenuOpen && (
+          <div className="md:hidden absolute top-full left-0 right-0 bg-black bg-opacity-80 backdrop-blur-lg border-b border-white border-opacity-30 shadow-xl">
             <div className="px-4 py-4 space-y-4">
               <div className="space-y-2">
                 <p className="text-sm font-semibold text-white mb-2">Projects</p>
@@ -112,7 +113,7 @@ export default function Header() {
                     key={index}
                     href={project.path}
                     className="block py-2 text-white hover:text-gray-300 transition-colors"
-                    onClick={() => setIsDropdownOpen(false)}
+                    onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {project.name}
                   </a>
@@ -122,7 +123,7 @@ export default function Header() {
                 <a 
                   href="/cv" 
                   className="block py-2 text-white hover:text-gray-300 transition-colors"
-                  onClick={() => setIsDropdownOpen(false)}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   CV
                 </a>
@@ -130,7 +131,7 @@ export default function Header() {
                   href="/contact" 
                   variant="primary" 
                   className="w-full"
-                  onClick={() => setIsDropdownOpen(false)}
+                  onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Contact
                 </Button>

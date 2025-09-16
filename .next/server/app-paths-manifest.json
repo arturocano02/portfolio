@@ -1,9 +1,10 @@
 {
+  "/api/contact/route": "app/api/contact/route.js",
   "/_not-found/page": "app/_not-found/page.js",
+  "/amazon/page": "app/amazon/page.js",
   "/cv/page": "app/cv/page.js",
   "/contact/page": "app/contact/page.js",
-  "/page": "app/page.js",
   "/trippl/page": "app/trippl/page.js",
-  "/amazon/page": "app/amazon/page.js",
+  "/page": "app/page.js",
   "/norton/page": "app/norton/page.js"
 }
